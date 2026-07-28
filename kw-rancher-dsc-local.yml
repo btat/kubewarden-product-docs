@@ -1,12 +1,12 @@
 site:
   title: SUSE Security Admission Controller
-  start_page: 1.36@admission-controller:en:introduction.adoc
+  start_page: 1.37@admission-controller:en:introduction.adoc
 
 content:
   sources:
     - url: ./
       branches: [HEAD]
-      start_paths: [shared, docs/version-1.37, docs/version-1.36]
+      start_paths: [shared, docs/version-1.36, docs/version-1.37, docs/version-1.38]
 
 ui:
   bundle:
@@ -19,6 +19,7 @@ asciidoc:
     page-draft-preview-only: 'You can have anything here, just not empty - so this is true, if empty string, or absent, then - false'
     page-pagination: ""
     tabs-sync-option: ""
+    build-type: product
   extensions:
     - "@asciidoctor/tabs"
 
