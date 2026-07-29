@@ -1,6 +1,5 @@
 include::partial$variables.adoc[]
 
-= Community Kubewarden v1.36 to SUSE Security v1.37 (Fleet)
 :page-languages: [en, de, es, fr, ja, pt, zh]
 :revdate: 2026-07-21
 :page-revdate: {revdate}
@@ -12,7 +11,9 @@ include::partial$variables.adoc[]
 :sidebar_label: Migrate with Fleet from Kubewarden v1.36 to {admc-name} v1.37
 :migration-backup-selector: -l app.kubernetes.io/instance!=kubewarden-defaults -l app.kubernetes.io/name!=kubewarden-defaults
 
-This guide shows how to migrate an existing Fleet-managed
+= From {admc-community-name} 1.36 to {admc-name} 1.37 with Fleet
+
+This page shows how to migrate an existing Fleet-managed
 {community-project-name} installation based on the legacy three-chart setup in
 v1.36 to the unified {admc-name} chart in v1.37.
 
@@ -290,12 +291,12 @@ helm:
 
 When deployed, the new release adopts the kept resources.
 
-=== Commit 4: suse-security-admission-controller bundle without takeOwnership
+==== Commit 4: suse-security-admission-controller bundle without takeOwnership
 
 In this `<commit-4-sha>`, remove the `takeOwnership` key from the
 `admission-controller` and unpin the `GitRepo`.
 
-== Run the migration
+=== Run the migration
 
 
 Move `spec.revision` forward, one commit at a time

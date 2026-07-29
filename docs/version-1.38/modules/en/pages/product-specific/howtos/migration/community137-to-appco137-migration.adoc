@@ -12,7 +12,7 @@ include::partial$variables.adoc[]
 :migration-namespace: $NAMESPACE
 :migration-backup-selector:
 
-= Migrate from {admc-community-name} 1.37 single chart to {admc-name} 1.37
+= From {admc-community-name} 1.37 to {admc-name} 1.37
 
 This page describes how to migrate an existing {community-project-name}
 installation based on the community `admission-controller` Helm chart
