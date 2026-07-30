@@ -20,6 +20,7 @@ asciidoc:
     kw-community-product-name: 'Kubewarden'
     page-pagination: ''
     tabs-sync-option: ''
+    build-type: product
   extensions:
     - '@asciidoctor/tabs'
 antora:
