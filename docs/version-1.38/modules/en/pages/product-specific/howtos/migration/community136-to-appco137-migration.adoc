@@ -12,7 +12,7 @@ include::partial$variables.adoc[]
 :migration-namespace: $TARGET_NAMESPACE
 :migration-backup-selector: -l app.kubernetes.io/instance!=kubewarden-defaults -l app.kubernetes.io/name!=kubewarden-defaults
 
-= Migrate from {admc-community-name} 1.36 three-chart setup to {admc-name} 1.37
+= From {admc-community-name} 1.36 to {admc-name} 1.37
 
 This page describes how to migrate an existing {community-project-name} installation
 based on the community upstream Helm charts to the {admc-name} single Helm chart,
