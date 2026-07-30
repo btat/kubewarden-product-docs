@@ -33,7 +33,7 @@ version jumping is not allowed. You must migrate from {admc-name} chart version
 ====
 
 Unlike the
-xref:product-specific/howtos/chart-migration.adoc[migration from the community three-chart setup],
+xref:product-specific/howtos/migration/community136-to-appco137-migration.adoc[migration from the community three-chart setup],
 this is an AppCo-to-AppCo migration. The image registry
 (`dp.apps.rancher.io`), the registry key (`global.imageRegistry`), and the pull
 secrets key (`global.imagePullSecrets`) all remain the same. The main work is
