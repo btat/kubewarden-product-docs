@@ -1,0 +1,1 @@
+docs/version-1.36/modules/en/pages/explanations/policy-lifecycle.adoc
