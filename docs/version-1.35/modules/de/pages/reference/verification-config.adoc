@@ -83,6 +83,7 @@ anyOf: # at least `+anyOf.minimumMatches+` are required to match
       urlPrefix: https://github.com/bob # <- it will be post-fixed with `+/+` for security reasons
 ----
 
+[#_signature_configuration_reference]
 == Referenz zur Signaturkonfiguration
 
 Sie können die in einer Datei enthaltenen Signaturanforderungen validieren. Klappen Sie auf für ein Beispiel:

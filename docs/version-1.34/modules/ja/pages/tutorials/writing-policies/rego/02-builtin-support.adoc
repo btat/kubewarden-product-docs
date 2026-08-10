@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = ビルトインサポート
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-03-18
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :description: WebAssemblyモジュールで利用可能なビルトイン関数を特定し、それらの実装とRegoポリシー開発における使用法を理解します。
 :doc-persona: ["kubewarden-policy-developer"]
@@ -13,7 +13,7 @@ include::partial$variables.adoc[]
 
 `wasm`ターゲットのポリシーを構築するには、そのターゲットが実行中である必要があります。
 
-Open Policy Agent (OPA)チームには、https://www.openpolicyagent.org/docs/latest/policy-reference/#built-in-functions[ビルトインサポート]を確認できるページがあります。
+Open Policy Agent (OPA)チームには、link:https://www.openpolicyagent.org/docs/latest/policy-reference/#built-in-functions[ビルトインサポート]を確認できるページがあります。
 
 RegoポリシーをWebAssemblyモジュールに構築する際、これらのビルトイン関数の一部はWasmファイル自体に含まれています。
 それらは、リンクされたビルトインページで緑のチェックマークが付けられたビルトインです。

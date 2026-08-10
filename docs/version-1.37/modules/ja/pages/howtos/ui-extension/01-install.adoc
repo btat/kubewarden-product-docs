@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Rancher UI拡張機能のクイックスタート
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-06-18
+:revdate: 2026-07-22
 :page-revdate: {revdate}
 :description: {admc-name} UIをRancher Managerの拡張機能としてインストールする方法を、段階的な手順で案内するガイドを通して学びます。
 :doc-persona: ["kubewarden-operator", "kubewarden-integrator"]
@@ -10,7 +10,7 @@ include::partial$variables.adoc[]
 :keywords: ["{admc-name}", "kubewarden", "kubernetes", "rancher ui extension"]
 :current-version: {page-origin-branch}
 
-このセクションでは、https://github.com/rancher/rancher[Rancher Manager]の拡張機能として{admc-name} UIをインストールする方法について説明します。
+このセクションでは、link:https://github.com/rancher/rancher[Rancher Manager]の拡張機能として{admc-name} UIをインストールする方法について説明します。
 
 == {admc-short-name} UI拡張機能をインストールします
 
@@ -46,7 +46,7 @@ include::partial$variables.adoc[]
 
 === デフォルトのポリシーサーバーとポリシーを有効にする
 
-ダッシュボードページ内で、「インストールチャート」ボタンを選択して、https://github.com/kubewarden/helm-charts/tree/main/charts/kubewarden-defaults[`kubewarden-defaults`]Helmチャートをインストールできます。このチャートには、デフォルトのポリシーサーバーといくつかのキュレーションされたポリシーが含まれています。
+ダッシュボードページ内で、「インストールチャート」ボタンを選択して、link:https://github.com/kubewarden/helm-charts/tree/main/charts/kubewarden-defaults[`kubewarden-defaults`]Helmチャートをインストールできます。このチャートには、デフォルトのポリシーサーバーといくつかのキュレーションされたポリシーが含まれています。
 
 チャートをインストールした後、関連するポリシーとともにデフォルトのポリシーサーバーの詳細をソート可能なテーブルで表示できます。
 
@@ -64,7 +64,7 @@ xref:howtos/ui-extension/02-metrics.adoc[モニタリング]またはxref:howtos
 
 == エアギャップ(された)インストール
 
-{admc-short-name}はRancher公式拡張機能であるため、Rancherチームは拡張カタログイメージを自動的に生成するメカニズムを提供します。これは、https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images#1-find-the-required-assets-for-your-rancher-version[Rancher Managerをインストールする]ためにエアギャップ(された)インスタンス用の`rancher-images.txt`ファイルに追加されます。
+{admc-short-name}はRancher公式拡張機能であるため、Rancherチームは拡張カタログイメージを自動的に生成するメカニズムを提供します。これは、link:https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images#1-find-the-required-assets-for-your-rancher-version[Rancher Managerをインストールする]ためにエアギャップ(された)インスタンス用の`rancher-images.txt`ファイルに追加されます。
 
 このイメージがエアギャップ(された)クラスターにアクセス可能なレジストリにミラーリングされると、Rancher UI内でイメージをインポートできます。これにより、インストール用の{admc-short-name} UIチャートを持つローカルHelmリポジトリが作成されます。
 

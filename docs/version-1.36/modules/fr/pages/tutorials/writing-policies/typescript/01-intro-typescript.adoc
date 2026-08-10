@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Écriture de stratégies en TypeScript/JavaScript
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Apprenez à rédiger des stratégies de validation {admc-name} efficaces en utilisant TypeScript/JavaScript.
 :keywords: kubewarden, kubernetes, écriture de stratégies en TypeScript, écriture de stratégies en JavaScript

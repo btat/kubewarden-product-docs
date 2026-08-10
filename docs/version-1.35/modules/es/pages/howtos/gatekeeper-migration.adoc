@@ -163,6 +163,7 @@ touch policy.wasm # opa creates the bundle with unix epoch timestamp, fix it
 
 Hay más información sobre cómo construir directivas de Gatekeeper en nuestro xref:/tutorials/writing-policies/rego/gatekeeper/03-build-and-run.adoc[tutorial].
 
+[#_rego_policy_code_and_opa_v1_0_0_compatibility]
 === Código de directiva Rego y compatibilidad con OPA v1.0.0
 
 Con el lanzamiento de OPA (Agente de Políticas Abiertas) link:https://github.com/open-policy-agent/opa/releases/tag/v1.0.0[v1.0.0] en diciembre de 2024, se introdujo un cambio importante respecto a la sintaxis de directivas Rego.

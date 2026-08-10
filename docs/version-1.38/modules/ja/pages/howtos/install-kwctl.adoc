@@ -178,7 +178,7 @@ Windows::
 Windows にインストールします
 
 . `kwctl` をダウンロードしてください：
-    .. ブラウザを開き、https://github.com/kubewarden/kwctl/releases/latest[{admc-short-name} リリースページ] に移動します。
+    .. ブラウザを開き、link:https://github.com/kubewarden/kwctl/releases/latest[{admc-short-name} リリースページ] に移動します。
     .. `kwctl-windows-x86_64.zip` ファイルをダウンロードしてください。
 
 . ダウンロードした zip ファイルからファイルを抽出してください。次の内容が含まれます：

@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = Instalação de air gap
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Configure um repositório privado com {admc-name} imagens e políticas para instalar {admc-name} em um ambiente air-gapped.
 :doc-persona: [“kubewarden-operator”, “kubewarden-integrator”]

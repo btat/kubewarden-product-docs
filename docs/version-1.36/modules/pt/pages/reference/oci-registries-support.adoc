@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Suporte ao registro OCI para {admc-short-name}
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Distribua as políticas de {admc-name} como artefatos OCI via registros regulares da Open Container Initiative (OCI).
 :doc-persona: ["kubewarden-all"]

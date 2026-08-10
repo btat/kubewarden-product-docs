@@ -20,6 +20,7 @@ Seit Version `v9.0.0` unterstützt `rancher-backup` {project-name}. Dies beinhal
 - Die {short-project-name} CRDs, die nach der Wiederherstellung vom {short-project-name} Controller abgeglichen werden.
 - Das `policy-reporter` Subchart des `kubewarden-controller` Charts, für deren Standardwerte. Dies umfasst nicht die Grafana-Integration oder andere Plugins.
 
+[#_user_secrets]
 == Benutzergeheimnisse
 
 Der Backup-Prozess umfasst keine vom Benutzer erstellten Geheimnisse, wie die, die verwendet werden, um xref:/howtos/policy-servers/02-private-registry.adoc#_creating_the_secret[PolicyServers für private Registries zu konfigurieren], es sei denn, sie sind korrekt gekennzeichnet. Dafür kennzeichnen Sie die Geheimnisse auf eine der folgenden Arten. Entweder:
@@ -38,7 +39,7 @@ kubectl label secret secret-ghcr-docker resources.cattle.io/backup=true
 
 == Installation des Rancher Backup Operators
 
-Folgen Sie dem Link: \https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[Rancher Manager] Dokumentation. Für eine Minikube-Installation, bei der PersistentVolumes vom Typ `hostPath` verwendet werden, die Minikube standardmäßig unterstützt, und die den Namen `standard` trägt.
+Folgen Sie dem Link: https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[Rancher Manager] Dokumentation. Für eine Minikube-Installation, bei der PersistentVolumes vom Typ `hostPath` verwendet werden, die Minikube standardmäßig unterstützt, und die den Namen `standard` trägt.
 
 Man muss den Backup Operator anweisen, auch {short-project-name} benutzerdefinierte CRs zu sichern, indem der Wert `optionalResources.kubewarden.enabled` auf `true` gesetzt wird.
 

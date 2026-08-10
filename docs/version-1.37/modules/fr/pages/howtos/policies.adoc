@@ -139,7 +139,7 @@ I0612 16:32:43.662550   48424 helpers.go:246] server response object: [{
 
 Parfois, lors de l'utilisation d'une stratégie, elle n'implémente pas encore la logique inverse de ce dont vous avez besoin.
 
-Par exemple, vous souhaitez utiliser le lien:https://artifacthub.io/packages/kubewarden/priority-class-policy/priority-class-policy[`priority-class` stratégie] pour rejeter un ensemble de classes de priorité. Mais au moment de la rédaction, la stratégie `priority-class` ne prend en charge que les listes d'autorisation, pas la liste rouge.
+Par exemple, vous souhaitez utiliser le link:https://artifacthub.io/packages/kubewarden/priority-class-policy/priority-class-policy[`priority-class` stratégie] pour rejeter un ensemble de classes de priorité. Mais au moment de la rédaction, la stratégie `priority-class` ne prend en charge que les listes d'autorisation, pas la liste rouge.
 
 Un modèle courant consiste alors à envelopper votre stratégie dans un `AdmissionPolicyGroup` ou `ClusterAdmissionPolicyGroup`, et à nier le résultat de la stratégie dans son `spec.expression`.
 

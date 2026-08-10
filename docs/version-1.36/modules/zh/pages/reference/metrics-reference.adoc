@@ -35,6 +35,7 @@ https://opentelemetry.io/docs/concepts/signals/baggage/[Baggage]键值属性被�
 | <<_kubewarden_policy_evaluations_total,Baggage>>
 |===
 
+[#_kubewarden_policy_evaluations_total]
 ==== `kubewarden_policy_evaluations_total`
 
 ===== Baggage

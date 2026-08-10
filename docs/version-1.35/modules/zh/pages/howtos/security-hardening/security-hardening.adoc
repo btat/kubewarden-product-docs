@@ -55,7 +55,7 @@ kubectl get clusterroles,roles -A | grep kubewarden
 
 == Pod 安全准入
 
-从1.23开始，{short-project-name}的堆栈能够在一个名称空间中运行，该名称空间中实施了https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted[`restricted`Pod安全标准]，并遵循当前的 Pod安全强化最佳实践。
+从1.23开始，{short-project-name}的堆栈能够在一个名称空间中运行，该名称空间中实施了link:https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted[`restricted`Pod安全标准]，并遵循当前的 Pod安全强化最佳实践。
 
 为此，您需要将`pod-security.kubernetes.io/enforce: restricted`标签添加到{short-project-name}部署名称空间。
 
@@ -63,7 +63,7 @@ kubectl get clusterroles,roles -A | grep kubewarden
 kubectl label namespace kubewarden pod-security.kubernetes.io/enforce=restricted --overwrite
 ```
 
-请参阅 Kubernetes Pod安全准入 的https://kubernetes.io/docs/concepts/security/pod-security-admission/[官方文档]以了解更多详细信息。
+请参阅 Kubernetes Pod安全准入 的link:https://kubernetes.io/docs/concepts/security/pod-security-admission/[官方文档]以了解更多详细信息。
 
 === SecurityContexts
 

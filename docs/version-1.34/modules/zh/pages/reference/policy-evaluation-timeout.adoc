@@ -47,7 +47,7 @@ include::partial$variables.adoc[]
 
 ### 每个策略
 
-从 {short-project-name} v1.29.0 开始，每个 {short-project-name} 策略可以通过其 `spec.timeoutEvalSeconds` 属性设置自己的超时值。这与用于 webhook 超时的 `spec.timeoutSeconds` 不同（见下文 [部分](#comparison-with-kubernetes-dynamic-admission-controller-timeout)）。
+从 {short-project-name} v1.29.0 开始，每个 {short-project-name} 策略可以通过其 `spec.timeoutEvalSeconds` 属性设置自己的超时值。这与用于 webhook 超时的 `spec.timeoutSeconds` 不同（见下文 <<_comparison_with_kubernetes_dynamic_admission_controller_timeout,部分>>）。
 
 `spec.timeoutEvalSeconds` 是细粒度的，允许对每个策略的评估超时进行调整。
 
@@ -124,13 +124,14 @@ spec:
       value: "3"
 ----
 
+[#_comparison_with_kubernetes_dynamic_admission_controller_timeout]
 == 与 Kubernetes 动态准入控制器超时的比较
 
-{short-project-name}是https://en.wikipedia.org/wiki/Webhook[webhook]的实现，属于https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/[Kubernetes 动态准入控制器]。
+{short-project-name}是link:https://en.wikipedia.org/wiki/Webhook[webhook]的实现，属于link:https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/[Kubernetes 动态准入控制器]。
 
 在内部，Kubernetes API 服务器向 {short-project-name} 的策略服务器发出 HTTP 请求，描述即将发生的事件。在 HTTP 请求后，Kubernetes API 服务器会等待响应。然而，Kubernetes API 服务器并不会无限期等待。在一定时间后，它会认为请求已超时。
 
-引用https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#timeouts[官方 Kubernetes 文档]：
+引用link:https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#timeouts[官方 Kubernetes 文档]：
 
 ____
 由于 webhook 会增加 API 请求延迟，因此应尽快评估。`timeoutSeconds`允许配置 API 服务器在将调用视为失败之前等待 webhook 响应的时间。

@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Políticas conscientes del contexto
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 18-03-2026
+:revdate: 2026-03-18
 :page-revdate: {revdate}
 :description: Los desarrolladores pueden crear políticas conscientes del contexto que obtienen información del clúster de Kubernetes en tiempo de ejecución para determinar los criterios de aceptación de AdmissionRequest.
 :doc-persona: ["kubewarden-policy-developer", "kubewarden-integrator"]

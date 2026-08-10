@@ -25,7 +25,7 @@ https://wasi.dev/[WebAssemblyシステムインターフェース(WASI)]は、�
 WASIを使用すると、STDOUT、STDERR、STDIN、環境変数などのシステムプリミティブと対話するWebAssemblyモジュールを持つことができます。
 
 {admc-short-name}ポリシーをコンパイルするために使用される多くのコンパイラは、WASIインターフェースをターゲットにしたWebAssemblyモジュールを生成します。
-しかし、{admc-short-name}ポリシーは、ポリシーとポリシーランタイム（`kwctl`または`policy-server`）間の双方向通信を実装するためにhttps://github.com/wapc[waPC]プロジェクトを使用します。{admc-short-name}通信プロトコルの使用はxref:reference/spec/01-intro-spec.adoc[こちら]に記載されています。
+しかし、{admc-short-name}ポリシーは、ポリシーとポリシーランタイム（`kwctl`または`policy-server`）間の双方向通信を実装するためにlink:https://github.com/wapc[waPC]プロジェクトを使用します。{admc-short-name}通信プロトコルの使用はxref:reference/spec/01-intro-spec.adoc[こちら]に記載されています。
 
 waPCプロジェクトがまだ使用できない特別なケースがあります。
 このような状況では、WASIが提供するインターフェースを使用してポリシーを書くことができます。
@@ -61,12 +61,12 @@ waPCプロジェクトがまだ使用できない特別なケースがありま�
 
 1.21リリースから、公式のGoコンパイラはWASIインターフェースをターゲットにしたWebAssemblyモジュールを生成できるようになりました。
 しかし、これらのモジュールはまだWebAssemblyランタイムに関数をエクスポートすることができません。
-この制限は、https://github.com/golang/go/issues/42372[この専用の問題]によって追跡されており、waPCプロトコルの採用を妨げています。
+この制限は、link:https://github.com/golang/go/issues/42372[この専用の問題]によって追跡されており、waPCプロトコルの採用を妨げています。
 
 {admc-short-name}プロジェクトチームは、TinyGoコンパイラを使用して{admc-short-name} Goポリシーを書くことをお勧めします。詳細はxref:tutorials/writing-policies/go/01-intro-go.adoc[こちら]に記載されています。
 
 しかし、特定の複雑なGoコードベースはTinyGoコンパイラを使用してコンパイルできません。
-これには、例えば、https://github.com/google/cel-go[CEL-go]やhttps://github.com/kyverno/kyverno/[Kyverno]のようなコードベースが含まれます。
+これには、例えば、link:https://github.com/google/cel-go[CEL-go]やlink:https://github.com/kyverno/kyverno/[Kyverno]のようなコードベースが含まれます。
 このような状況では、公式のGoコンパイラの使用が役立ちます。
 
 == 通信プロトコル
@@ -109,7 +109,7 @@ STDINには、`ValidationRequest`オブジェクトを記述したJSONドキュ�
 
 現時点ではGo SDKを介してのみサポートされています。Go SDKは、通常通りコンテキスト認識機能を公開しており、詳細についてはxref:explanations/context-aware-policies.adoc[こちら]を参照してください。
 
-WASI Goコンテキスト認識ポリシーの例として、https://github.com/kubewarden/go-wasi-context-aware-test-policy[go-wasi-context-aware-test-policy]を参照してください。
+WASI Goコンテキスト認識ポリシーの例として、link:https://github.com/kubewarden/go-wasi-context-aware-test-policy[go-wasi-context-aware-test-policy]を参照してください。
 
 === 設定の検証
 

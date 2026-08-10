@@ -17,7 +17,7 @@ Lorsque vous utilisez le Scanner d'audit {project-name}, vous stockez les résul
 [CAUTION]
 ====
 
-Avec {project-name} 1.33, la fonctionnalité Scanner d'audit enregistre les rapports dans des CRD OpenReports de [openreports.io](https://openreports.io) par défaut.
+Avec {project-name} 1.33, la fonctionnalité Scanner d'audit enregistre les rapports dans des CRD OpenReports de https://openreports.io[openreports.io] par défaut.
 
 Les CRD link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] du groupe de travail sur les politiques Kubernetes ne sont pas installées par défaut, marquées comme obsolètes, et seront supprimées dans une future version.
 

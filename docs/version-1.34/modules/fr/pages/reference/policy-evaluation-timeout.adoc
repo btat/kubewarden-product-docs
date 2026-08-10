@@ -47,7 +47,7 @@ Toutes les valeurs des délais d'évaluation par stratégie, le délai d'évalua
 
 ### Par stratégie
 
-À partir de {short-project-name} v1.29.0, chaque {short-project-name} stratégie peut définir sa propre valeur de délai via son attribut `spec.timeoutEvalSeconds`. Cela ne doit pas être confondu avec `spec.timeoutSeconds`, utilisé pour le délai des webhooks (voir la section [ci-dessous](#comparison-with-kubernetes-dynamic-admission-controller-timeout)).
+À partir de {short-project-name} v1.29.0, chaque {short-project-name} stratégie peut définir sa propre valeur de délai via son attribut `spec.timeoutEvalSeconds`. Cela ne doit pas être confondu avec `spec.timeoutSeconds`, utilisé pour le délai des webhooks (voir la section <<_comparison_with_kubernetes_dynamic_admission_controller_timeout,ci-dessous>>).
 
 Le `spec.timeoutEvalSeconds` est granulaire, permettant un réglage par stratégie de leur délai d'évaluation.
 
@@ -124,6 +124,7 @@ spec:
       value: "3"
 ----
 
+[#_comparison_with_kubernetes_dynamic_admission_controller_timeout]
 == Comparaison avec le délai d'attente du Contrôleur d'Admission Dynamique Kubernetes
 
 {short-project-name} est une implémentation de https://en.wikipedia.org/wiki/Webhook[webhook] du https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/[Contrôleur d'Admission Dynamique Kubernetes].

@@ -56,6 +56,7 @@ Der {project-name} Stack besteht aus:
 ====
 
 
+[#_installation]
 == Installation
 
 [IMPORTANT]
@@ -89,7 +90,7 @@ helm repo update kubewarden
 
 Installieren Sie die folgenden Helm-Charts im `kubewarden` Namespace in Ihrem Kubernetes-Cluster:
 
-* `kubewarden-crds`, das die {cluster-admission-policy}, {admission-policy} und {policy-server} benutzerdefinierte Ressourcenbeschreibungen registriert. Außerdem die {report} benutzerdefinierte Ressourcenbeschreibungen, die vom Audit-Scanner verwendet werden.
+* `kubewarden-crds`, das die {cluster-admission-policy}, {admission-policy} und {policy-server} benutzerdefinierte Ressourcenbeschreibungen registriert. Außerdem die {policy-report} benutzerdefinierte Ressourcenbeschreibungen, die vom Audit-Scanner verwendet werden.
 * `kubewarden-controller`, das den {short-project-name} Controller und den Audit-Scanner installiert.
 +
 [NOTE]
@@ -315,6 +316,7 @@ Kubernetes 1.21.0 eingeführt wurde.
 
 Die vollständige Dokumentation dieser benutzerdefinierten Ressourcen ist https://github.com/kubewarden/kubewarden-controller/blob/main/docs/crds/README.asciidoc[hier] oder auf https://doc.crds.dev/github.com/kubewarden/kubewarden-controller[docs.crds.dev].
 
+[#_example_enforce_your_first_policy]
 == Beispiel: Setzen Sie Ihre erste Richtlinie durch.
 
 Wir werden die https://github.com/kubewarden/pod-privileged-policy[`pod-privileged`] Richtlinie verwenden.

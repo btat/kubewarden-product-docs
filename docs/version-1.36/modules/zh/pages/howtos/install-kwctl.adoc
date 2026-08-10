@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 安装 kwctl ({admc-name} CLI)
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :title: 安装 kwctl
 :description: 按照各种操作系统的安装说明安装 kwctl（{admc-name} CLI），然后启用外壳补全。

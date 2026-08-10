@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = PolicyServersをプライベートレジストリで使用するように設定する
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Dockerの設定シークレットを作成し、設定のspec.imagePullSecretフィールドを設定することで、PolicyServersをプライベートレジストリを使用するように構成します。
 :doc-persona: ["kubewarden-operator", "kubewarden-integrator"]
@@ -17,9 +17,10 @@ PolicyServerをプライベートレジストリにアクセスするように�
 
 これを達成するためには、プライベートレジストリの資格情報を含むシークレットを作成する必要があります。次に、PolicyServersのリソースとHelmチャートをそれを使用するように構成します。
 
+[#_creating_the_secret]
 == シークレットの作成
 
-PolicyServersは通常のhttps://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Docker設定シークレット]をサポートしており、タイプ`kubernetes.io/dockercfg`またはタイプ`kubernetes.io/dockerconfigjson`のいずれかです。これらのシークレットは`kubectl create secret docker-registry`を使用して作成できます。
+PolicyServersは通常のlink:https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Docker設定シークレット]をサポートしており、タイプ`kubernetes.io/dockercfg`またはタイプ`kubernetes.io/dockerconfigjson`のいずれかです。これらのシークレットは`kubectl create secret docker-registry`を使用して作成できます。
 
 シークレットは**PolicyServerを実行しているネームスペースで**作成します。
 これは最小特権の原則に従い、異なるPolicyServersが異なるレジストリからOCIアーティファクトを独立して検証できるようにします。
@@ -41,7 +42,7 @@ kubectl --namespace kubewarden create secret docker-registry secret-ghcr-docker 
 
 ====
 
-Dockerシークレットの作成方法についての詳細は、https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Kubernetesドキュメント]を参照してください。
+Dockerシークレットの作成方法についての詳細は、link:https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Kubernetesドキュメント]を参照してください。
 
 == PolicyServersでのシークレットの使用
 

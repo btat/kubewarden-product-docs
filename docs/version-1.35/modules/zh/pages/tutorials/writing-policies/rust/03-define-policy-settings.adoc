@@ -51,7 +51,7 @@ impl kubewarden::settings::Validatable for Settings {
 == 添加单元测试
 
 现在您可以编写单元测试，以确保设置验证正常工作。
-您可以按照https://doc.rust-lang.org/stable/book/ch11-00-testing.html[常规Rust方式]完成此操作。
+您可以按照link:https://doc.rust-lang.org/stable/book/ch11-00-testing.html[常规Rust方式]完成此操作。
 
 在`src/settings.rs`文件的底部已经有一些默认测试。将自动生成的代码替换为如下所示：
 

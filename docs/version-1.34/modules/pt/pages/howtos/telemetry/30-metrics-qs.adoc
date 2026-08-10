@@ -24,6 +24,7 @@ deste livro. Você precisa disso para que esta seção funcione corretamente.
 
 Você usa https://prometheus.io/[Prometheus] para coletar métricas expostas pelo Policy Server.
 
+[#_install_prometheus]
 == Instale o Prometheus
 
 Você usa https://github.com/prometheus-operator/prometheus-operator[Prometheus

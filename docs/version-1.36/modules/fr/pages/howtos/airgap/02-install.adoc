@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = Installation en isolation physique
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Configurez un registre privé avec {admc-name} des images et des stratégies pour installer {admc-name} dans un environnement isolé physiquement.
 :doc-persona: [“kubewarden-operator”, “kubewarden-integrator”]

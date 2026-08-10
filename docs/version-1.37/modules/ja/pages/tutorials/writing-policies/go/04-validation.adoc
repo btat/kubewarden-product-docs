@@ -22,7 +22,7 @@ include::partial$variables.adoc[]
 受信したペイロードはJSONオブジェクトであり、xref:reference/spec/03-validating-policies.adoc[この文書]で説明されています。データは2つの方法で取得できます：
 
 . JSONデータをGo型にアンマーシャルします。
-. JSONクエリを実行します（https://stedolan.github.io/jq/[`jq`]に似たもの）。
+. JSONクエリを実行します（link:https://stedolan.github.io/jq/[`jq`]に似たもの）。
 
 このドキュメントのこのセクションは、Go型を使用した最初のアプローチに焦点を当てています。
 2番目のアプローチの説明は、後のxref:tutorials/writing-policies/go/09-validation-with-queries.adoc[クエリを使用した検証]セクションにあります。

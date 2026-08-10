@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = コンテナレジストリの機能
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: OCIマニフェストダイジェストの計算やOCIオブジェクトマニフェストの取得など、コンテナレジストリの機能についてご紹介します。
 :doc-persona: ["kubewarden-policy-developer"]
@@ -178,7 +178,7 @@ OR
 
 * 入力ペイロード: `"ghcr.io/kubewarden/policy-server:v1.10.0"`
 * 出力ペイロード: レジストリから取得した成功した応答の本文。
-それはhttps://github.com/opencontainers/image-spec/blob/main/image-index.md[OCIインデックスイメージ]またはhttps://github.com/opencontainers/image-spec/blob/main/manifest.md[OCIイメージマニフェスト]である可能性があります。
+それはlink:https://github.com/opencontainers/image-spec/blob/main/image-index.md[OCIインデックスイメージ]またはlink:https://github.com/opencontainers/image-spec/blob/main/manifest.md[OCIイメージマニフェスト]である可能性があります。
 詳細はレジストリとイメージによって異なる場合があります。
 
 == OCIマニフェストと設定
@@ -317,4 +317,4 @@ string
 例えば、`ghcr.io/kubewarden/policy-server:v1.13.0`イメージのマニフェストと設定をリクエストする場合、ペイロードは次のようになります:
 
 * 入力ペイロード: `"ghcr.io/kubewarden/policy-server:v1.13.0"`
-* 出力ペイロード: レジストリから取得した成功した応答の本文。それにはhttps://github.com/opencontainers/image-spec/blob/main/manifest.md[OCIイメージマニフェスト]、イメージダイジェスト、およびhttps://github.com/opencontainers/image-spec/blob/main/config.md[OCIイメージ設定]が含まれます。
+* 出力ペイロード: レジストリから取得した成功した応答の本文。それにはlink:https://github.com/opencontainers/image-spec/blob/main/manifest.md[OCIイメージマニフェスト]、イメージダイジェスト、およびlink:https://github.com/opencontainers/image-spec/blob/main/config.md[OCIイメージ設定]が含まれます。

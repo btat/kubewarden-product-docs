@@ -51,6 +51,7 @@ Vá em frente e anote a política:
 $ kwctl annotate policy.wasm --metadata-path metadata.yaml --output-path annotated-policy.wasm
 ----
 
+[#_pushing_the_policy]
 == Enviando a política
 
 Envie sua política para um registro OCI:

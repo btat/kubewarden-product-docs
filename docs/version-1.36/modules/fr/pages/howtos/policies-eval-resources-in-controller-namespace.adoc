@@ -1,6 +1,8 @@
 include::partial$variables.adoc[]
 
 = Autoriser les évaluations dans l'espace de noms du contrôleur d'admission
+:revdate: 2026-05-22
+:page-revdate: {revdate}
 :page-languages: [en, de, es, fr, ja, pt, zh]
 :description: Comment configurer le contrôleur d'admission pour permettre l'évaluation des stratégies dans son propre espace de noms
 :keywords: ["politiques", "ClusterAdmissionPolicies", "ClusterAdmissionPoliciesGroup", "configuration", "espaces de noms"]

@@ -1,6 +1,8 @@
 include::partial$variables.adoc[]
 
 = 配置 PolicyServers 使用私有 Sigstore 实例
+:revdate: 2026-05-22
+:page-revdate: {revdate}
 :page-languages: [en, de, es, fr, ja, pt, zh]
 :description: 配置 PolicyServers 使用私有或自托管的 Sigstore 实例进行 {admc-name} 的策略签名验证。
 :keywords: ["kubewarden", "kubernetes", "policyservers", "sigstore", "private sigstore", "policy signing"]

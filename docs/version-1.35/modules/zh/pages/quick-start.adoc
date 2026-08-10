@@ -56,6 +56,7 @@ include::partial$variables.adoc[]
 ====
 
 
+[#_installation]
 == 安装
 
 [IMPORTANT]
@@ -64,7 +65,7 @@ include::partial$variables.adoc[]
 
 :gh-pat-url: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
-您可以从GitHub容器注册表中检索{short-project-name}策略，地址为https://ghcr.io.。使用{short-project-name} CLI访问该储存库需要身份验证，您需要一个{gh-pat-url}[GitHub个人访问令牌]（PAT）。如果您尚未创建，文档将指导您完成创建过程。
+您可以从GitHub容器注册表中检索{short-project-name}策略，地址为link:https://ghcr.io[].。使用{short-project-name} CLI访问该储存库需要身份验证，您需要一个link:{gh-pat-url}[GitHub个人访问令牌]（PAT）。如果您尚未创建，文档将指导您完成创建过程。
 然后，您可以使用类似以下的命令进行身份验证：
 
 [subs="+attributes",console]
@@ -89,7 +90,7 @@ helm repo update kubewarden
 
 在您的Kubernetes集群中，在`kubewarden`名称空间中安装以下Helm图表：
 
-* `kubewarden-crds`，它注册了{cluster-admission-policy}、{admission-policy}和{policy-server}自定义资源定义。此外，审计扫描仪使用的{report}自定义资源定义。
+* `kubewarden-crds`，它注册了{cluster-admission-policy}、{admission-policy}和{policy-server}自定义资源定义。此外，审计扫描仪使用的{policy-report}自定义资源定义。
 * `kubewarden-controller`，它安装了{short-project-name}控制器和审计扫描仪。
 +
 [NOTE]
@@ -119,14 +120,14 @@ helm install --wait -n kubewarden kubewarden-defaults kubewarden/kubewarden-defa
 [CAUTION]
 ====
 
-由于https://github.com/kubewarden/kubewarden-controller/releases/tag/v0.4.0[`v0.4.0`]，未使用`kubewarden-controller`图表创建名为`PolicyServer`的`default`资源。现在，一个名为`kubewarden-defaults`的Helm图表安装默认策略服务器。
+由于link:https://github.com/kubewarden/kubewarden-controller/releases/tag/v0.4.0[`v0.4.0`]，未使用`kubewarden-controller`图表创建名为`PolicyServer`的`default`资源。现在，一个名为`kubewarden-defaults`的Helm图表安装默认策略服务器。
 
 这意味着如果在升级或删除时未使用最新版本的`kubewarden-controller`，则您的默认策略服务器不会被升级或删除。因此，如果您尝试安装具有冲突信息的`kubewarden-defaults`，例如相同的策略服务器名称，可能会遇到问题。要安装`kubewarden-defaults` Helm图表的未来升级，请在安装新图表之前去除由`PolicyServer`创建的现有`kubewarden-controller`资源。现在，您可以使用Helm升级更新您的策略服务器，而不会发生资源冲突。当您去除`PolicyServer`时，您也会去除与之绑定的所有策略。
 
 ====
 
 
-默认配置值对于大多数部署来说是足够的。https://charts.kubewarden.io/#configuration[文档]描述了所有选项。
+默认配置值对于大多数部署来说是足够的。link:https://charts.kubewarden.io/#configuration[文档]描述了所有选项。
 
 == 主要组件
 
@@ -309,6 +310,7 @@ spec:
 
 这些自定义资源的完整文档在 https://github.com/kubewarden/kubewarden-controller/blob/main/docs/crds/README.asciidoc[这里] 或 https://doc.crds.dev/github.com/kubewarden/kubewarden-controller[docs.crds.dev] 上。
 
+[#_example_enforce_your_first_policy]
 == 示例：强制执行您的第一个策略
 
 我们将使用 https://github.com/kubewarden/pod-privileged-policy[`pod-privileged`] 策略。

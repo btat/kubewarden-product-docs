@@ -30,6 +30,7 @@ y políticas.
 Utilizas https://www.jaegertracing.io/[Jaeger] -- que se utiliza para recibir, almacenar y
 visualizar eventos de trazado.
 
+[#_install_jaeger]
 == Instalar Jaeger
 
 Utilizas el https://github.com/jaegertracing/jaeger-operator[Operador de Jaeger]

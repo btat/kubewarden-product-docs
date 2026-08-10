@@ -1,14 +1,15 @@
 include::partial$variables.adoc[]
-= Schnelleinführung
+
+= Quick start
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-06-18
+:revdate: 2026-05-14
 :page-revdate: {revdate}
-:description: Verstehen Sie den {admc-name} Stack, indem Sie lernen, wie man seine Hauptkomponenten, einschließlich PolicyServers und ClusterAdmissionPolicy-Ressourcen, bereitstellt und verwaltet.
+:description: Understand the {admc-name} stack by learning how to deploy and manage its main components, including PolicyServers and ClusterAdmissionPolicy resources.
 :doc-persona: ["kubewarden-all"]
 :doc-topic: ["quick-start"]
 :doc-type: ["tutorial"]
-:keywords: ["{admc-name}", "installation", "Kurzanleitung", "policyserver", "clusteradmissionpolicy", "admissionpolicy"]
-:sidebar_label: Schnelleinführung
+:keywords: ["{admc-name}", "installation", "quick start", "policyserver", "clusteradmissionpolicy", "admissionpolicy"]
+:sidebar_label: Quick start
 :sidebar_position: 20
 :current-version: {page-origin-branch}
 
@@ -18,23 +19,32 @@ include::partial$variables.adoc[]
 </head>
 ++++
 
-Der {admc-name} Stack besteht aus:
+The {admc-name} stack comprises:
 
-* Einer oder mehreren {cluster-admission-policy} Ressourcen: dies definiert Richtlinien für Kubernetes-Cluster.
-* Einer oder mehreren {policy-server} Ressourcen: repräsentiert eine Implementierung eines {admc-short-name} `PolicyServer`. Der {admc-short-name} `PolicyServer` lädt und bewertet die Richtlinien Ihres Administrators.
-* Einer oder mehreren {admission-policy} Ressourcen: Richtlinien für einen definierten Namespace.
-* Eine Bereitstellung eines `kubewarden-controller`: dieser Controller überwacht die {cluster-admission-policy} Ressourcen und interagiert mit den {admc-short-name} {policy-server} Komponenten.
+* One or more {cluster-admission-policy} resources: this defines policies
+  for Kubernetes clusters.
+* One or more {policy-server} resources: representing a deployment of a
+  {admc-short-name}
+  `PolicyServer`. The {admc-short-name} `PolicyServer` loads and evaluates your
+  administrator's policies.
+* One or more {admission-policy} resources: policies for a defined namespace.
+* A deployment of a `{admc-release}`: this controller monitors the
+  {cluster-admission-policy} resources and interacts with the {admc-short-name}
+  {policy-server} components.
 
 [TIP]
 ====
 
-{admc-short-name} beschreibt seine Kubernetes Custom Resource Definitions (CRDs) xref:reference/CRDs.adoc[hier].
+{admc-short-name} describes its Kubernetes Custom Resource Definitions (CRDs)
+xref:reference/CRDs.adoc[here].
 
-{admc-short-name} CRDs, die in diesem Tutorial und im Rest der Dokumentation erwähnt werden, haben kurze Namen, die einfacher zu verwenden sind. Dies sind die kurzen Namen für die CRDs:
+{admc-short-name} CRDs mentioned in this tutorial and in the rest of
+documentation have short names, which are easier to use. These are the short
+names for the CRDs:
 
 [cols="1,1"]
 |===
-| Ressource | shortName
+| Resource | shortName
 
 | AdmissionPolicies
 | *ap*
@@ -56,93 +66,28 @@ Der {admc-name} Stack besteht aus:
 ====
 
 
+[#_installation]
 == Installation
 
-[IMPORTANT]
-.Authentifizierung
-====
+include::partial${build-type}-specific/quick-start-installation.adoc[]
 
-:gh-pat-url: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+== Main components
 
-Sie können {admc-short-name} Richtlinien aus dem GitHub-Container-Registry unter https://ghcr.io. abrufen. Sie benötigen eine Authentifizierung, um das Repository mit der {admc-short-name} CLI zu verwenden, ein {gh-pat-url}[GitHub-Personen-Zugriffstoken] (PAT). Ihre Dokumentation führt Sie durch die Erstellung eines, falls Sie dies noch nicht getan haben.
-Dann authentifizieren Sie sich mit einem Befehl wie:
+The {admc-short-name} has three main components which you interact with:
 
-[subs="+attributes",console]
-----
-echo $PAT | docker login ghcr.io --username <my-gh-username> --password-stdin
-----
-
-====
-
-
-Stellen Sie den {admc-short-name} Stack mit `helm` Charts wie folgt bereit:
-
-[subs="+attributes",console]
-----
-helm repo add kubewarden https://charts.kubewarden.io
-----
-
-[subs="+attributes",console]
-----
-helm repo update kubewarden
-----
-
-Installieren Sie die folgenden Helm-Charts im `kubewarden` Namespace in Ihrem Kubernetes-Cluster:
-
-* `kubewarden-crds`, das die {cluster-admission-policy}, {admission-policy} und {policy-server} benutzerdefinierte Ressourcenbeschreibungen registriert. Außerdem die {report} benutzerdefinierte Ressourcenbeschreibungen, die vom Audit-Scanner verwendet werden.
-* `kubewarden-controller`, das den {admc-short-name} Controller und den Audit-Scanner installiert.
-+
-[NOTE]
-====
-
-Wenn Sie die Komponente des Audit-Scanners deaktivieren müssen, überprüfen Sie die Installationsdokumentation des Audit-Scanners xref:howtos/audit-scanner.adoc[Dokumentationsseite].
-
-====
-+
-* `kubewarden-defaults`, das eine `PolicyServer` Ressource mit dem Namen `default` erstellt. Es kann auch eine Reihe empfohlener Richtlinien installieren, um Ihren Cluster durch Durchsetzung bekannter Best Practices abzusichern.
-
-[subs="+attributes",console]
-----
-helm install --wait -n kubewarden --create-namespace kubewarden-crds kubewarden/kubewarden-crds
-----
-
-[subs="+attributes",console]
-----
-helm install --wait -n kubewarden kubewarden-controller kubewarden/kubewarden-controller
-----
-
-[subs="+attributes",console]
-----
-helm install --wait -n kubewarden kubewarden-defaults kubewarden/kubewarden-defaults
-----
-
-[CAUTION]
-====
-
-Da https://github.com/kubewarden/kubewarden-controller/releases/tag/v0.4.0[`v0.4.0`] wird eine `PolicyServer` Ressource mit dem Namen `default` nicht mit dem `kubewarden-controller` Chart erstellt. Jetzt installiert ein Helm-Chart namens `kubewarden-defaults` den Standardrichtlinienserver.
-
-Das bedeutet, dass, wenn Sie nicht die neueste Version des `kubewarden-controller` verwenden, während Sie aktualisieren oder löschen, Ihr Standardrichtlinienserver nicht aktualisiert oder gelöscht wird. Sie könnten auf Probleme stoßen, wenn Sie versuchen, den `kubewarden-defaults` mit widersprüchlichen Informationen zu installieren, zum Beispiel denselben Richtlinienserver-Namen. Um zukünftige Upgrades des `kubewarden-defaults` Helm-Charts zu installieren, entfernen Sie die vorhandene `PolicyServer` Ressource, die von dem `kubewarden-controller` erstellt wurde, bevor Sie das neue Chart installieren. Jetzt können Sie Ihren Richtlinienserver mit Helm-Upgrade ohne Ressourcenkonflikte aktualisieren. Wenn Sie das `PolicyServer` entfernen, entfernen Sie auch alle daran gebundenen Richtlinien.
-
-====
-
-
-Die Standardkonfigurationswerte sind für die meisten Implementierungen ausreichend. Die https://charts.kubewarden.io/#configuration[Dokumentation] beschreibt alle Optionen.
-
-== Hauptkomponenten
-
-{admc-short-name} hat drei Hauptkomponenten, mit denen Sie interagieren:
-
-* Der {policy-server}
-* Der {cluster-admission-policy}
-* Der {admission-policy}
+* The {policy-server}
+* The {cluster-admission-policy}
+* The {admission-policy}
 
 === `PolicyServer`
 
-Der `kubewarden-controller` verwaltet ein {admc-short-name} `PolicyServer`. Sie können mehrere {policy-server}s im selben Kubernetes-Cluster bereitstellen.
+The `{admc-release}` manages a {admc-short-name} `PolicyServer`. You can
+deploy multiple {policy-server}s in the same Kubernetes cluster.
 
-Ein `PolicyServer` validiert eingehende Anfragen, indem er {admc-short-name} Richtlinien gegen sie ausführt.
+A `PolicyServer` validates incoming requests by executing {admc-short-name}
+policies against them.
 
-Dies ist die Standardkonfiguration für `PolicyServer`:
+This is the default `PolicyServer` configuration:
 
 [subs="+attributes",yaml]
 ----
@@ -151,7 +96,7 @@ kind: PolicyServer
 metadata:
   name: reserved-instance-for-tenant-a
 spec:
-  image: ghcr.io/kubewarden/policy-server:v1.3.0
+  image: {default-policy-server-image-tag}
   replicas: 2
   serviceAccountName: ~
   env:
@@ -159,50 +104,53 @@ spec:
       value: debug
 ----
 
-[NOTE]
-====
+include::partial${build-type}-specific/quick-start-policyserver-note.adoc[]
 
-Überprüfen Sie die https://github.com/kubewarden/policy-server/pkgs/container/policy-server[neueste veröffentlichte `PolicyServer` Version] und ändern Sie das Tag entsprechend.
-
-====
-
-Übersicht über die Attribute der `PolicyServer` Ressource:
+Overview of the attributes of the `PolicyServer` resource:
 
 [cols="^,,"]
 |===
-| required | Placeholder | Beschreibung
+| Required | Placeholder | Description
 
 | Y
 | `image`
-| Der Name des Container-Images
+| The name of the container image
 
 | Y
 | `replicas`
-| Die Anzahl der gewünschten Instanzen
+| The number of desired instances
 
 | N
 | `serviceAccountName`
-| Der Name des `ServiceAccount`, der für die `PolicyServer` Implementierung verwendet werden soll. Wenn kein Wert angegeben ist, wird der Standardwert `ServiceAccount` aus dem Installations-Namespace, von `kubewarden-controller`, verwendet.
+| The name of the `ServiceAccount` to use for the `PolicyServer` deployment. If
+  there is no provided value, the default `ServiceAccount` from the installation namespace, of `{admc-release}`, gets used.
 
 | N
 | `env`
-| Die Liste der Umgebungsvariablen
+| The list of environment variables
 
 | N
 | `annotations`
-| Die Liste der Annotationen
+| The list of annotations
 
 |===
 
-Die Änderung eines dieser Attribute führt zu einer `PolicyServer` Implementierung mit der neuen Konfiguration.
+Changing any of these attributes causes a `PolicyServer` deployment with the
+new configuration.
 
 === ClusterAdmissionPolicy
 
-Die {cluster-admission-policy} Ressource ist der Kernel des {admc-short-name} Stacks. Sie definiert, wie Richtlinien Anfragen bewerten.
+The {cluster-admission-policy} resource is the core of the {admc-short-name}
+stack. It defines how policies evaluate requests.
 
-Die Durchsetzung von Richtlinien ist die häufigste Operation, die ein Kubernetes-Administrator durchführt. Sie können so viele Richtlinien deklarieren, wie Sie möchten, jede richtet sich an eine oder mehrere Kubernetes-Ressourcen (das heißt, `pods`, `Custom Resource` und andere). Sie geben auch den Typ der auf die Zielressourcen angewendeten Operationen an. Die verfügbaren Vorgänge sind `CREATE`, `UPDATE`, `DELETE` und `CONNECT`.
+Enforcing policies is the most common operation which a Kubernetes
+administrator performs. You can declare as many policies as you want, each
+targets one or more Kubernetes resources (that is, `pods`, `Custom Resource`
+and others). You also specify the type of operations applied to targeted
+resources. The operations available are `CREATE`, `UPDATE`, `DELETE` and
+`CONNECT`.
 
-Standard-{cluster-admission-policy}-Konfiguration:
+Default {cluster-admission-policy} configuration:
 
 [subs="+attributes",yaml]
 ----
@@ -211,8 +159,8 @@ kind: ClusterAdmissionPolicy
 metadata:
   name: psp-capabilities
 spec:
-  policyServer: reserved-instance-for-tenant-a
-  module: registry://ghcr.io/kubewarden/policies/psp-capabilities:v0.1.9
+  policyServer: default
+  module: registry://ghcr.io/kubewarden/policies/capabilities-psp:v1.0.10
   rules:
     - apiGroups: [""]
       apiVersions: ["v1"]
@@ -228,99 +176,107 @@ spec:
       - NET_ADMIN
 ----
 
-Übersicht über die Attribute der {cluster-admission-policy} Ressource:
+Overview of the attributes of the {cluster-admission-policy} resource:
 
 [cols="^,,"]
 |===
-| required | Placeholder | Beschreibung
+| Required | Placeholder | Description
 
 | N
 | `policy-server`
-| Identifiziert ein vorhandenes `PolicyServer` Objekt. Nur diese `PolicyServer` Instanz dient der Richtlinie. Der Richtlinienserver mit dem Namen `default` bedient ein {cluster-admission-policy} ohne eine explizite `PolicyServer`.
+| Identifies an existing `PolicyServer` object. Only
+  this `PolicyServer` instance serves the policy. The policy server named `default` serves a {cluster-admission-policy} without an explicit `PolicyServer`.
 
 | Y
 | `module`
-| Der Standort der {admc-short-name} Richtlinie. Die folgenden Schemen sind erlaubt:
+| The location of the {admc-short-name} policy. The following schemes are allowed:
 
 | N
 |
-| - `registry`: Richtlinien-Download von einem https://github.com/opencontainers/artifacts[OCI-Artefakten] konformen Container-Registry. Beispiel: `registry://<OCI registry/policy URL>`
+| - `registry`: Policy download from an
+    https://github.com/opencontainers/artifacts[OCI artifacts] compliant
+    container registry. Example: `registry://<OCI registry/policy URL>`
 
 | N
 |
-| - `http`, `https`: Richtlinien-Download von einem regulären HTTP(s) Server.
-    Beispiel: `\https://<website/policy URL>`
+| - `http`, `https`: Policy download from a regular HTTP(s) server.
+    Example: `\https://<website/policy URL>`
 
 | N
 |
-| - `file`: Laden Sie die Richtlinie aus einer Datei im Dateisystem des Computers.
-    Beispiel: `\file:///<policy WASM binary full path>`
+| - `file`: Load the policy from a file in the computer file system.
+    Example: `\file:///<policy WASM binary full path>`
 
 | Y
 | `resources`
-| Die Kubernetes-Ressourcen, die von der Richtlinie bewertet werden
+| The Kubernetes resources evaluated by the policy
 
 | Y
 | `operations`
-| Welche Vorgänge für die zuvor angegebenen Typen sollten vom API-Server zur Bewertung an diese Zulassungsrichtlinie weitergeleitet werden.
+| What operations for the previously given types should be forwarded to this
+  admission policy by the API server for evaluation.
 
 | Y
 | `mutating`
-| Setzen Sie diesen booleschen Wert `true` für Richtlinien, die eingehende Anfragen verändern können.
+| Set this boolean value `true` for policies that can mutate
+  incoming requests
 
 | N
 | `settings`
-| Ein Freiform-Objekt, das die Konfigurationswerte der Richtlinie enthält.
+| A free-form object that contains the policy configuration values
 
 | N
 | `failurePolicy`
-| Die Aktion, die zu ergreifen ist, wenn die von einer Richtlinie bewertete Anfrage zu einem Fehler führt.
-  Die folgenden Optionen sind erlaubt:
+| The action to take if the request evaluated by a policy results in an error.
+  The following options are allowed:
 
 | N
 |
-| - `Ignore`: Ignoriere einen Fehler beim Aufruf des Webhooks, und die API-Anfrage
-    wird fortgesetzt.
+| - `Ignore`: ignore an error calling the webhook and the API request
+    continues.
 
 | N
 |
-| - `Fail`: Ein Fehler beim Aufruf des Webhooks führt dazu, dass die Zulassung fehlschlägt
-    und die API-Anfrage abgelehnt wird.
+| - `Fail`: an error calling the webhook causes the admission to fail
+    and API request rejection.
 |===
 
 [NOTE]
 ====
 
-Der Controller registriert die {cluster-admission-policy} Ressourcen `*` Webhook
-`scope`. Das bedeutet, dass registrierte Webhooks alle Anfragen weiterleiten, die mit dem gegebenen `resources` und `operations` übereinstimmen – entweder namespace-gebundene oder clusterweite Ressourcen.
+The controller registers the {cluster-admission-policy} resources `*` webhook
+`scope`. This means that registered webhooks forward all requests matching the
+given `resources` and `operations`, either namespaced or cluster-wide
+resources.
 
 ====
 
 
 === AdmissionPolicy
 
-{admission-policy} ist eine namespace-weite Ressource. Die Richtlinie verarbeitet nur die
-Anfragen, die auf den Namespace mit dem definierten {admission-policy} abzielen.
-Abgesehen davon gibt es keine funktionalen Unterschiede zwischen den
-{admission-policy} und {cluster-admission-policy} Ressourcen.
+{admission-policy} is a namespace-wide resource. The policy processes only the
+requests that are targeting the Namespace with the {admission-policy} defined.
+Other than that, there are no functional differences between the
+{admission-policy} and {cluster-admission-policy} resources.
 
 [IMPORTANT]
 ====
 
-{admission-policy} erfordert Kubernetes 1.21.0 oder höher. Das liegt daran, dass
-{admc-short-name} das `kubernetes.io/metadata.name` Label verwendet, das in
-Kubernetes 1.21.0 eingeführt wurde.
+{admission-policy} requires Kubernetes 1.21.0 or greater. This is because
+{admc-short-name} uses the `kubernetes.io/metadata.name` label, introduced in
+Kubernetes 1.21.0
 
 ====
 
-Die vollständige Dokumentation dieser benutzerdefinierten Ressourcen ist https://github.com/kubewarden/kubewarden-controller/blob/main/docs/crds/README.asciidoc[hier] oder auf https://doc.crds.dev/github.com/kubewarden/kubewarden-controller[docs.crds.dev].
+The complete documentation of these Custom Resources is xref:/reference/CRDs.adoc[here].
 
-== Beispiel: Setzen Sie Ihre erste Richtlinie durch.
+[#_example_enforce_your_first_policy]
+== Example: Enforce your first policy
 
-Wir werden die https://github.com/kubewarden/pod-privileged-policy[`pod-privileged`] Richtlinie verwenden.
-Wir möchten die Erstellung von privilegierten Containern in unserem Kubernetes-Cluster verhindern, indem wir diese Richtlinie durchsetzen.
+We will use the https://github.com/kubewarden/pod-privileged-policy[`pod-privileged`] policy.
+We want to prevent the creation of privileged containers inside our Kubernetes cluster by enforcing this policy.
 
-Lassen Sie uns eine {cluster-admission-policy} definieren, um dies zu erreichen:
+Let's define a {cluster-admission-policy} to do that:
 
 [subs="+attributes",console]
 ----
@@ -342,23 +298,24 @@ spec:
 EOF
 ----
 
-Dies erzeugt die folgende Ausgabe:
+This produces the following output:
 
 [subs="+attributes",console]
 ----
 clusteradmissionpolicy.policies.kubewarden.io/privileged-pods created
 ----
 
-Nach der Instanziierung einer {cluster-admission-policy} wird der Status `pending`,
-und es erzwingt einen Rollout des gezielten `PolicyServer`. Im Beispiel ist es
-die `PolicyServer` mit dem Namen `default`. Sie können den Rollout überwachen, indem Sie den folgenden Befehl ausführen:
+After instantiating a {cluster-admission-policy}, the status becomes `pending`,
+and it forces a rollout of the targeted `PolicyServer`. In the example, it's
+the `PolicyServer` named `default`. You can monitor the rollout by running the
+following command:
 
 [subs="+attributes",console]
 ----
 kubectl get clusteradmissionpolicy.policies.kubewarden.io/privileged-pods
 ----
 
-Sie sollten die folgende Ausgabe sehen:
+You should see the following output:
 
 [subs="+attributes",console]
 ----
@@ -366,18 +323,21 @@ NAME              POLICY SERVER   MUTATING   STATUS
 privileged-pods   default         false      pending
 ----
 
-Sobald die neue Richtlinie bereit ist, registriert die `kubewarden-controller` ein
+Once the new policy is ready, the `admission-controller`
+registers a
 https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.33/#validatingwebhookconfiguration-v1-admissionregistration-k8s-io[ValidatingWebhookConfiguration]
-Objekt, um sie bereitzustellen.
+object to serve it.
 
-Der {cluster-admission-policy} Status wird `active`, sobald die Implementierung für jede `PolicyServer` Instanz abgeschlossen ist. Zeigen Sie {validating-webhook-configuration}s mit folgendem Befehl an:
+The {cluster-admission-policy} status becomes `active` once the Deployment
+completes for every `PolicyServer` instance. Show
+{validating-webhook-configuration}s with the following command:
 
 [subs="+attributes",console]
 ----
 kubectl get validatingwebhookconfigurations.admissionregistration.k8s.io -l kubewarden
 ----
 
-Sie sollten die folgende Ausgabe sehen:
+You should see the following output:
 
 [subs="+attributes",console]
 ----
@@ -385,9 +345,10 @@ NAME                          WEBHOOKS   AGE
 clusterwide-privileged-pods   1          9s
 ----
 
-Sobald der {cluster-admission-policy} aktiv ist und der {validating-webhook-configuration} registriert ist, können Sie die Richtlinie testen.
+Once the {cluster-admission-policy} is active and the
+{validating-webhook-configuration} registers, you can test the policy.
 
-Zuerst können Sie einen Pod mit einem Container _not_ im `privileged`-Modus erstellen:
+First, you can create a Pod with a Container _not_ in `privileged` mode:
 
 [subs="+attributes",console]
 ----
@@ -403,16 +364,16 @@ spec:
 EOF
 ----
 
-Dies erzeugt die folgende Ausgabe:
+This produces the following output:
 
 [subs="+attributes",console]
 ----
 pod/unprivileged-pod created
 ----
 
-Der Pod wurde erfolgreich erstellt.
+The Pod is successfully created.
 
-Jetzt können Sie einen Pod mit mindestens einem Container `privileged` Flag erstellen:
+Now, you can create a Pod with at least one Container `privileged` flag:
 
 [subs="+attributes",console]
 ----
@@ -430,7 +391,7 @@ spec:
 EOF
 ----
 
-Die Richtlinie verweigert die Erstellung des Pods und Sie sollten die folgende Nachricht sehen:
+The policy denies creation of the Pod and you should see the following message:
 
 [subs="+attributes",console]
 ----
@@ -440,78 +401,63 @@ Error from server: error when creating "STDIN": admission webhook "clusterwide-p
 [NOTE]
 ====
 
-Beide Beispiele haben kein `namespace` definiert, was bedeutet, dass der `default` Namespace das Ziel war. Wie Sie im zweiten Beispiel sehen konnten, wird die Richtlinie dennoch angewendet. Wie bereits erwähnt, liegt das daran, dass der Geltungsbereich clusterweit ist und nicht auf einen bestimmten Namespace abzielt.
+Both examples didn't define a `namespace`, which means the `default` namespace
+was the target. However, as you could see in the second example, the policy is
+still applied. As stated previously, this is due to the scope being cluster-wide and
+not targeting a specific namespace.
 
 ====
 
 
-== Deinstallieren
+== Uninstall
 
-Sie können die Ressourcen entfernen, die durch das Deinstallieren der `helm` Charts erstellt wurden, wie folgt:
-
-[subs="+attributes",console]
-----
-helm uninstall --namespace kubewarden kubewarden-defaults
-----
+Uninstall the Helm chart as follows:
 
 [subs="+attributes",console]
 ----
-helm uninstall --namespace kubewarden kubewarden-controller
+helm uninstall --namespace {admc-namespace} {admc-release}
 ----
+
+Uninstalling the Helm chart removes:
+
+* The controller Deployment
+* Managed defaults such as the PolicyServer `default` and recommended policies
+* ConfigMaps, Secrets, Services, Deployments that make all PolicyServers be effective
+
+It does not remove:
+
+- CRDs (kept by `helm.sh/resource-policy: keep`)
+- User-managed PolicyServers and policies
+
+The user-managed custom resources are kept on purpose. Re-installing the chart
+deploys the controller, which reconciles them, and activates them back.
+
+To remove all user-managed custom resources and the CRDs do:
 
 [subs="+attributes",console]
 ----
-helm uninstall --namespace kubewarden kubewarden-crds
+kubectl delete crd policyservers.policies.kubewarden.io
+kubectl delete crd clusteradmissionpolicies.policies.kubewarden.io
+kubectl delete crd admissionpolicies.policies.kubewarden.io
+kubectl delete crd clusteradmissionpolicygroups.policies.kubewarden.io
+kubectl delete crd admissionpolicygroups.policies.kubewarden.io
 ----
 
-Nach der Entfernung der `helm` Charts entfernen Sie den Kubernetes-Namespace, der zum Bereitstellen des {admc-short-name} Stacks verwendet wurde:
+== Wrapping up
 
-[subs="+attributes",console]
-----
-kubectl delete namespace kubewarden
-----
+{cluster-admission-policy} is the core resource that a cluster operator has to
+manage. The `{admc-release}` module automatically takes care of the
+configuration for the rest of the resources needed to run the policies.
 
-[CAUTION]
-====
+== What's next?
 
-{admc-short-name} enthält einen Helm-Vorab-Lösch-Hook, der alle `PolicyServer`s und `kubewarden-controller`s entfernt. Dann löscht der `kubewarden-controller` alle Ressourcen, daher ist es wichtig, dass `kubewarden-controller` läuft, wenn helm uninstall ausgeführt wird.
+Now, you are ready to learn more about the {admc-short-name}! Have a look at the policies on
+https://artifacthub.io/packages/search?kind=13[artifacthub.io], on
+https://github.com/topics/kubewarden-policy[GitHub], or reuse existing Rego
+policies as shown in the xref:tutorials/writing-policies/rego/01-intro-rego.adoc[following
+chapters].
 
-====
-
-
-{admc-short-name} löscht {validating-webhook-configuration}s und {mutating-webhook-configuration}s. Überprüfen Sie dies mit:
-
-[subs="+attributes",console]
-----
-kubectl get validatingwebhookconfigurations.admissionregistration.k8s.io -l "kubewarden"
-----
-
-[subs="+attributes",console]
-----
-kubectl get mutatingwebhookconfigurations.admissionregistration.k8s.io -l "kubewarden"
-----
-
-Wenn diese Ressourcen nicht automatisch entfernt werden, entfernen Sie sie manuell mit dem folgenden Befehl:
-
-[subs="+attributes",console]
-----
-kubectl delete -l "kubewarden" validatingwebhookconfigurations.admissionregistration.k8s.io
-----
-
-[subs="+attributes",console]
-----
-kubectl delete -l "kubewarden" mutatingwebhookconfigurations.admissionregistration.k8s.io
-----
-
-== Zusammenfassung
-
-{cluster-admission-policy} ist die Kernel-Ressource, die ein Cluster-Operator verwalten muss. Das `kubewarden-controller` Modul kümmert sich automatisch um die Konfiguration der restlichen Ressourcen, die benötigt werden, um die Richtlinien auszuführen.
-
-== Weitere Schritte
-
-Jetzt sind Sie bereit, {admc-short-name} bereitzustellen! Werfen Sie einen Blick auf die Richtlinien auf https://artifacthub.io/packages/search?kind=13[artifacthub.io], auf https://github.com/topics/kubewarden-policy[GitHub] oder verwenden Sie vorhandene Rego-Richtlinien, wie in den xref:tutorials/writing-policies/rego/01-intro-rego.adoc[folgenden Kapiteln] gezeigt.
-
-.Vollständige Liste der verfügbaren Richtlinien auf ArtifactHub
+.Small selection of available policies on ArtifactHub
 [%collapsible,subs="+macros"]
 ======
 

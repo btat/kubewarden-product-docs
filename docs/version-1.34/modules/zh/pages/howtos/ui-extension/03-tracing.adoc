@@ -13,7 +13,7 @@ include::partial$variables.adoc[]
 跟踪允许收集有关策略评估的详细信息。
 这是一个非常有用的工具，可用于调试您在 {project-name} 部署及相关策略中出现的问题。
 
-{short-project-name}使用https://www.jaegertracing.io/[Jaeger]来接收、存储和可视化跟踪事件。
+{short-project-name}使用link:https://www.jaegertracing.io/[Jaeger]来接收、存储和可视化跟踪事件。
 
 *_策略跟踪日志_* image:ui_policy_tracing.png[UI策略跟踪日志]
 
@@ -62,7 +62,7 @@ telemetry:
 
 为了简单起见，我们不对OpenTelemetry收集器与Jaeger端点之间的通信进行加密。
 
-这对于生产部署是*不合适的*。您应该阅读Jaeger的https://www.jaegertracing.io/docs/latest/kubernetes/[文档]。
+这对于生产部署是*不合适的*。您应该阅读Jaeger的link:https://www.jaegertracing.io/docs/latest/kubernetes/[文档]。
 
 ====
 

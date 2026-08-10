@@ -27,6 +27,7 @@ Le traçage vous permet de collecter des détails précis sur les évaluations d
 
 Vous utilisez https://www.jaegertracing.io/[Jaeger] -- qui sert à recevoir, stocker et visualiser les événements de traçage.
 
+[#_install_jaeger]
 == Installer Jaeger
 
 Vous utilisez le https://github.com/jaegertracing/jaeger-operator[Jaeger Operator]

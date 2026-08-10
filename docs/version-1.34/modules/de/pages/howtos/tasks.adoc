@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{project-name}", "kubewarden", "kubernetes", "kwctl", "Richtlinie", "Richtlinienspeicher", "Clusterzulassungsrichtlinie", "Zulassungsrichtlinie"]
 :current-version: {page-origin-branch}
 
-Dies beschreibt allgemeine Aufgaben, nachdem Sie xref:quick-start.adoc#installation[installieren {project-name}] in Ihrem Kubernetes-Cluster.
+Dies beschreibt allgemeine Aufgaben, nachdem Sie xref:quick-start.adoc#_installation[installieren {project-name}] in Ihrem Kubernetes-Cluster.
 
 Die einzelnen Aufgaben sind in einer logischen Reihenfolge angeordnet.
 

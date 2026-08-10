@@ -71,12 +71,14 @@ Diese Tabelle bietet einen Vergleich zwischen OPA Gatekeeper und {admc-short-nam
 | ✅
 |===
 
+[#_types_of_policies]
 == Richtlinientypen
 
 Sowohl OPA Gatekeeper als auch Kubernetes können Validierungs- und Mutationsrichtlinien schreiben.
 
 Diese Richtlinien können auf jede Art von Kubernetes-Ressource abzielen, einschließlich benutzerdefinierter Ressourcen.
 
+[#_writing_policies]
 == Richtlinien schreiben
 
 Sie schreiben OPA Gatekeeper-Richtlinien mit https://www.openpolicyagent.org/docs/latest/#rego[Rego]. Rego ist eine Abfragesprache, die vom Open Policy Agent-Projekt erstellt wurde.
@@ -103,6 +105,7 @@ Trotz der Verwendung derselben Sprache sind für kube-mgmt geschriebene Richtlin
 ====
 
 
+[#_context_aware]
 == Kontextbewusst
 
 Manchmal benötigt eine Richtlinie Daten über den aktuellen Zustand des Clusters, um eine Validierungs- oder Mutationsentscheidung zu treffen. Zum Beispiel könnte eine Richtlinie, die Ingress-Ressourcen validiert, wissen müssen, welche anderen Ingress-Ressourcen bereits im Cluster definiert sind, um sicherzustellen, dass keine Konflikte auftreten. {admc-short-name} bezeichnet diese Richtlinien als "kontextbewusst".
@@ -118,6 +121,7 @@ Wenn eine OPA Gatekeeper-Richtlinie beispielsweise Zugriff auf Kubernetes-Secret
 Umgekehrt bietet {admc-short-name} einen granularen Zugriff auf Clusterressourcen.
 Jede Richtlinie hat nur Zugriff auf die Ressourcen, die der Kubernetes-Administrator angibt. Der Versuch, unbefugte Daten zu lesen, wird sofort blockiert und den Clusteradministratoren gemeldet.
 
+[#_kubernetes_integration]
 == Kubernetes-Integration
 
 OPA Gatekeeper hat eine clusterweite benutzerdefinierte Ressource, die die Definition von Richtlinien sowie deren Durchsetzung und Standort ermöglicht.
@@ -128,6 +132,7 @@ Richtlinien, die über eine `AdmissionPolicy` Ressource bereitgestellt werden, b
 
 Dies ermöglicht es Kubernetes-Administratoren, die mit Richtlinien verbundenen Arbeiten zu delegieren.
 
+[#_policy_distribution]
 == Richtlinienverteilung
 
 OPA Gatekeeper und {admc-short-name} Richtlinien haben den Quellcode der Richtlinie (Rego für OPA Gatekeeper, CEL für {admc-short-name}) in der benutzerdefinierten Ressource, die eine Richtlinie in Kubernetes definiert.
@@ -138,6 +143,7 @@ Sie können {admc-short-name} Richtlinien mit Container-Image-Tools wie `cosign`
 
 Sie können {admc-short-name} Richtlinien zwischen geografisch verteilten Container-Registries mit den traditionellen Werkzeugen und Prozessen verteilen, die für Container-Images übernommen wurden.
 
+[#_cicd_integration]
 == CI/CD-Integration
 
 Sowohl OPA Gatekeeper als auch {admc-short-name} werden mit GitOps-Methoden verwaltet.
@@ -156,6 +162,7 @@ Kubernetes-Administratoren warten typischerweise andere Automatisierungspipeline
 
 Die Pipeline testet die Richtlinie gegen verschiedene Arten von Anfragen. Sie können die Tests mit dem https://github.com/kubewarden/kwctl[`kwctl`] CLI-Tool durchführen, ohne dass ein laufender Kubernetes-Cluster erforderlich ist. Das `kwctl` CLI-Tool verwendet die gleiche Bewertungs-Engine, die auch vom {admc-short-name} Stack verwendet wird, der in einem Kubernetes-Cluster bereitgestellt wird.
 
+[#_policy_enforcement_modes]
 == Richtliniendurchsetzungsmodi
 
 Sowohl OPA Gatekeeper als auch {admc-short-name} können Richtlinien mit zwei verschiedenen Betriebsmodi bereitstellen:
@@ -163,6 +170,7 @@ Sowohl OPA Gatekeeper als auch {admc-short-name} können Richtlinien mit zwei ve
 * `deny`: Verletzung einer Richtlinie lehnt die Anfrage ab
 * `warn`: Verletzung einer Richtlinie führt nicht zur Ablehnung und wird protokolliert
 
+[#_deployment_mode]
 == Bereitstellungsmodus
 
 Der gleiche Server bewertet alle OPA Gatekeeper-Richtlinien. Im Gegensatz dazu erlaubt {admc-short-name} die Definition mehrerer Bewertungsserver. Sie definieren diese Server durch eine benutzerdefinierte Ressource namens `PolicyServer`.
@@ -184,6 +192,7 @@ Dies ermöglicht interessante Szenarien wie die folgenden:
 * Stellen Sie kritische Richtlinien auf einem dedizierten Policy-Server-Pool bereit.
 * Stellen Sie die Richtlinien eines lärmenden Mandanten auf einem dedizierten Policy-Server-Pool bereit.
 
+[#_background_checks]
 == Hintergrundprüfungen
 
 Da Richtlinien hinzugefügt, entfernt und neu konfiguriert werden, könnten die bereits im Cluster vorhandenen Ressourcen nicht mehr konform sein.

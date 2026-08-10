@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Réutilisation des ValidatingAdmissionPolicies
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :description: Découvrez comment réutiliser et valider des stratégies d'admission dans Kubernetes en utilisant {admc-name} (cel-policy).
 :doc-persona: ["kubewarden-policy-developer", "kubewarden-operator"]

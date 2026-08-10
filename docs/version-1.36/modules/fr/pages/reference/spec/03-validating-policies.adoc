@@ -48,6 +48,7 @@ Il ressemble à :
 
 La clé `settings` pointe vers un document JSON au format libre contenant les paramètres spécifiques à la stratégie. Le chapitre précédent était axé sur les stratégies et les paramètres.
 
+[#_an_example]
 == Un exemple
 
 Étant donné le `AdmissionReview` Kubernetes suivant :

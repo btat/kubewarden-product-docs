@@ -23,6 +23,7 @@ xref:howtos/telemetry/10-opentelemetry-qs.adoc#_install_opentelemetry[OpenTeleme
 
 您使用 https://prometheus.io/[Prometheus] 来收集策略服务器暴露的指标。
 
+[#_install_prometheus]
 == 安装 Prometheus
 
 您使用 https://github.com/prometheus-operator/prometheus-operator[Prometheus
@@ -194,7 +195,7 @@ kubectl port-forward -n prometheus --address 0.0.0.0 svc/prometheus-grafana 8080
 curl https://github.com/kubewarden/policy-server/releases/latest/download/kubewarden-dashboard.json
 ----
 
-一旦您拥有该文件，您应该访问 Grafana 仪表板并https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard[导入它]。在 Grafana 仪表板中访问 `/dashboard/import` 并按照以下步骤操作：
+一旦您拥有该文件，您应该访问 Grafana 仪表板并link:https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard[导入它]。在 Grafana 仪表板中访问 `/dashboard/import` 并按照以下步骤操作：
 
 . 将 JSON 文件的内容复制并粘贴到 Grafana UI 中的 `Import via panel json` 框中。
 . 单击 `Load` 按钮。

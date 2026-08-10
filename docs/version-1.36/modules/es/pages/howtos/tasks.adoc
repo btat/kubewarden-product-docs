@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = Tareas habituales
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Gestiona políticas en tu clúster de Kubernetes con {admc-name} utilizando la herramienta CLI kwctl.
 :doc-persona: ["kubewarden-all"]
@@ -12,7 +12,7 @@ include::partial$variables.adoc[]
 :current-version: {page-origin-branch}
 
 Esto describe tareas habituales para después de que tú
-xref:quick-start.adoc#installation[instales {admc-name}] en tu clúster de Kubernetes.
+xref:quick-start.adoc#_installation[instales {admc-name}] en tu clúster de Kubernetes.
 
 Las tareas separadas están en un orden lógico.
 
@@ -35,7 +35,7 @@ image::tasks-artifact-hub.png[Hub de Artefactos]
 [NOTE]
 ====
 
-Anteriormente, las directivas de {admc-short-name} podían encontrarse en el https://hub.kubewarden.io[{admc-short-name} Hub de Políticas]. Esto ha sido
+Anteriormente, las directivas de {admc-short-name} podían encontrarse en el https://hub.kubewarden.io[{admc-short-name} Hub de Políticas]. Esto ha sido
 https://www.kubewarden.io/blog/2022/07/artifact-hub-supports-kubewarden/[retirado].
 Las políticas ahora están disponibles desde
 https://artifacthub.io/packages/search?kind=13&sort=relevance&page=1[https://artifacthub.io].

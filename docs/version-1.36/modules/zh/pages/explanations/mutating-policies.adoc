@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 变更策略
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :description: 根据预定义设置，在ClusterAdmissionPolicy中配置并管理变更策略以重建请求。
 :doc-persona: ["kubewarden-policy-developer", "kubewarden-integrator"]
@@ -91,7 +91,7 @@ EOF
 clusteradmissionpolicy.policies.kubewarden.io/psp-user-group created
 ----
 
-您使用https://github.com/kubewarden/user-group-psp-policy[`psp-user-group`]策略来控制容器中的用户和组，并可以变更请求。在前面的示例中，您设置了`runAsUser`字段，并将其添加到容器`securityContext`部分。
+您使用link:https://github.com/kubewarden/user-group-psp-policy[`psp-user-group`]策略来控制容器中的用户和组，并可以变更请求。在前面的示例中，您设置了`runAsUser`字段，并将其添加到容器`securityContext`部分。
 
 由于`mutating`字段是`true`，以下请求成功：
 

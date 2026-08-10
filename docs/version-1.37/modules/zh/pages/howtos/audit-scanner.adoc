@@ -36,7 +36,7 @@ helm install kubewarden-crds kubewarden/kubewarden-crds
 
 [NOTE]
 ====
-使用 Kubewarden 1.33，审计扫描器功能默认将报告保存到来自 [openreports.io](https://openreports.io) 的 OpenReports CRDs 中。
+使用 Kubewarden 1.33，审计扫描器功能默认将报告保存到来自 https://openreports.io[openreports.io] 的 OpenReports CRDs 中。
 
 来自 K8s 策略工作组的 link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] CRDs 默认未安装，标记为弃用，并将在未来版本中移除。
 
@@ -89,7 +89,7 @@ helm install kubewarden-controller kubewarden/kubewarden-controller
 
 ==== 入口
 
-用户可以提供自己的入口配置，或通过子图表配置在https://github.com/kyverno/policy-reporter/blob/policy-reporter-2.19.4/charts/policy-reporter/charts/ui/values.yaml#L172-L189[这里]启用入口。
+用户可以提供自己的入口配置，或通过子图表配置在link:https://github.com/kyverno/policy-reporter/blob/policy-reporter-2.19.4/charts/policy-reporter/charts/ui/values.yaml#L172-L189[这里]启用入口。
 
 请参见以下子图表的入口配置示例：
 

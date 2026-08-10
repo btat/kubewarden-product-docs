@@ -53,7 +53,7 @@ include::partial$variables.adoc[]
 }
 ----
 
-エンドツーエンドテストケースは、Kubernetes AdmissionReviewを含むJSONファイルを使用します。これらのAdmissionReviewを含むJSONオブジェクトは、Kubernetes APIに対して送信され、xref:/reference/spec/03-validating-policies.adoc#an-example[検証されます]。
+エンドツーエンドテストケースは、Kubernetes AdmissionReviewを含むJSONファイルを使用します。これらのAdmissionReviewを含むJSONオブジェクトは、Kubernetes APIに対して送信され、xref:/reference/spec/03-validating-policies.adoc#_an_example[検証されます]。
 
 AdmissionReviews JSONオブジェクトは、`kwctl scaffold admission-request`を使用して取得できます。
 Podを含むAdmissionRequest JSONを確認するには、`test_data/pod.json`をご覧ください。
@@ -256,5 +256,5 @@ e2e.bats
 
 [TIP]
 ====
-より包括的なエンドツーエンドテストの例については、https://github.com/kubewarden/policy-sdk-js/blob/main/demo_policy/e2e.bats[policy-sdk-jsのソースコード]を参照してください。これは、各{short-project-name}のホスト機能を示す広範なe2eテストを含んでいます。これらのテストは、ネットワーキング、暗号操作、OCIレジストリとの相互作用など、より高度なポリシー機能をテストするためのインスピレーションとして役立ちます。
+より包括的なエンドツーエンドテストの例については、link:https://github.com/kubewarden/policy-sdk-js/blob/main/demo_policy/e2e.bats[policy-sdk-jsのソースコード]を参照してください。これは、各{short-project-name}のホスト機能を示す広範なe2eテストを含んでいます。これらのテストは、ネットワーキング、暗号操作、OCIレジストリとの相互作用など、より高度なポリシー機能をテストするためのインスピレーションとして役立ちます。
 ====

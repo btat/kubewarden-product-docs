@@ -19,7 +19,7 @@ Swiftは、新人にとって親しみやすく、専門家にとって強力な
 それは速く、現代的で、安全で、書くのが楽しいです。
 ____
 
-SwiftコンパイラはまだWebAssemblyサポートを持っていませんが、https://swiftwasm.org/[SwiftWasm]プロジェクトはこの機能を持つパッチを当てたコンパイラを提供しています。
+SwiftコンパイラはまだWebAssemblyサポートを持っていませんが、link:https://swiftwasm.org/[SwiftWasm]プロジェクトはこの機能を持つパッチを当てたコンパイラを提供しています。
 
 SwiftWasmチームは、これらの変更をSwiftプロジェクトに統合する作業を行っています。
 その間、SwiftWasmプロジェクトが提供するツールチェーンを使用して{project-name}ポリシーを構築できます。

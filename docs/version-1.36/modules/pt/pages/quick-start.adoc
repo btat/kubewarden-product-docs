@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Início rápido
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Entenda a {admc-name} pilha aprendendo a implantar e gerenciar seus principais componentes, incluindo PolicyServers e recursos de ClusterAdmissionPolicy.
 :doc-persona: ["kubewarden-all"]
@@ -56,6 +56,7 @@ A pilha {admc-name} é composta por:
 ====
 
 
+[#_installation]
 == Instalação
 
 [IMPORTANT]
@@ -89,7 +90,7 @@ helm repo update kubewarden
 
 Instale os seguintes gráficos Helm no namespace `kubewarden` em seu cluster Kubernetes:
 
-* `kubewarden-crds`, que registra as definições de recursos personalizados {cluster-admission-policy}, {admission-policy} e {policy-server}. Além disso, as definições de recursos personalizados {report} usadas pelo scanner de auditoria.
+* `kubewarden-crds`, que registra as definições de recursos personalizados {cluster-admission-policy}, {admission-policy} e {policy-server}. Além disso, as definições de recursos personalizados {policy-report} usadas pelo scanner de auditoria.
 * `kubewarden-controller`, que instala o controlador {admc-short-name} e o scanner de auditoria.
 +
 [NOTE]
@@ -308,6 +309,7 @@ Além disso, não há diferenças funcionais entre os recursos {admission-policy
 
 A documentação completa desses Recursos Personalizados está https://github.com/kubewarden/kubewarden-controller/blob/main/docs/crds/README.asciidoc[aqui] ou em https://doc.crds.dev/github.com/kubewarden/kubewarden-controller[docs.crds.dev].
 
+[#_example_enforce_your_first_policy]
 == Exemplo: Imponha sua primeira política
 
 Usaremos a política https://github.com/kubewarden/pod-privileged-policy[`pod-privileged`].

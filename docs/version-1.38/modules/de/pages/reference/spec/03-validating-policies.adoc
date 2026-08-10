@@ -46,6 +46,7 @@ Es sieht aus wie:
 
 Der `settings` Schlüssel verweist auf ein Freiform-JSON-Dokument, das die richtlinenspezifischen Einstellungen enthält. Das vorherige Kapitel konzentrierte sich auf Richtlinien und Einstellungen.
 
+[#_an_example]
 == Ein Beispiel
 
 Betrachten Sie folgendes Kubernetes `AdmissionReview`:

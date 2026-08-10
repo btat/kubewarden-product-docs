@@ -58,6 +58,7 @@ De plus, les stratégies dans {short-project-name} prennent désormais en charge
 
 Consultez la documentation des auteurs de la stratégie xref:tutorials/writing-policies/index.adoc[documentation] pour plus d'informations.
 
+[#_permissions_and_serviceaccounts]
 == Permissions et ServiceAccounts
 
 Le Kubewarden audit scanner dans {short-project-name} nécessite des configurations spécifiques de contrôle d'accès en fonction du rôle (RBAC) pour pouvoir scanner les ressources Kubernetes et enregistrer les résultats. L'installation crée un ServiceAccount par défaut correct avec ces permissions. L'utilisateur peut créer son propre ServiceAccount pour configurer l'accès aux ressources.

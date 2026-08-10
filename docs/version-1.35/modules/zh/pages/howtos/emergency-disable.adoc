@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 紧急禁用
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-04-30
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :sidebar_label: 紧急禁用
 :sidebar_position: 31

@@ -13,7 +13,7 @@ include::partial$variables.adoc[]
 :sidebar_position: 80
 :current-version: {page-origin-branch}
 
-Das Team von {project-name} schätzt die Ermittlungsarbeit zu Schwachstellen, die von gut gemeinten, ethischen Sicherheitsforschern durchgeführt wird. {short-project-name} folgt der Praxis der [verantwortungsvollen Offenlegung](https://en.wikipedia.org/wiki/Responsible_disclosure), um die Benutzerbasis von {short-project-name} bestmöglich vor den Auswirkungen von Sicherheitsproblemen zu schützen. Auf der Seite von {short-project-name} bedeutet dies:
+Das Team von {project-name} schätzt die Ermittlungsarbeit zu Schwachstellen, die von gut gemeinten, ethischen Sicherheitsforschern durchgeführt wird. {short-project-name} folgt der Praxis der https://en.wikipedia.org/wiki/Responsible_disclosure[verantwortungsvollen Offenlegung], um die Benutzerbasis von {short-project-name} bestmöglich vor den Auswirkungen von Sicherheitsproblemen zu schützen. Auf der Seite von {short-project-name} bedeutet dies:
 
 * {short-project-name} reagiert prioritär auf Sicherheitsvorfälle.
 * {short-project-name} veröffentlicht Korrekturen für Probleme, sobald dies praktikabel ist, wobei nach Risiko priorisiert wird.
@@ -21,7 +21,7 @@ Das Team von {project-name} schätzt die Ermittlungsarbeit zu Schwachstellen, di
 
 Wenn Sie eine Schwachstelle in {short-project-name} gefunden haben, ist der einfachste Weg, eine Schwachstelle zu melden, über den https://github.com/kubewarden/community/security/advisories[Security-Tab auf GitHub]. Dieser Mechanismus ermöglicht es den Betreuern, privat mit Ihnen zu kommunizieren, und Sie müssen Ihre Nachrichten nicht verschlüsseln.
 
-Alternativ können Sie es verantwortungsvoll offenlegen, indem Sie eine E-Mail an xref:mailto:cncf-kubewarden-maintainers@lists.cncf.io.adoc[cncf-kubewarden-maintainers@lists.cncf.io] in einer *unverschlüsselten* Nachricht senden. Bitte diskutieren Sie potenzielle Schwachstellen nicht öffentlich, ohne dies vorher mit uns abzuklären.
+Alternativ können Sie es verantwortungsvoll offenlegen, indem Sie eine E-Mail an mailto:cncf-kubewarden-maintainers@lists.cncf.io[cncf-kubewarden-maintainers@lists.cncf.io] in einer *unverschlüsselten* Nachricht senden. Bitte diskutieren Sie potenzielle Schwachstellen nicht öffentlich, ohne dies vorher mit uns abzuklären.
 
 Sie können auch in unserem https://kubernetes.slack.com/archives/C03L52JRAFM[Slack-Raum] auf dem Kubernetes Slack-Server vorbeikommen.
 

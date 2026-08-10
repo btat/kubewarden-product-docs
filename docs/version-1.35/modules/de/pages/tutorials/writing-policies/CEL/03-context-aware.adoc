@@ -53,8 +53,8 @@ spec:
 
 ----
 
-Jetzt müssen wir den CEL-Code schreiben, der die vorhandenen Ingresses im Cluster abruft. Dafür verwenden wir die [{short-project-name} CEL-Erweiterungsbibliothek](https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities).
-Insbesondere die `kw.k8s` Hostfähigkeiten, die es uns ermöglichen, das Cluster nach GroupVersionKinds abzufragen. Sie können die verfügbaren Dokumente für die CEL-Funktionen [hier](https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library) einsehen.
+Jetzt müssen wir den CEL-Code schreiben, der die vorhandenen Ingresses im Cluster abruft. Dafür verwenden wir die https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{short-project-name} CEL-Erweiterungsbibliothek].
+Insbesondere die `kw.k8s` Hostfähigkeiten, die es uns ermöglichen, das Cluster nach GroupVersionKinds abzufragen. Sie können die verfügbaren Dokumente für die CEL-Funktionen https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library[hier] einsehen.
 
 Die Bibliothek verwendet ein Builder-Schema, genau wie die Upstream-Kubernetes-CEL-Erweiterungen; das Aufrufen einer CEL-Funktionsmethode gibt ein CEL-Objekt zurück, das seinerseits spezifische Funktionsmethoden hat. Dies vereinfacht die Gewissheit über den Umfang und die Rückgaben unseres CEL-Codes.
 

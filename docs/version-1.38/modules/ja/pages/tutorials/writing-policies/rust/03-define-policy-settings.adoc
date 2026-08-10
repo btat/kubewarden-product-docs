@@ -50,7 +50,7 @@ impl kubewarden::settings::Validatable for Settings {
 == ユニットテストを追加
 
 これで、設定検証が機能していることを確認するためのユニットテストを書くことができます。
-これは、https://doc.rust-lang.org/stable/book/ch11-00-testing.html[通常のRustの方法]で行うことができます。
+これは、link:https://doc.rust-lang.org/stable/book/ch11-00-testing.html[通常のRustの方法]で行うことができます。
 
 `src/settings.rs`ファイルの下部には、すでにいくつかのデフォルトテストがあります。自動生成されたコードを次のように置き換えます：
 

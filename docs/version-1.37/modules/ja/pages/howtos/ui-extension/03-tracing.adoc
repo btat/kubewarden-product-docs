@@ -13,7 +13,7 @@ include::partial$variables.adoc[]
 トレースによって、ポリシー評価に関する詳細な情報を収集できます。
 これは、{admc-name}のデプロイメントやポリシーに関する問題をデバッグするのに便利なツールです。
 
-{admc-short-name}はhttps://www.jaegertracing.io/[Jaeger]を使用して、トレースイベントを受信、保存、視覚化します。
+{admc-short-name}はlink:https://www.jaegertracing.io/[Jaeger]を使用して、トレースイベントを受信、保存、視覚化します。
 
 *_ポリシートレースログ_*image:ui_policy_tracing.png[UIポリシートレースログ]
 
@@ -62,7 +62,7 @@ telemetry:
 
 簡単のために、OpenTelemetryコレクターとJaegerエンドポイント間の通信を暗号化していません。
 
-これは*本番デプロイメントには不適切です*。Jaegerのhttps://www.jaegertracing.io/docs/latest/kubernetes/[ドキュメント]を読むべきです。
+これは*本番デプロイメントには不適切です*。Jaegerのlink:https://www.jaegertracing.io/docs/latest/kubernetes/[ドキュメント]を読むべきです。
 
 ====
 

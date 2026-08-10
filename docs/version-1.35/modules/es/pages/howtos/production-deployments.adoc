@@ -140,6 +140,7 @@ Kubernetes ya incluye dos PriorityClasses que son buenos candidatos: `system-clu
 Si eliminas una PriorityClass, los Pods existentes que utilizan el nombre de la PriorityClass eliminada permanecen sin cambios, pero los siguientes Pods que utilizan el nombre de la PriorityClass eliminada no serán creados por Kubernetes.
 ====
 
+[#_policyserver_production_configuration]
 == `PolicyServer`Configuración de producción
 
 `PolicyServers` son críticos para el clúster. La fiabilidad de ellos es importante ya que procesan las Solicitudes de Admisión destinadas a la API de Kubernetes a través de los Webhooks de Validación y Mutación.

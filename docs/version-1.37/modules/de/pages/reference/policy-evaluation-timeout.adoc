@@ -47,7 +47,7 @@ Alle Werte der pro-Richtlinie-Zeitlimits, des pro-Policy-Server-Zeitlimits und d
 
 ### Pro Richtlinie
 
-Beginnend mit {admc-short-name} v1.29.0 kann jede {admc-short-name}-Richtlinie ihr eigenes Zeitlimit über ihr `spec.timeoutEvalSeconds`-Attribut festlegen. Dies ist nicht zu verwechseln mit `spec.timeoutSeconds`, das für das Webhook-Zeitlimit verwendet wird (siehe Abschnitt [unten](#comparison-with-kubernetes-dynamic-admission-controller-timeout)).
+Beginnend mit {admc-short-name} v1.29.0 kann jede {admc-short-name}-Richtlinie ihr eigenes Zeitlimit über ihr `spec.timeoutEvalSeconds`-Attribut festlegen. Dies ist nicht zu verwechseln mit `spec.timeoutSeconds`, das für das Webhook-Zeitlimit verwendet wird (siehe Abschnitt <<_comparison_with_kubernetes_dynamic_admission_controller_timeout,unten>>).
 
 Das `spec.timeoutEvalSeconds` ist feingranular und ermöglicht eine Anpassung des Zeitlimits pro Richtlinie.
 
@@ -124,6 +124,7 @@ spec:
       value: "3"
 ----
 
+[#_comparison_with_kubernetes_dynamic_admission_controller_timeout]
 == Vergleich mit dem Timeout des Kubernetes Dynamic Admission Controllers
 
 {admc-short-name} ist eine https://en.wikipedia.org/wiki/Webhook[Webhook] Implementierung des https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/[Kubernetes Dynamic Admission Controllers].

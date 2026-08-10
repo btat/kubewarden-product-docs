@@ -12,7 +12,7 @@ include::partial$variables.adoc[]
 :sidebar_position: 8
 :current-version: {page-origin-branch}
 
-{short-project-name}のドキュメントに問題がある場合や新しいコンテンツを提案したい場合は、イシューを開いてください。https://github.com/join[GitHubアカウント]とブラウザへのアクセスが必要です。
+{short-project-name}のドキュメントに問題がある場合や新しいコンテンツを提案したい場合は、イシューを開いてください。link:https://github.com/join[GitHubアカウント]とブラウザへのアクセスが必要です。
 
 通常、{short-project-name}の新しいドキュメント作業はGitHubのイシューから始まります。
 ifeval::["{build-type}" == "community"]
@@ -37,7 +37,7 @@ endif::[]
 * イシュータブに移動し、*新しいイシュー*をクリックします。
 * 問題または改善提案を説明してください。詳細が多いほど、より良いです。
 * *新しいイシューを送信*をクリックしてください。
-* 問題を提出した後は、自分に割り当てるか、コミュニティメンバーがそれを引き受けるのを待つことができます。ドキュメントチームやコミュニティのメンバーは、あなたの問題に対処する前に明確化を求めることがあります。あなたは自分の問題を積極的に確認するか、https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notificationsGitHub通知をオンにするhttps://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notificationsべきです。
+* 問題を提出した後は、自分に割り当てるか、コミュニティメンバーがそれを引き受けるのを待つことができます。ドキュメントチームやコミュニティのメンバーは、あなたの問題に対処する前に明確化を求めることがあります。あなたは自分の問題を積極的に確認するか、link:https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notificationsGitHub[]通知をオンにするlink:https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications[]べきです。
 
 == 新しいコンテンツの提案
 

@@ -13,7 +13,7 @@ include::partial$variables.adoc[]
 
 {admc-name}の`cel-policy`は、xref:reference/spec/05-context-aware-policies.adoc[コンテキスト認識]機能をサポートしています。ポリシーは、クラスター情報を読み取り、ポリシー評価をトリガーしたリソース以外の既存リソースに基づいて意思決定を行う能力を持っています。
 
-これを実現するために、ポリシーに含まれているhttps://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{admc-short-name}のホスト機能のためのCEL拡張機能ライブラリ]を使用できます。
+これを実現するために、ポリシーに含まれているlink:https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{admc-short-name}のホスト機能のためのCEL拡張機能ライブラリ]を使用できます。
 
 == 例:一意のIngress
 
@@ -53,8 +53,8 @@ spec:
 
 ----
 
-今、クラスター内の既存のIngressを取得するCELコードを書く必要があります。そのために、[{admc-short-name} CEL拡張機能ライブラリ](https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities)を使用します。
-特に、グループバージョンKindをクエリすることを可能にする`kw.k8s`ホスト機能です。CEL関数の利用可能なドキュメントは[こちら](https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library)で確認できます。
+今、クラスター内の既存のIngressを取得するCELコードを書く必要があります。そのために、link:https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{admc-short-name} CEL拡張機能ライブラリ]を使用します。
+特に、グループバージョンKindをクエリすることを可能にする`kw.k8s`ホスト機能です。CEL関数の利用可能なドキュメントはlink:https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library[こちら]で確認できます。
 
 ライブラリは、アップストリームのKubernetes CEL拡張と同様にビルダーパターンを使用しており、CEL関数メソッドを呼び出すと、特定の関数メソッドを持つCELオブジェクトが返されます。これにより、私たちのCELコードの範囲と戻り値を確実にすることが簡素化されます。
 

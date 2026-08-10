@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Guía rápida de la extensión UI de Rancher
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-06-18
+:revdate: 2026-07-22
 :page-revdate: {revdate}
 :description: Aprende a instalar la {admc-name} UI como una extensión de Rancher Manager con una guía paso a paso a través del proceso de instalación.
 :doc-persona: ["kubewarden-operator", "kubewarden-integrator"]
@@ -19,7 +19,7 @@ Instalas la {admc-short-name} UI como una extensión global, sin embargo, instal
 [NOTE]
 ====
 
-Para instalaciones en entornos aislados, sigue xref:howtos/airgap/02-install.adoc[estos pasos].
+Para instalaciones en entornos aislados, sigue xref:howtos/airgap/01-requirements.adoc[estos pasos].
 
 ====
 

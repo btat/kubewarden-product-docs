@@ -36,7 +36,7 @@ helm install kubewarden-crds kubewarden/kubewarden-crds
 
 [NOTE]
 ====
-Con Kubewarden 1.33, la función Audit Scanner guarda los informes en los CRDs de OpenReports de [openreports.io](https://openreports.io) por defecto.
+Con Kubewarden 1.33, la función Audit Scanner guarda los informes en los CRDs de OpenReports de https://openreports.io[openreports.io] por defecto.
 
 Los CRDs de link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] del grupo de trabajo de políticas de K8s no están instalados por defecto, están marcados como obsoletos y serán eliminados en una futura versión.
 

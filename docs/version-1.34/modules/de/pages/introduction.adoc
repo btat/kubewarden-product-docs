@@ -71,6 +71,7 @@ Sie können {short-project-name}Richtlinien mit einem Standard-Webserver bereits
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == Anbieterneutralität
 
 {short-project-name} ist ein \link:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[anbieterneutrales] Projekt, wie von der CNCF definiert.

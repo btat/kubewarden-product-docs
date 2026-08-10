@@ -53,7 +53,7 @@ Par exemple, lors du test de la création d'une ressource Pod :
 }
 ----
 
-Le cas de test de bout en bout utilise un fichier JSON contenant un AdmissionReview Kubernetes. Ces objets JSON AdmissionReviews sont ceux qui sont envoyés contre l'API Kubernetes afin qu'ils soient xref:/reference/spec/03-validating-policies.adoc#an-example[validés].
+Le cas de test de bout en bout utilise un fichier JSON contenant un AdmissionReview Kubernetes. Ces objets JSON AdmissionReviews sont ceux qui sont envoyés contre l'API Kubernetes afin qu'ils soient xref:/reference/spec/03-validating-policies.adoc#_an_example[validés].
 
 Vous pouvez obtenir des objets JSON AdmissionReviews en utilisant `kwctl scaffold admission-request`.
 Jetez un œil à `test_data/pod.json` pour voir un AdmissionRequest JSON avec un Pod.

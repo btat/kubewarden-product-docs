@@ -12,7 +12,7 @@ include::partial$variables.adoc[]
 :sidebar_position: 40
 :current-version: {page-origin-branch}
 
-https://artifacthub.io/[Artifact Hub]は、ユーザーがhttps://cncf.io[CNCF]プロジェクトのパッケージや設定を見つけ、インストールし、公開できるウェブサイトです。
+https://artifacthub.io/[Artifact Hub]は、ユーザーがlink:https://cncf.io[CNCF]プロジェクトのパッケージや設定を見つけ、インストールし、公開できるウェブサイトです。
 
 {project-name}ポリシーはArtifact Hubに公開され、CNCFユーザーの広範なオーディエンスに発見可能になります。
 
@@ -31,7 +31,7 @@ Artifact Hubでは、コンテナイメージリポジトリをコンテナレ�
 
 Artifact Hubは、特別なメタデータファイルを探してGitリポジトリをクロールします。
 
-Gitリポジトリには異なる種類のレイアウトがあります。それらはすべて、https://artifacthub.io/docs/topics/repositories/#kubewarden-policies-repositories[公式Artifact Hubドキュメント]に詳細に文書化されています。
+Gitリポジトリには異なる種類のレイアウトがあります。それらはすべて、link:https://artifacthub.io/docs/topics/repositories/#kubewarden-policies-repositories[公式Artifact Hubドキュメント]に詳細に文書化されています。
 
 Artifact Hubは柔軟で、次のようにコードを整理することができます：
 
@@ -45,11 +45,11 @@ Artifact Hubは柔軟で、次のようにコードを整理することがで�
 
 == 公開手順
 
-ポリシーをArtifact Hubに公開する前に、https://artifacthub.io/[そこ]にアカウントを作成する必要があります。
+ポリシーをArtifact Hubに公開する前に、link:https://artifacthub.io/[そこ]にアカウントを作成する必要があります。
 
 ポリシーを公開する前に、Gitリポジトリが適切なレイアウトを持っていることを確認してください。必須の注釈が付いた適切にフォーマットされた`metadata.yml`を含めてください。
 
-これを手動で行いたい場合、`kwctl scaffold artifacthub`（バージョン`>= 1.23`）を実行して、`artifacthub-pkg.yml`ファイルを作成できます。このコマンドは、現在のパスにある`metadata.yml`を取得し、`artifacthub-pkg.yml`を出力します。`artifacthub-pkg.yml`には、特定のフォーマットに一致し、最新である必要がある`version:`、`createdAt:`などのフィールドが含まれています。`artifacthub-pkg.yml`のフォーマットはhttps://github.com/artifacthub/hub/blob/master/docs/metadata/artifacthub-pkg.yml[ここ]に記載されています。
+これを手動で行いたい場合、`kwctl scaffold artifacthub`（バージョン`>= 1.23`）を実行して、`artifacthub-pkg.yml`ファイルを作成できます。このコマンドは、現在のパスにある`metadata.yml`を取得し、`artifacthub-pkg.yml`を出力します。`artifacthub-pkg.yml`には、特定のフォーマットに一致し、最新である必要がある`version:`、`createdAt:`などのフィールドが含まれています。`artifacthub-pkg.yml`のフォーマットはlink:https://github.com/artifacthub/hub/blob/master/docs/metadata/artifacthub-pkg.yml[ここ]に記載されています。
 
 私たちのGitHub Actions >= `v4.0.0`を使用する場合、リリースワークフローは入力`artifacthub: true`で構成できます。そのように構成されている場合、成功したリリースの後（ポリシーが正常にビルド、署名、プッシュされた後）、私たちのGitHub Actionsは、`artifacthub-pkg.yml`を生成し、変更を`artifacthub`ブランチにコミットしてプッシュする最後のジョブを持っています。標準ファイルは常に`main`ブランチのものです。私たちのGitHub Actionsの以前のリリースの動作については、1.23以前のドキュメントバージョンを参照してください。
 
@@ -61,7 +61,7 @@ Artifact Hubは柔軟で、次のようにコードを整理することがで�
 ====
 
 
-すべてが整ったら、Artifact Hubにログインし、あなたのhttps://artifacthub.io/control-panel/repositories?page=1[コントロールプレーン]に移動します。
+すべてが整ったら、Artifact Hubにログインし、あなたのlink:https://artifacthub.io/control-panel/repositories?page=1[コントロールプレーン]に移動します。
 
 ポリシーをユーザーとして公開するか、所属するArtifact Hubの組織の下で公開するかを決定します。これは、正しい_"コントロールパネルコンテキスト"_を選択することで行います。
 
@@ -80,13 +80,13 @@ Artifact Hubは柔軟で、次のようにコードを整理することがで�
 
 [TIP]
 ====
-`artifacthub-repo.yml`ファイルのフォーマットはhttps://github.com/artifacthub/hub/blob/master/docs/metadata/artifacthub-repo.yml[こちら]で定義されています。
+`artifacthub-repo.yml`ファイルのフォーマットはlink:https://github.com/artifacthub/hub/blob/master/docs/metadata/artifacthub-repo.yml[こちら]で定義されています。
 
 今はこのファイルにさらなるカスタマイズを行う良い時期です。
 ====
 
 
-変更が完了したら、更新された`artifacthub-repo.yml`ファイルをコミットしてプッシュします。次のスキャン中に、Artifact Hubはこのファイルを見つけ、あなたのArtifact Hubリポジトリにhttps://artifacthub.io/docs/topics/repositories/#verified-publisher[_"確認済みの発行者"_バッジ]を追加します。
+変更が完了したら、更新された`artifacthub-repo.yml`ファイルをコミットしてプッシュします。次のスキャン中に、Artifact Hubはこのファイルを見つけ、あなたのArtifact Hubリポジトリにlink:https://artifacthub.io/docs/topics/repositories/#verified-publisher[_"確認済みの発行者"_バッジ]を追加します。
 
 == Artifact Hubをsync状態に保つ
 

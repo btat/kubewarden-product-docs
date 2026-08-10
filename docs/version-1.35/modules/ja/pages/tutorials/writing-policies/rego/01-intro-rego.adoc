@@ -24,7 +24,7 @@ Regoポリシーは、{project-name} 1.9リリースからのコンテキスト�
 
 Rego言語は、ポリシーをコードとして実装するためのドメイン特化型言語です。
 https://www.openpolicyagent.org/docs/latest/policy-language/[Rego]
-は、https://en.wikipedia.org/wiki/Datalog[Datalog]に触発された言語です。
+は、link:https://en.wikipedia.org/wiki/Datalog[Datalog]に触発された言語です。
 
 Kubernetesでポリシーをコードとして実装するためのRegoポリシーの記述方法は2つあります。
 Open Policy AgentとGatekeeperです。
@@ -49,7 +49,7 @@ OPAは、`kube-mgmt`サイドカーを通じてKubernetesとの任意の統合�
 Kubernetesにデプロイされ、OPAサーバーがRegoポリシーを評価することで、構成されたKubernetesリソースをRegoに複製することができます。
 そのため、これらのKubernetesリソースはすべてのポリシーから参照可能です。
 OPAを使用すると、KubernetesのConfigMapオブジェクト内にポリシーを定義できます。
-詳細については、https://github.com/open-policy-agent/kube-mgmt[プロジェクトページ]をご覧ください。
+詳細については、link:https://github.com/open-policy-agent/kube-mgmt[プロジェクトページ]をご覧ください。
 
 === Gatekeeper
 

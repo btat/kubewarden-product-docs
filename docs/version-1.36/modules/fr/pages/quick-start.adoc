@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Actions de
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Comprendre la pile {admc-name} en apprenant à déployer et à gérer ses principaux composants, y compris les serveurs de stratégie et les ressources ClusterAdmissionPolicy.
 :doc-persona: ["kubewarden-all"]
@@ -56,6 +56,7 @@ Les CRDs {admc-short-name} mentionnées dans ce tutoriel et dans le reste de la 
 ====
 
 
+[#_installation]
 == Installation
 
 [IMPORTANT]
@@ -89,7 +90,7 @@ helm repo update kubewarden
 
 Installez les charts Helm suivants dans l'espace de noms `kubewarden` de votre cluster Kubernetes :
 
-* `kubewarden-crds`, qui enregistre les définitions de ressources personnalisées {cluster-admission-policy}, {admission-policy} et {policy-server}. De plus, les définitions de ressources personnalisées {report} utilisées par le scanner d'audit.
+* `kubewarden-crds`, qui enregistre les définitions de ressources personnalisées {cluster-admission-policy}, {admission-policy} et {policy-server}. De plus, les définitions de ressources personnalisées {policy-report} utilisées par le scanner d'audit.
 * `kubewarden-controller`, qui installe le contrôleur {admc-short-name} et le scanner d'audit.
 +
 [NOTE]
@@ -308,6 +309,7 @@ Le contrôleur enregistre le webhook des ressources {cluster-admission-policy} `
 
 La documentation complète de ces ressources personnalisées est https://github.com/kubewarden/kubewarden-controller/blob/main/docs/crds/README.asciidoc[ici] ou sur https://doc.crds.dev/github.com/kubewarden/kubewarden-controller[docs.crds.dev].
 
+[#_example_enforce_your_first_policy]
 == Exemple : Appliquez votre première stratégie
 
 Nous allons utiliser la stratégie https://github.com/kubewarden/pod-privileged-policy[`pod-privileged`].

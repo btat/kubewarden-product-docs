@@ -17,6 +17,7 @@ Uma vez que você configure o PolicyServer para acessar registros privados, as p
 
 Para alcançar isso, você deve criar um Segredo contendo as credenciais do registro privado. Em seguida, configure os recursos dos seus PolicyServers e, em seguida, seu gráfico Helm para usá-lo.
 
+[#_creating_the_secret]
 == Criando o Segredo
 
 Os PolicyServers suportam os habituais https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Segredos de configuração do Docker], seja do tipo `kubernetes.io/dockercfg` ou do tipo `kubernetes.io/dockerconfigjson`. Você pode criar esses segredos com `kubectl create secret docker-registry`.

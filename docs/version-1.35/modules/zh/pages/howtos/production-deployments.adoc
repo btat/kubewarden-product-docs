@@ -19,7 +19,7 @@ include::partial$variables.adoc[]
 
 == 配置容忍和亲和性/反亲和性
 
-通过使用`tolerations`和`affinity`字段，操作员可以微调{short-project-name}堆栈的调度和可靠性，以满足其特定的部署需求和约束。有关确切字段及其配置的更多详细信息，请参阅https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/[Kubernetes关于污点和容忍的文档]和https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[亲和性和反亲和性]。
+通过使用`tolerations`和`affinity`字段，操作员可以微调{short-project-name}堆栈的调度和可靠性，以满足其特定的部署需求和约束。有关确切字段及其配置的更多详细信息，请参阅link:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/[Kubernetes关于污点和容忍的文档]和link:https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[亲和性和反亲和性]。
 
 从{short-project-name}堆栈的1.15版本开始，{short-project-name} Helm图表附带两个新值：
 
@@ -112,7 +112,7 @@ global:
 
 == 配置优先级类
 
-通过使用优先级类，操作员可以为{short-project-name}堆栈的工作负载Pod强制执行调度优先级。这确保了{short-project-name}工作负载在其他工作负载之上可用，防止驱逐并确保服务可靠性。有关更多信息，请参阅https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Kubernetes关于优先级类的文档]。
+通过使用优先级类，操作员可以为{short-project-name}堆栈的工作负载Pod强制执行调度优先级。这确保了{short-project-name}工作负载在其他工作负载之上可用，防止驱逐并确保服务可靠性。有关更多信息，请参阅link:https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Kubernetes关于优先级类的文档]。
 
 从{short-project-name}堆栈的版本1.25开始，{short-project-name} Helm图表附带一个新值：
 
@@ -133,13 +133,14 @@ globalDefault: false
 description: "This priority class should be used for XYZ service pods only."
 ----
 
-Kubernetes已经附带了两个优先级类，它们是不错的候选者：`system-cluster-critical`和`system-node-critical`。这些是常见的类，用于https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/[确保关键组件始终优先调度]。
+Kubernetes已经附带了两个优先级类，它们是不错的候选者：`system-cluster-critical`和`system-node-critical`。这些是常见的类，用于link:https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/[确保关键组件始终优先调度]。
 
 [WARNING]
 ====
 如果您删除一个优先级类，使用已删除优先级类名称的现有Pod将保持不变，但后续使用已删除优先级类名称的Pod将不会被Kubernetes创建。
 ====
 
+[#_policyserver_production_configuration]
 == `PolicyServer`生产配置
 
 `PolicyServers`对集群至关重要。它们的可靠性非常重要，因为它们处理通过验证和变更Webhook发送到Kubernetes API的准入请求。
@@ -150,7 +151,7 @@ Kubernetes已经附带了两个优先级类，它们是不错的候选者：`sys
 
 === PodDisruptionBudgets
 
-{short-project-name}控制器可以为`PolicyServer` Pods创建一个https://kubernetes.io/docs/tasks/run-application/configure-pdb/[PodDisruptionBudget]（PDB）。这控制与`PolicyServer`相关的`PolicyServer` Pod副本的范围，确保高可用性，并在节点维护、扩展操作或集群升级时进行受控驱逐。
+{short-project-name}控制器可以为`PolicyServer` Pods创建一个link:https://kubernetes.io/docs/tasks/run-application/configure-pdb/[PodDisruptionBudget]（PDB）。这控制与`PolicyServer`相关的`PolicyServer` Pod副本的范围，确保高可用性，并在节点维护、扩展操作或集群升级时进行受控驱逐。
 
 通过设置`spec.minAvailable`或`spec.maxUnavailable`字段来配置`PolicyServer`资源，从而实现这一目标：
 
@@ -197,7 +198,7 @@ spec:
 
 === 亲和性/反亲和性
 
-{short-project-name}控制器可以设置`PolicyServer` Pods的亲和性。这允许将Pods约束到特定节点，或将Pods与其他Pods进行约束。有关亲和性的更多信息，请参见https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[Kubernetes文档]。
+{short-project-name}控制器可以设置`PolicyServer` Pods的亲和性。这允许将Pods约束到特定节点，或将Pods与其他Pods进行约束。有关亲和性的更多信息，请参见link:https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[Kubernetes文档]。
 
 Kubernetes亲和性配置允许将 Pod 约束到节点（通过`spec.affinity.nodeAffinity`）或将 Pod 与其他 Pod 进行约束（通过`spec.affinity.podAffinity`）。亲和性可以设置为软约束（使用`preferredDuringSchedulingIgnoredDuringExecution`）或硬约束（使用`requiredDuringSchedulingIgnoredDuringExecution`）。
 
@@ -297,7 +298,7 @@ spec:
 
 === PriorityClasses
 
-{short-project-name} 控制器可以为 `PolicyServers` 的 Pod 设置 PriorityClass。这意味着 `PolicyServer` 工作负载将优先调度，防止驱逐并确保服务可靠性。请参阅https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Kubernetes文档以获取更多信息]。
+{short-project-name} 控制器可以为 `PolicyServers` 的 Pod 设置 PriorityClass。这意味着 `PolicyServer` 工作负载将优先调度，防止驱逐并确保服务可靠性。请参阅link:https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Kubernetes文档以获取更多信息]。
 
 [WARNING]
 ====

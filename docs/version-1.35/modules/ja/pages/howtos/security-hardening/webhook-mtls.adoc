@@ -10,7 +10,7 @@ include::partial$variables.adoc[]
 :doc-type: HOWTO(操作方法)
 :doc-topic: operator-manual, security
 
-このガイドでは、https://k3s.io/[K3s]をKubernetesディストリビューションとして使用する際に、{project-name}スタックWebhookのために相互トランスポート層セキュリティ（mTLS）を有効にする方法を示します。
+このガイドでは、link:https://k3s.io/[K3s]をKubernetesディストリビューションとして使用する際に、{project-name}スタックWebhookのために相互トランスポート層セキュリティ（mTLS）を有効にする方法を示します。
 
 Webhookを強化する方法についての詳細は、xref:/reference/security-hardening/webhooks-hardening.adoc[リファレンスページ]を参照してください。
 

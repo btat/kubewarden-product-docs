@@ -38,9 +38,9 @@ https://opentelemetry.io/[OpenTelemetry] 是一个云原生计算基金会（CNC
 如果您已经有可用的 Kubernetes 集群，可以跳过本节。
 ====
 
-您可以使用https://minikube.sigs.k8s.io/docs/[minikube]创建一个用于测试的 Kubernetes 集群。
+您可以使用link:https://minikube.sigs.k8s.io/docs/[minikube]创建一个用于测试的 Kubernetes 集群。
 
-Minikube 有许多后端，在这种情况下，您可以使用https://minikube.sigs.k8s.io/docs/drivers/kvm2/[kvm2]驱动程序，该驱动程序依赖于 libvirt。
+Minikube 有许多后端，在这种情况下，您可以使用link:https://minikube.sigs.k8s.io/docs/drivers/kvm2/[kvm2]驱动程序，该驱动程序依赖于 libvirt。
 
 假设 `libvirtd` 在您的机器上正确运行，请输入以下命令：
 
@@ -72,7 +72,7 @@ $ minikube start --driver=kvm2
 
 === 安装 Traefik
 
-以下遥测指南在使用 Kubernetes `Ingress` 资源暴露 Jaeger UI 时，将https://traefik.io/traefik/[Traefik]用作 Ingress 控制器。
+以下遥测指南在使用 Kubernetes `Ingress` 资源暴露 Jaeger UI 时，将link:https://traefik.io/traefik/[Traefik]用作 Ingress 控制器。
 
 通过使用其 Helm 图表安装 Traefik：
 
@@ -91,7 +91,7 @@ helm install --wait \
 
 如果您不想安装 Traefik，跟踪指南也保留 `kubectl port-forward` 作为直接访问 Jaeger 的后备方案。
 
-[#install-opentelemetry]
+[#_install_opentelemetry]
 == 安装 OpenTelemetry
 
 [NOTE]
@@ -99,9 +99,9 @@ helm install --wait \
 请参阅xref:/reference/dependency-matrix.adoc[依赖矩阵]以获取最新支持的组件版本。
 ====
 
-您使用https://github.com/open-telemetry/opentelemetry-operator[OpenTelemetry Operator]来管理OpenTelemetry Collector侧车的自动注入到PolicyServer pod中。
+您使用link:https://github.com/open-telemetry/opentelemetry-operator[OpenTelemetry Operator]来管理OpenTelemetry Collector侧车的自动注入到PolicyServer pod中。
 
-OpenTelemetry Operator 需要在集群中安装https://cert-manager.io/docs/installation/[cert-manager]。
+OpenTelemetry Operator 需要在集群中安装link:https://cert-manager.io/docs/installation/[cert-manager]。
 
 
 [subs="+attributes",console]

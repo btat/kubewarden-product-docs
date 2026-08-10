@@ -148,7 +148,7 @@ xref:/howtos/security-hardening/webhook-mtls.adoc[Webhook mTLSハウツー]を�
 
 {short-project-name}スタックによって公開されるWebhookは、Kubernetes APIサーバーまたは監査スキャナーコンポーネントからのリクエストのみを受け入れるべきです。デフォルトでは、これらのWebhookはクライアントに対して認証を要求しません。任意のリクエストを受け入れます。
 
-Webhookに認証情報を要求するように設定することで、APIサーバーと監査スキャナープロセスのみがアクセスできるようにすることができます。詳細については、https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#authenticate-apiservers[Kubernetesドキュメント]を参照してください。
+Webhookに認証情報を要求するように設定することで、APIサーバーと監査スキャナープロセスのみがアクセスできるようにすることができます。詳細については、link:https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#authenticate-apiservers[Kubernetesドキュメント]を参照してください。
 
 . APIサーバーを設定して、Webhookにクライアント証明書を提示し、`AdmissionConfiguration`ファイルを指して`ValidatingAdmissionWebhook`および`MutatingAdmissionWebhook`プラグインを設定します:
 +

@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Caminho de fazer upgrade
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-06-18
+:revdate: 2026-07-28
 :page-revdate: {revdate}
 :description: Atualize sua pilha {admc-name} usando estratégias de versionamento suportadas e regras de compatibilidade entre seus componentes.
 :doc-persona: ["kubewarden-operator"]

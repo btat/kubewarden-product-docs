@@ -13,7 +13,7 @@ include::partial$variables.adoc[]
 :sidebar_position: 5
 :current-version: {page-origin-branch}
 
-您可以在此页面和 {project-name}https://doc.crds.dev/github.com/kubewarden/kubewarden-controller[docs.crds.dev] 上找到  自定义资源的定义。
+您可以在此页面和 {project-name} https://doc.crds.dev/github.com/kubewarden/kubewarden-controller[docs.crds.dev] 上找到  自定义资源的定义。
 
 ////
 API REFERENCE GOES BELOW.

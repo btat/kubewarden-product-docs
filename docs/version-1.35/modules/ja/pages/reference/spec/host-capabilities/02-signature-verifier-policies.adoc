@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :sidebar_label: 署名検証ポリシー
 :current-version: {page-origin-branch}
 
-{project-name}はhttps://www.sigstore.dev/[Sigstore]プロジェクトのサポートを実装します。
+{project-name}はlink:https://www.sigstore.dev/[Sigstore]プロジェクトのサポートを実装します。
 これにより、クラスターのための「安全なサプライチェーン」を実装できます。
 
 安全なサプライチェーンの機能の一部は、クラスター内で実行されるすべてのコンテナイメージが署名され、検証されていることを保証することです。
@@ -74,7 +74,7 @@ verify_keyless_exact_match(
 
 == 例
 
-{short-project-name}チームは、https://github.com/kubewarden/verify-image-signatures[検証ポリシー]を提供し、すべてのコンテナに対してSigstore署名を強制します。
+{short-project-name}チームは、link:https://github.com/kubewarden/verify-image-signatures[検証ポリシー]を提供し、すべてのコンテナに対してSigstore署名を強制します。
 RustおよびRust SDKを使用して構築されています。
 ポリシーは、コンテナが署名されていることを保証し、オプションでリクエストを変更します。変更は、検証されたチェックサムをイメージのタグに追加します。
 詳細については、ドキュメントを確認してください。

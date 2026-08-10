@@ -28,6 +28,7 @@ O rastreamento permite coletar detalhes granulares sobre avaliações de políti
 
 Você usa https://www.jaegertracing.io/[Jaeger] -- para receber, armazenar e visualizar eventos de rastreamento.
 
+[#_install_jaeger]
 == Instalar Jaeger
 
 Você usa o https://github.com/jaegertracing/jaeger-operator[Jaeger Operator]

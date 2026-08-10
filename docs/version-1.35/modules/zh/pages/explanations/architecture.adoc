@@ -99,7 +99,7 @@ include::latest@shared:en:partial$architecture.adoc[]
 
 当`kubewarden-controller`注意到默认的策略服务器资源时，它会创建一个`policy-server`的策略服务器组件部署。
 
-{project-name}作为Kubernetes的准入Webhook工作。Kubernetes指定使用https://en.wikipedia.org/wiki/Transport_Layer_Security[传输层安全性](TLS)来保护所有Webhook端点。`kubewarden-controller`通过以下方式设置此安全通信：
+{project-name}作为Kubernetes的准入Webhook工作。Kubernetes指定使用link:https://en.wikipedia.org/wiki/Transport_Layer_Security[传输层安全性](TLS)来保护所有Webhook端点。`kubewarden-controller`通过以下方式设置此安全通信：
 
 . 生成自签名的证书颁发机构
 . 使用此CA为`policy-server`服务生成TLS证书密钥。
@@ -139,7 +139,7 @@ Web 服务器通过遵循命名约定的专用路径公开每个策略：`/valid
 
 === 使 Kubernetes 意识到策略。
 
-所有`policy-server`实例都有一个https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/[`就绪探针`]，`kubewarden-controller`使用它来检查`策略服务器`部署是否准备好评估一个https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#webhook-request-and-response[`AdmissionReview`]。
+所有`policy-server`实例都有一个link:https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/[`就绪探针`]，`kubewarden-controller`使用它来检查`策略服务器`部署是否准备好评估一个link:https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#webhook-request-and-response[`AdmissionReview`]。
 
 一旦{project-name}将`policy-server`部署标记为'唯一可达'或`Ready`，`kubewarden-controller`就会使 Kubernetes API 服务器意识到新策略。这通过创建一个`MutatingWebhookConfiguration`或一个`ValidatingWebhookConfiguration`对象来实现。在这个上下文中，'唯一可达'意味着集群中的所有 PolicyServer 实例都安装了最新的策略配置。这种区分虽然细微，但由于 PolicyServers 的发布方式，这是必要的。
 在不同的 PolicyServer 上可以使用相同的策略，但它们的配置可能各不相同。

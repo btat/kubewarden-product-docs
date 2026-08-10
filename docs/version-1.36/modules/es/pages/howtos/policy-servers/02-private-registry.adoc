@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = Configurando PolicyServers para utilizar registros privados
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Configura PolicyServers para utilizar registros privados creando un secreto de configuración de Docker y configurando el campo spec.imagePullSecret en la configuración.
 :doc-persona: ["kubewarden-operator", "kubewarden-integrator"]
@@ -17,6 +17,7 @@ Una vez que configures PolicyServer para acceder a registros privados, las polí
 
 Para lograr esto, debes crear un Secreto que contenga las credenciales del registro privado. Luego configura los recursos de tus PolicyServers, y después tu chart de Helm para utilizarlo.
 
+[#_creating_the_secret]
 == Creando el Secreto
 
 Los PolicyServers soportan los habituales https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Secretos de configuración de Docker], ya sea de tipo `kubernetes.io/dockercfg` o tipo `kubernetes.io/dockerconfigjson`. Puedes crear estos secretos con `kubectl create secret docker-registry`.

@@ -24,6 +24,7 @@ Abschnitt dieses Buches abgeschlossen haben. Sie benötigen es, damit dieser Abs
 
 Sie verwenden https://prometheus.io/[Prometheus], um Metriken zu sammeln, die vom Policy Server exponiert werden.
 
+[#_install_prometheus]
 == Installieren Sie Prometheus
 
 Sie verwenden https://github.com/prometheus-operator/prometheus-operator[Prometheus

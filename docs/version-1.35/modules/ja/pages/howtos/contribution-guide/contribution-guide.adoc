@@ -15,5 +15,5 @@ include::partial$variables.adoc[]
 _{project-name}は、新しい方も経験豊富な方も、すべての貢献者を歓迎します。_
 
 ifeval::["{build-type}" == "community"]
-貢献ガイドをhttps://github.com/kubewarden/community/blob/main/CONTRIBUTING.md[こちら]でご確認ください。
+貢献ガイドをlink:https://github.com/kubewarden/community/blob/main/CONTRIBUTING.md[こちら]でご確認ください。
 endif::[]

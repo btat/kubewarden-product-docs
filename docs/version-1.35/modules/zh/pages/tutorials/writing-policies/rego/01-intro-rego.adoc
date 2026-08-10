@@ -22,7 +22,7 @@ Rego 策略支持来自 {project-name} 1.9 版本的上下文感知数据。
 ====
 
 
-Rego 语言是一种领域特定语言，用于实现代码中的策略。https://www.openpolicyagent.org/docs/latest/policy-language/[Rego]是一种受https://en.wikipedia.org/wiki/Datalog[Datalog]启发的语言。
+Rego 语言是一种领域特定语言，用于实现代码中的策略。link:https://www.openpolicyagent.org/docs/latest/policy-language/[Rego]是一种受link:https://en.wikipedia.org/wiki/Datalog[Datalog]启发的语言。
 
 有两种方法可以编写 Rego 策略以在 Kubernetes 中实现代码中的策略，Open Policy Agent 和 Gatekeeper。
 

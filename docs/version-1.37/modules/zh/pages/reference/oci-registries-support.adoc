@@ -45,7 +45,7 @@ include::partial$variables.adoc[]
 {admc-short-name} 项目推荐：
 
 * https://github.com/kubewarden/kwctl[`kwctl`]（我们的 CLI 工具）。
-* https://github.com/containers/skopeo[Skopeo]（https://github.com/containers/skopeo/pull/1705[≥ 1.9.0]）。
+* https://github.com/containers/skopeo[Skopeo]（link:https://github.com/containers/skopeo/pull/1705[≥ 1.9.0]）。
 * https://github.com/google/go-containerregistry/blob/main/cmd/crane/README.md[Crane]。
 
 == 已知问题
@@ -53,8 +53,8 @@ include::partial$variables.adoc[]
 === Docker Hub
 
 目前，Docker Hub 不支持 OCI 工件，因此无法用于存储 {admc-short-name} 策略。
-Docker Inc. 已宣布 Docker Hub 将在https://www.docker.com/blog/announcing-docker-hub-oci-artifacts-support/[未来]支持 OCI 工件。
+Docker Inc. 已宣布 Docker Hub 将在link:https://www.docker.com/blog/announcing-docker-hub-oci-artifacts-support/[未来]支持 OCI 工件。
 
 === JFrog
 
-尽管 JFrog 支持 OCI 工件，但根据其规范，推送功能仅部分可用。https://github.com/kubewarden/kwctl/issues/59[在这里阅读更多]。
+尽管 JFrog 支持 OCI 工件，但根据其规范，推送功能仅部分可用。link:https://github.com/kubewarden/kwctl/issues/59[在这里阅读更多]。

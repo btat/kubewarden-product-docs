@@ -71,8 +71,9 @@ Vous pouvez servir {admc-short-name} stratégies en utilisant un serveur web sta
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == Neutralité des fournisseurs
 
-{admc-short-name} est un projet lien:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[neutre vis-à-vis des fournisseurs] tel que défini par le CNCF.
+{admc-short-name} est un projet link:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[neutre vis-à-vis des fournisseurs] tel que défini par le CNCF.
 
 endif::[]

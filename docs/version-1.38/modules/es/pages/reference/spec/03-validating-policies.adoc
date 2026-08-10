@@ -47,6 +47,7 @@ Se ve así:
 
 La clave `settings` apunta a un documento JSON en formato libre que contiene las configuraciones específicas de la directiva. El capítulo anterior se centró en directivas y configuraciones.
 
+[#_an_example]
 == Un ejemplo
 
 Dada la siguiente directiva de Kubernetes `AdmissionReview`:

@@ -47,7 +47,7 @@ Todos los valores de los tiempos de espera de evaluación por directiva, el tiem
 
 ### Por Directiva
 
-A partir de {short-project-name} v1.29.0, cada Directiva {short-project-name} puede establecer su propio valor de tiempo de espera a través de su atributo `spec.timeoutEvalSeconds`. Esto no debe confundirse con `spec.timeoutSeconds`, utilizado para el tiempo de espera del Webhook (ver sección [abajo](#comparison-with-kubernetes-dynamic-admission-controller-timeout)).
+A partir de {short-project-name} v1.29.0, cada Directiva {short-project-name} puede establecer su propio valor de tiempo de espera a través de su atributo `spec.timeoutEvalSeconds`. Esto no debe confundirse con `spec.timeoutSeconds`, utilizado para el tiempo de espera del Webhook (ver sección <<_comparison_with_kubernetes_dynamic_admission_controller_timeout,abajo>>).
 
 El `spec.timeoutEvalSeconds` es granular, permitiendo el ajuste del tiempo de espera de evaluación por directiva.
 
@@ -124,6 +124,7 @@ spec:
       value: "3"
 ----
 
+[#_comparison_with_kubernetes_dynamic_admission_controller_timeout]
 == Comparación con el tiempo de espera del Controlador de Admisión Dinámico de Kubernetes
 
 {short-project-name} es una implementación de https://en.wikipedia.org/wiki/Webhook[webhook] del https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/[Controlador de Admisión Dinámico de Kubernetes].

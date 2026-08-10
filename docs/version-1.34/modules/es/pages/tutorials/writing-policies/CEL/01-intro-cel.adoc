@@ -44,6 +44,7 @@ Esto significa que `cel-policy` es un superconjunto de Kubernetes CEL, y es comp
 
 El `cel-policy` se envía compilado y se comporta como un intérprete de CEL. Los usuarios de la política pasan las expresiones CEL deseadas en el `spec.settings` de la (Cluster)AdmissionPolicy, y gracias a las características de CEL, la expresión se compila y se verifica su tipo para corrección al crear o actualizar la (Cluster)AdmissionPolicy. Esto significa que no hay necesidad de compilaciones personalizadas del `cel-policy`.
 
+[#_benefits_of_kubewardens_cel_policy_in_comparison_with_validatingadmissionpolicies]
 === Beneficios del `cel-policy` de {short-project-name} en comparación con ValidatingAdmissionPolicies
 
 El {short-project-name} `cel-policy`:

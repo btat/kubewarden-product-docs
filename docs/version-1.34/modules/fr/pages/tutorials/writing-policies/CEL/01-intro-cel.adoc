@@ -32,7 +32,7 @@ Les règles de validation Kubernetes CEL ont accès à plusieurs bibliothèques 
 {short-project-name} fournit https://github.com/kubewarden/cel-policy[cel-policy].
 Il s'agit d'une stratégie qui construit et regroupe l'interpréteur https://pkg.go.dev/github.com/google/cel-go[cel-go] en amont, ainsi que les différentes bibliothèques énumérées ci-dessus et disponibles pour CEL dans Kubernetes à partir de `apiextensions-apiserver`.
 
-De plus, `cel-policy` regroupe une *{short-project-name} bibliothèque d'extension CEL* qui expose les capacités d'hôte de {short-project-name}https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[host capabilities as native CEL]https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities :
+De plus, `cel-policy` regroupe une *{short-project-name} bibliothèque d'extension CEL* qui expose les capacités d'hôte de {short-project-name} https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[host capabilities as native CEL]https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities :
 
 * Vérification de Sigstore
 * Interaction OCI
@@ -44,6 +44,7 @@ Cela signifie que `cel-policy` est un sur-ensemble de Kubernetes CEL, et rétroc
 
 Le `cel-policy` est livré compilé et se comporte comme un interpréteur CEL. Les utilisateurs de la stratégie passent les expressions CEL souhaitées dans le `spec.settings` de la (Cluster)AdmissionPolicy, et grâce aux fonctionnalités de CEL, l'expression est compilée et vérifiée pour sa validité lors de la création ou de la mise à jour de la (Cluster)AdmissionPolicy. Cela signifie qu'il n'est pas nécessaire de créer des versions personnalisées du `cel-policy`.
 
+[#_benefits_of_kubewardens_cel_policy_in_comparison_with_validatingadmissionpolicies]
 === Avantages de {short-project-name}`cel-policy` par rapport aux ValidatingAdmissionPolicies
 
 Le {short-project-name} `cel-policy`:

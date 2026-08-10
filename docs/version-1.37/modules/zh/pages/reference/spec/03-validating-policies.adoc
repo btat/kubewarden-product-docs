@@ -46,6 +46,7 @@ https://godoc.org/k8s.io/api/admission/v1#AdmissionRequest[`AdmissionRequest`]�
 
 `settings`键指向一个自由格式的JSON文档，包含特定于策略的设置。上一章集中讨论策略和设置。
 
+[#_an_example]
 == 示例
 
 给定以下Kubernetes `AdmissionReview`：

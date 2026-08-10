@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{admc-name}", "kubewarden", "kubernetes", "cel", "vap", "validatingadmissionpolicy"]
 :current-version: {page-origin-branch}
 
-Kubernetes v1.26以降、https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/[ValidatingAdmissionPolicy]は、KubernetesでカスタムAdmissionポリシーを記述する方法を提供します。ポリシーは、https://cel.dev/[Common Expression Language (CEL)]を使用して記述され、いくつかのhttps://kubernetes.io/docs/reference/using-api/cel/[Kubernetes特有の拡張]が追加されています。
+Kubernetes v1.26以降、link:https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/[ValidatingAdmissionPolicy]は、KubernetesでカスタムAdmissionポリシーを記述する方法を提供します。ポリシーは、link:https://cel.dev/[Common Expression Language (CEL)]を使用して記述され、いくつかのlink:https://kubernetes.io/docs/reference/using-api/cel/[Kubernetes特有の拡張]が追加されています。
 ValidatingAdmissionPolicyはKubernetes v1.30で安定版となりました。
 
 {admc-name}は、変更なしでKubernetes VAPポリシーを実行できるCELポリシーを提供します。

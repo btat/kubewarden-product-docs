@@ -91,7 +91,7 @@ annotations:
 * `action`が有効なアクションのリストに含まれていること
 * `resource`が有効なリソースのリストに含まれていること
 
-まず、https://github.com/kubewarden/go-policy-template[goポリシーテンプレート]を使用してポリシーの雛形を作成します。
+まず、link:https://github.com/kubewarden/go-policy-template[goポリシーテンプレート]を使用してポリシーの雛形を作成します。
 すべてが`make`、`make test`、`make e2e-tests`で整っていることを確認してください。
 
 まず、リクエストのペイロードを表す型を定義します。

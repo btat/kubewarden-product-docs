@@ -14,7 +14,7 @@ include::partial$variables.adoc[]
 
 你已经经历了一段既漫长又愉快的 Go 教程之旅，恭喜你走到这一步 🎉。
 
-在本教程中，你已经重新创建了https://github.com/kubewarden/safe-labels-policy[safe-labels-policy]。
+在本教程中，你已经重新创建了link:https://github.com/kubewarden/safe-labels-policy[safe-labels-policy]。
 
 在分发策略时没有特别需要做的事情。
 如果你遵循本指南，你已经使用上一章中定义的 GitHub `release.yml` 操作发布了你的策略。

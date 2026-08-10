@@ -71,6 +71,7 @@ Sie können {admc-short-name}Richtlinien mit einem Standard-Webserver bereitstel
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == Anbieterneutralität
 
 {admc-short-name} ist ein \link:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[anbieterneutrales] Projekt, wie von der CNCF definiert.

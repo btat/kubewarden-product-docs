@@ -46,7 +46,7 @@ include::partial$variables.adoc[]
 * `action`が有効なアクションのリストに含まれていること
 * `resource`が有効なリソースのリストに含まれていること
 
-まず、https://github.com/kubewarden/rust-policy-template[Rustポリシーテンプレート]を使用してポリシーの雛形を作成します。
+まず、link:https://github.com/kubewarden/rust-policy-template[Rustポリシーテンプレート]を使用してポリシーの雛形を作成します。
 
 最初に、リクエストのペイロードを表すタイプを定義します。
 SDKが提供する`RawValidationRequest`タイプの代わりに、`Request`と`Settings`を含むカスタム`ValidationRequest`タイプを宣言します：

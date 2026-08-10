@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Gestionando {admc-name} con Rancher Fleet
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :description: Gestiona los gráficos Helm de {admc-name} utilizando Rancher Fleet y las definiciones de recursos personalizadas (CRDs) de Kubernetes para implementar un enfoque GitOps.
 :doc-persona: ["kubewarden-operator", "kubewarden-integrator"]

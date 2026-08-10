@@ -19,7 +19,7 @@ Kubewardenの`cel-policy`におけるホスト機能の別の使用例として�
 
 この場合、GitHub Actionsで行われたSigstoreのキーレス署名を確認します。この種のキーレス署名は、暗号証明書を作成する際にGitHubのOIDC発行者に関連付けられているため、コンテナイメージが公開されているGitHub組織を知っている必要があります。Sigstoreのホスト機能については、xref:reference/spec/host-capabilities/02-signature-verifier-policies.adoc[こちら]をお読みください。
 
-CELでこれを達成するために、ポリシー内でhttps://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{project-name}のCEL拡張機能ライブラリ]を使用し、特にhttps://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library#Sigstore[`githubAction`の関数]を使用します。
+CELでこれを達成するために、ポリシー内でlink:https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{project-name}のCEL拡張機能ライブラリ]を使用し、特にlink:https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library#Sigstore[`githubAction`の関数]を使用します。
 
 いつものように、`kwctl`から始めましょう：
 

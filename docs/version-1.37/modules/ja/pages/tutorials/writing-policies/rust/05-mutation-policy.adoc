@@ -57,7 +57,7 @@ spec:
 == ミューテーションコードを記述する
 
 ミューテーションコードは `validate` 関数にあります。
-この関数を変更して、https://docs.rs/kubewarden-policy-sdk/0.1.0/kubewarden_policy_sdk/fn.mutate_request.html[`mutate_request`]の代わりにhttps://docs.rs/kubewarden-policy-sdk/0.1.0/kubewarden_policy_sdk/fn.accept_request.html[`accept_request`]を使ってリクエストを承認するようにしてください。
+この関数を変更して、link:https://docs.rs/kubewarden-policy-sdk/0.1.0/kubewarden_policy_sdk/fn.mutate_request.html[`mutate_request`]の代わりにlink:https://docs.rs/kubewarden-policy-sdk/0.1.0/kubewarden_policy_sdk/fn.accept_request.html[`accept_request`]を使ってリクエストを承認するようにしてください。
 
 これが `validate` における `lib.rs` 関数の例です：
 

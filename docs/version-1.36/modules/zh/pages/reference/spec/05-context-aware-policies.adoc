@@ -84,7 +84,7 @@ include::partial$variables.adoc[]
 
 == ClusterAdmissionPolicies
 
-ClusterAdmissionPolicies具有字段https://doc.crds.dev/github.com/kubewarden/kubewarden-controller/policies.kubewarden.io/ClusterAdmissionPolicy/v1#spec-contextAwareResources[spec.contextAwareResources]。
+ClusterAdmissionPolicies具有字段link:https://doc.crds.dev/github.com/kubewarden/kubewarden-controller/policies.kubewarden.io/ClusterAdmissionPolicy/v1#spec-contextAwareResources[spec.contextAwareResources]。
 该字段提供了策略需要访问的`GroupVersionKind`资源列表。这允许策略编写者将策略所需的“权限”与策略一起交付。此外，这允许策略操作员在部署时审查策略所需的“权限”。
 
 === 在本地测试上下文感知策略
@@ -146,11 +146,11 @@ kwctl run \
 
 === Rust
 
-请参阅在https://docs.rs/kubewarden-policy-sdk/0.8.7/kubewarden_policy_sdk[Rust SDK参考文档]中公开此功能的函数。
+请参阅在link:https://docs.rs/kubewarden-policy-sdk/0.8.7/kubewarden_policy_sdk[Rust SDK参考文档]中公开此功能的函数。
 
 === 转至
 
-请参阅暴露此功能的函数，详见https://pkg.go.dev/github.com/kubewarden/policy-sdk-go[Go SDK参考文档]。
+请参阅暴露此功能的函数，详见link:https://pkg.go.dev/github.com/kubewarden/policy-sdk-go[Go SDK参考文档]。
 
 == Rego策略
 
@@ -162,6 +162,6 @@ kwctl run \
 
 === 开放政策代理
 
-上下文感知信息的暴露在`data.kubernetes`键下，例如https://github.com/open-policy-agent/kube-mgmt[`kube-mgmt`]默认情况下的行为。
+上下文感知信息的暴露在`data.kubernetes`键下，例如link:https://github.com/open-policy-agent/kube-mgmt[`kube-mgmt`]默认情况下的行为。
 
 库存的填充是通过策略可以访问的资源，位于`spec.contextAwareResources`字段中。

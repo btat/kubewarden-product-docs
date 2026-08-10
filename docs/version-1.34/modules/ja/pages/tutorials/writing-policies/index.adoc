@@ -25,7 +25,7 @@ https://github.com/kubewarden/policy-server[policy-server]{short-project-name}�
 ランタイムでアドオンを使用して処理機能を追加します。
 これらのアドオンが{short-project-name}ポリシーです。
 
-したがって、{short-project-name}ポリシーは「ポリシーサーバー」プログラムのhttps://en.wikipedia.org/wiki/Plug-in_%28computing%29[従来のプラグイン]のようなものです。
+したがって、{short-project-name}ポリシーは「ポリシーサーバー」プログラムのlink:https://en.wikipedia.org/wiki/Plug-in_%28computing%29[従来のプラグイン]のようなものです。
 
 まとめ:
 
@@ -36,13 +36,13 @@ https://github.com/kubewarden/policy-server[policy-server]{short-project-name}�
 
 == プログラミング言語の要件
 
-{short-project-name}ポリシーをhttps://webassembly.org/[WebAssembly]バイナリとして提供します。
+{short-project-name}ポリシーをlink:https://webassembly.org/[WebAssembly]バイナリとして提供します。
 
 ポリシーの著者は、WebAssemblyをコンパイルターゲットとしてサポートする任意のプログラミング言語を使用してポリシーを作成できます。
-サポートされている言語のリストは常に進化しており、https://github.com/appcypher/awesome-wasm-langs[このページ]はWebAssemblyの全体像を提供しています。
+サポートされている言語のリストは常に進化しており、link:https://github.com/appcypher/awesome-wasm-langs[このページ]はWebAssemblyの全体像を提供しています。
 
 現在、WebAssemblyにはホストとWebAssemblyゲスト間で複雑なデータ型を共有する公式な方法がありません。
-この制限を克服するために、{short-project-name}ポリシーはhttps://github.com/wapc[waPC]プロジェクトを使用しており、双方向通信チャネルを提供します。
+この制限を克服するために、{short-project-name}ポリシーはlink:https://github.com/wapc[waPC]プロジェクトを使用しており、双方向通信チャネルを提供します。
 
 したがって、選択したプログラミング言語には利用可能なwaPCゲストSDKが必要です。
 もしそうでない場合は、お気軽にお問い合わせください。

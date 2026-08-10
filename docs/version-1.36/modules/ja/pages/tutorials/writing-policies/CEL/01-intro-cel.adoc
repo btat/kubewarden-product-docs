@@ -10,13 +10,13 @@ include::partial$variables.adoc[]
 :keywords: ["kubewarden", "kubernetes", "writing policies", "introduction"]
 :current-version: {page-origin-branch}
 
-https://cel.dev[共通式言語（CEL）]は、高速でポータブル、安全に実行できるように設計された汎用の式言語です。CELは、メモリ安全で、副作用がなく、終了する（プログラムが無限ループしない）、強く動的に型付けされた言語です。CELについての詳細は、https://cel.dev[cel.dev]で学ぶことができ、https://playcel.undistro.io[CELプレイグラウンド]で実践できます。
+https://cel.dev[共通式言語（CEL）]は、高速でポータブル、安全に実行できるように設計された汎用の式言語です。CELは、メモリ安全で、副作用がなく、終了する（プログラムが無限ループしない）、強く動的に型付けされた言語です。CELについての詳細は、link:https://cel.dev[cel.dev]で学ぶことができ、link:https://playcel.undistro.io[CELプレイグラウンド]で実践できます。
 
 == KubernetesにおけるCEL
 
 CELは、Kubernetesの検証ルールのための言語として選ばれました。CEL式はCRDスキーマに簡単にインライン化でき、"事前に"（CRDが作成および更新されるとき）コンパイルおよび型チェックが可能です。これらの理由とその一般的な特性から、Kubernetes APIを拡張するための完璧な候補です。
 
-Kubernetes 1.30で安定版としてマークされ、https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy[ValidatingAdmissionPolicies]やその他の検証ルールでCELを使用できます。詳細については、Kubernetesのドキュメントをhttps://kubernetes.io/docs/reference/using-api/cel[こちら]でご覧ください。
+Kubernetes 1.30で安定版としてマークされ、link:https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy[ValidatingAdmissionPolicies]やその他の検証ルールでCELを使用できます。詳細については、Kubernetesのドキュメントをlink:https://kubernetes.io/docs/reference/using-api/cel[こちら]でご覧ください。
 
 === Kubernetes関数ライブラリ
 
@@ -29,10 +29,10 @@ Kubernetes CEL検証ルールは、いくつかの関数ライブラリにアク
 
 == {admc-name}におけるCEL：`cel-policy`
 
-{admc-short-name}はhttps://github.com/kubewarden/cel-policy[cel-policy]を提供します。
-これは、アップストリームのhttps://pkg.go.dev/github.com/google/cel-go[cel-go]インタープリターを構築しバンドルするポリシーであり、KubernetesのCEL用に上記のさまざまなライブラリも含まれています。 `apiextensions-apiserver`
+{admc-short-name}はlink:https://github.com/kubewarden/cel-policy[cel-policy]を提供します。
+これは、アップストリームのlink:https://pkg.go.dev/github.com/google/cel-go[cel-go]インタープリターを構築しバンドルするポリシーであり、KubernetesのCEL用に上記のさまざまなライブラリも含まれています。 `apiextensions-apiserver`
 
-さらに、`cel-policy`は*{admc-short-name}CEL拡張ライブラリ*をバンドルしており、{admc-short-name}のhttps://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[ホスト機能をネイティブCELとして公開します]。
+さらに、`cel-policy`は*{admc-short-name}CEL拡張ライブラリ*をバンドルしており、{admc-short-name}のlink:https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[ホスト機能をネイティブCELとして公開します]。
 
 * Sigstore検証
 * OCIインタラクション
@@ -44,6 +44,7 @@ Kubernetes CEL検証ルールは、いくつかの関数ライブラリにアク
 
 `cel-policy`はコンパイル済みで出荷され、CELインタープリタとして動作します。ポリシーのユーザーは、(Cluster)AdmissionPolicyの`spec.settings`に希望するCEL式を渡し、CEL機能のおかげで、式は作成または更新時にコンパイルされ、型チェックによって正しさが検証されます。これは、`cel-policy`のカスタムビルドが必要ないことを意味します。
 
+[#_benefits_of_kubewardens_cel_policy_in_comparison_with_validatingadmissionpolicies]
 === ValidatingAdmissionPoliciesと比較した場合の{admc-short-name}の`cel-policy`の利点
 
 {admc-short-name} `cel-policy`：

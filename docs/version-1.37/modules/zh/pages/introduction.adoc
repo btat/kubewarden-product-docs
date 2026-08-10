@@ -24,13 +24,13 @@ include::partial$variables.adoc[]
 
 === 好处和价值
 
-- 使用任何生成https://webassembly.org[WebAssembly]二进制文件的编程语言来编写您的策略。
+- 使用任何生成link:https://webassembly.org[WebAssembly]二进制文件的编程语言来编写您的策略。
 - WebAssembly使策略在处理器和操作系统之间兼容。
 - 可以重用来自其他策略引擎的策略，而无需重写它们。
-- 使用标准和安全的机制分发策略，例如https://opencontainers.org[OCI]兼容的注册表。
+- 使用标准和安全的机制分发策略，例如link:https://opencontainers.org[OCI]兼容的注册表。
 - 在准入时强制执行策略，确保只有合规的工作负载运行。
 - {admc-short-name}审计扫描器主动并持续地检查策略执行情况。
-- 使用https://slsa.dev[SLSA]（软件工件供应链级别）工具和实践验证策略。
+- 使用link:https://slsa.dev[SLSA]（软件工件供应链级别）工具和实践验证策略。
 - {admc-name}提供全面的准入策略管理方法。
 - CNCF会员资格以及不断增长的开源社区和生态系统帮助{admc-short-name}实现透明、协作和改进。
 
@@ -49,7 +49,7 @@ include::partial$variables.adoc[]
 
 == 什么是WebAssembly？
 
-正如在https://webassembly.org/[WebAssembly的官方网站]上所述：
+正如在link:https://webassembly.org/[WebAssembly的官方网站]上所述：
 
 ____
 WebAssembly（缩写为Wasm）是一种用于基于栈的虚拟机的二进制指令格式。Wasm被设计为编程语言的可移植编译目标，使其能够在客户端和服务器应用程序的Web上部署。
@@ -67,12 +67,13 @@ Wasm模块是可移植的，一旦构建，它们可以在任何类型的处理�
 
 == 策略分发
 
-您可以使用标准网络服务器提供{admc-short-name}策略，或者更好的是，您可以将它们发布到符合 OCI 标准的注册表中，作为https://github.com/opencontainers/artifacts[OCI 工件]。
+您可以使用标准网络服务器提供{admc-short-name}策略，或者更好的是，您可以将它们发布到符合 OCI 标准的注册表中，作为link:https://github.com/opencontainers/artifacts[OCI 工件]。
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == 供应商中立性
 
-{admc-short-name} 是一个链接：https://contribute.cncf.io/maintainers/community/vendor-neutrality/[供应商中立] 项目，按照 CNCF 的定义。
+{admc-short-name} 是一个链接：link:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[供应商中立] 项目，按照 CNCF 的定义。
 
 endif::[]

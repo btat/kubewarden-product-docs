@@ -25,7 +25,7 @@ https://wasi.dev/[WebAssembly系统接口（WASI）]是一个WebAssembly标准�
 使用WASI，您可以拥有一个与系统原语交互的WebAssembly模块，如STDOUT、STDERR、STDIN、环境变量等。
 
 许多用于编译{short-project-name}策略的编译器生成针对WASI接口的WebAssembly模块。
-然而，{short-project-name}策略使用https://github.com/wapc[waPC]项目在策略与策略运行时（`kwctl`或`policy-server`）之间实现双向通信。{short-project-name}通信协议的使用在xref:reference/spec/01-intro-spec.adoc[这里]进行了描述。
+然而，{short-project-name}策略使用link:https://github.com/wapc[waPC]项目在策略与策略运行时（`kwctl`或`policy-server`）之间实现双向通信。{short-project-name}通信协议的使用在xref:reference/spec/01-intro-spec.adoc[这里]进行了描述。
 
 在某些特殊情况下，waPC项目尚不可用。
 在这些情况下，您可以使用WASI提供的接口编写策略。
@@ -61,12 +61,12 @@ https://wasi.dev/[WebAssembly系统接口（WASI）]是一个WebAssembly标准�
 
 从1.21版本开始，官方的Go编译器能够生成针对WASI接口的WebAssembly模块。
 然而，这些模块尚不能向WebAssembly运行时导出函数。
-这个限制，由https://github.com/golang/go/issues/42372[这个专门的问题]跟踪，阻碍了waPC协议的采用。
+这个限制，由link:https://github.com/golang/go/issues/42372[这个专门的问题]跟踪，阻碍了waPC协议的采用。
 
 {short-project-name}项目团队建议您使用TinyGo编译器编写{short-project-name} Go策略，如xref:tutorials/writing-policies/go/01-intro-go.adoc[这里]所述。
 
 然而，某些复杂的Go代码库无法使用TinyGo编译器进行编译。
-这包括例如像https://github.com/google/cel-go[CEL-go]或https://github.com/kyverno/kyverno/[Kyverno]这样的代码库。
+这包括例如像link:https://github.com/google/cel-go[CEL-go]或link:https://github.com/kyverno/kyverno/[Kyverno]这样的代码库。
 在这种情况下，使用官方的Go编译器可以提供帮助。
 
 == 通信协议
@@ -109,7 +109,7 @@ STDIN必须包含描述`ValidationRequest`对象的JSON文档。
 
 目前仅通过Go SDK支持。Go SDK像往常一样公开上下文感知能力，更多信息请见xref:explanations/context-aware-policies.adoc[这里]。
 
-作为WASI Go上下文感知策略的示例，请参见https://github.com/kubewarden/go-wasi-context-aware-test-policy[go-wasi-context-aware-test-policy]。
+作为WASI Go上下文感知策略的示例，请参见link:https://github.com/kubewarden/go-wasi-context-aware-test-policy[go-wasi-context-aware-test-policy]。
 
 === 设置验证
 

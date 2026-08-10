@@ -12,15 +12,15 @@ include::partial$variables.adoc[]
 
 このガイドでは、クラスターにすでにデプロイされているOpenTelemetryコレクターにテレメトリーデータを送信するために{short-project-name}を設定する方法を説明します。
 
-クラスター内にhttps://opentelemetry.io/docs/collector/[OpenTelemetry Collector]のインスタンスを1つだけデプロイする必要があります。
+クラスター内にlink:https://opentelemetry.io/docs/collector/[OpenTelemetry Collector]のインスタンスを1つだけデプロイする必要があります。
 
 == 依存関係をインストールする
 
 まず、OpenTelemetryコレクターの依存関係をインストールすることから始めます。
 
-{project-name}コンポーネントとコレクター間で暗号化された通信が必要です。安全な通信に必要なすべての証明書を管理するためにhttps://cert-manager.io/[cert-manager]を使用できます。
+{project-name}コンポーネントとコレクター間で暗号化された通信が必要です。安全な通信に必要なすべての証明書を管理するためにlink:https://cert-manager.io/[cert-manager]を使用できます。
 
-OpenTelemetryコレクターのトレースは、https://www.jaegertracing.io/[Jaeger]インスタンスに送信されます。
+OpenTelemetryコレクターのトレースは、link:https://www.jaegertracing.io/[Jaeger]インスタンスに送信されます。
 
 {short-project-name}スタックは、OpenTelemetryコレクターにメトリクスを送信します。
 このメトリクスは、Prometheusエンドポイントとして公開されます。メトリクスは、その後Prometheusインスタンスによって収集され、データベースに保存されます。同じPrometheusインスタンスは、メトリクスを表示および使用するためのUIも公開します。

@@ -67,9 +67,9 @@ $ helm upgrade -i --wait --namespace kubewarden \
 
 == 应用策略
 
-您可以通过使用https://artifacthub.io/packages/kubewarden/verify-image-signatures/verify-image-signatures[验证镜像签名]策略来应用ClusterAdmissionPolicy。此策略检查来自`dp.apps.rancher.io/containers/*`的所有容器镜像。该策略支持OCI注册表和工件。
+您可以通过使用link:https://artifacthub.io/packages/kubewarden/verify-image-signatures/verify-image-signatures[验证镜像签名]策略来应用ClusterAdmissionPolicy。此策略检查来自`dp.apps.rancher.io/containers/*`的所有容器镜像。该策略支持OCI注册表和工件。
 
-您可以使用https://docs.apps.rancher.io/howto-guides/verify-signatures-with-kubewarden/[公钥]配置策略设置，该公钥来自应用程序集合（在撰写时）中的`pubKeys`数组。
+您可以使用link:https://docs.apps.rancher.io/howto-guides/verify-signatures-with-kubewarden/[公钥]配置策略设置，该公钥来自应用程序集合（在撰写时）中的`pubKeys`数组。
 
 [subs="+attributes",console]
 ----
@@ -137,7 +137,7 @@ $ kubectl get admissionpolicies -n default # wait for status active
 
 [subs="+attributes",console]
 ----
-$ kubectl run nginx --image [dp.apps.rancher.io/containers/nginx:1.24.0](http://dp.apps.rancher.io/containers/nginx:1.24.0) --overrides='{"spec": {"imagePullSecrets":[{"name": "application-collection"}]}}'
+$ kubectl run nginx --image dp.apps.rancher.io/containers/nginx:1.24.0 --overrides='{"spec": {"imagePullSecrets":[{"name": "application-collection"}]}}'
  pod/nginx created
 ----
 

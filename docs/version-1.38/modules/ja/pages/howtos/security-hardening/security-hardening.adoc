@@ -55,7 +55,7 @@ kubectl get clusterroles,roles -A | grep kubewarden
 
 == ポッドセキュリティアドミッション
 
-1.23以降、{admc-short-name}のスタックは、https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted[`restricted`\`ポッドセキュリティ基準`]が適用されているネームスペースで実行でき、現在のポッドハードニングのベストプラクティスが適用されます。
+1.23以降、{admc-short-name}のスタックは、link:https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted[`restricted`\`ポッドセキュリティ基準`]が適用されているネームスペースで実行でき、現在のポッドハードニングのベストプラクティスが適用されます。
 
 そのためには、`pod-security.kubernetes.io/enforce: restricted`ラベルを{admc-short-name}デプロイメントネームスペースに追加する必要があります。
 
@@ -63,7 +63,7 @@ kubectl get clusterroles,roles -A | grep kubewarden
 kubectl label namespace kubewarden pod-security.kubernetes.io/enforce=restricted --overwrite
 ```
 
-詳細については、Kubernetesのポッドセキュリティアドミッションのhttps://kubernetes.io/docs/concepts/security/pod-security-admission/[公式ドキュメント]を参照してください。
+詳細については、Kubernetesのポッドセキュリティアドミッションのlink:https://kubernetes.io/docs/concepts/security/pod-security-admission/[公式ドキュメント]を参照してください。
 
 === SecurityContexts
 

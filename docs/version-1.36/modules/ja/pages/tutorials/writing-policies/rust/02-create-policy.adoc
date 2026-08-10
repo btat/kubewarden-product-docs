@@ -55,9 +55,9 @@ spec:
 
 == 新しいポリシープロジェクトのスキャフォールディング
 
-`cargo generate`とhttps://github.com/kubewarden/rust-policy-template[テンプレートプロジェクト]を使用して、新しいポリシープロジェクトを作成できます。
+`cargo generate`とlink:https://github.com/kubewarden/rust-policy-template[テンプレートプロジェクト]を使用して、新しいポリシープロジェクトを作成できます。
 
-まず、`cargo-generate`をインストールします。これにはhttps://pkgs.org/download/openssl-devel[openssl-devel]が必要です。
+まず、`cargo-generate`をインストールします。これにはlink:https://pkgs.org/download/openssl-devel[openssl-devel]が必要です。
 
 [subs="+attributes",shell]
 ----
@@ -86,7 +86,7 @@ cargo generate --git https://github.com/kubewarden/rust-policy-template \
 [NOTE]
 ====
 
-デモでGitHubコンテナレジストリ機能を使用する予定がある場合は、https://docs.github.com/en/packages/working-with-a-github-packages-registry/enabling-improved-container-support-with-the-container-registry#enabling-the-container-registry-for-your-personal-account[改善されたコンテナサポートを有効にする]必要があります。
+デモでGitHubコンテナレジストリ機能を使用する予定がある場合は、link:https://docs.github.com/en/packages/working-with-a-github-packages-registry/enabling-improved-container-support-with-the-container-registry#enabling-the-container-registry-for-your-personal-account[改善されたコンテナサポートを有効にする]必要があります。
 ====
 
 

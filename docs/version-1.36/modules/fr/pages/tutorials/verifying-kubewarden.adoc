@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Vérification {admc-name}
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Vérifiez les différents artefacts produits par l'équipe {admc-name} pour garantir une chaîne d'approvisionnement sécurisée grâce à l'utilisation de SBOMs et de fichiers de provenance.
 :doc-persona: ["kubewarden-operator", "kubewarden-policy-developer", "kubewarden-integrator"]
@@ -37,7 +37,7 @@ Notez que l'URL inclut le chemin complet du dépôt, le chemin du fichier de wor
 
 L'équipe {admc-short-name} s'efforce également d'améliorer la chaîne d'approvisionnement sécurisée et de rendre l'ensemble de la pile conforme au niveau 3 SLSA. Par conséquent, les principaux artefacts incluent également des fichiers SBOM et de provenance. Dans les sections suivantes, nous montrerons comment vérifier les différents artefacts produits par l'équipe {admc-short-name} et comment garantir la chaîne d'approvisionnement sécurisée des artefacts en utilisant des fichiers SBOM et de provenance.
 
-[#container-images]
+[#_container_images]
 == Images de conteneur
 
 Pour vérifier les images de conteneur signées sans clé produites par l'équipe {admc-short-name}, vous pouvez utiliser la CLI `cosign`. Par exemple, pour vérifier l'image `kubewarden/policy-server`, vous pouvez exécuter la commande suivante :
@@ -95,6 +95,7 @@ slsactl download provenance ghcr.io/kubewarden/policy-server:v1.30.0
 slsactl download sbom ghcr.io/kubewarden/policy-server:v1.30.0
 ----
 
+[#_helm_charts]
 == Charts Helm
 
 Vous pouvez trouver {admc-short-name} charts Helm dans notre `https://` dépôt Helm traditionnel sous https://charts.kubewarden.io.
@@ -129,7 +130,7 @@ The following checks were performed on each of these signatures:
 
 Vous pouvez ensuite vérifier que le certificat dans le JSON retourné contient le bon émetteur, le bon sujet et les bonnes extensions `github_workflow_repository`.
 
-Les attestations de chart sont poussées vers le registre OCI en tant que couche d'artefact. Voir la section xref:#container-images[images de conteneurs] sur la façon de les vérifier.
+Les attestations de chart sont poussées vers le registre OCI en tant que couche d'artefact. Voir la section xref:#_container_images[images de conteneurs] sur la façon de les vérifier.
 
 Les charts {admc-short-name} incluent `imagelist.txt` et (`policylist.txt` lorsque cela est pertinent) à l'intérieur du chart. Ainsi, si vous avez déjà vérifié le chart, vous pouvez utiliser ces listes pour vérifier les images de conteneurs consommées et les stratégies.
 
@@ -153,7 +154,7 @@ ghcr.io/kubewarden/policy-server:v0.3.1
 ghcr.io/kubewarden/kubectl:v1.21.4
 ----
 
-Maintenant, pour chaque image de cette liste, vous pouvez vérifier leurs signatures Sigstore en suivant les instructions de la xref:#container-images[section précédente].
+Maintenant, pour chaque image de cette liste, vous pouvez vérifier leurs signatures Sigstore en suivant les instructions de la xref:#_container_images[section précédente].
 
 == kwctl
 

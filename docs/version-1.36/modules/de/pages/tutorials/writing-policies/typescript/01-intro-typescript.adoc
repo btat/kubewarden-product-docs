@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Richtlinien in TypeScript/JavaScript schreiben
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Erfahren Sie, wie Sie effektive {admc-name} Validierungsrichtlinien mit TypeScript/JavaScript schreiben.
 :keywords: kubewarden, kubernetes, Richtlinien in TypeScript schreiben, Richtlinien in JavaScript schreiben

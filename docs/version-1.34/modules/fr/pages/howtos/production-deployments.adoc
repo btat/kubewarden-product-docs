@@ -140,6 +140,7 @@ Kubernetes est déjà livré avec deux classes de priorité qui sont de bons can
 Si vous supprimez une classe de priorité, les pods existants qui utilisent le nom de la classe de priorité supprimée restent inchangés, mais les pods suivants qui utilisent ce nom ne seront pas créés par Kubernetes.
 ====
 
+[#_policyserver_production_configuration]
 == `PolicyServer` Configuration de production pour
 
 `PolicyServers` sont critiques pour le cluster. La fiabilité de ceux-ci est importante car ils traitent les demandes d'admission destinées à l'API Kubernetes via les webhooks de validation et de mutation.

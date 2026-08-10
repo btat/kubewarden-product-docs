@@ -53,8 +53,8 @@ spec:
 
 ----
 
-Ahora, necesitamos escribir el código CEL que obtendrá los Ingresses existentes en el clúster. Para eso, usamos la [{admc-short-name} biblioteca de extensiones CEL](https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities).
-Particularmente, las `kw.k8s` capacidades de host, que nos permiten consultar el clúster por GroupVersionKinds. Puedes ver la documentación disponible para las funciones CEL [aquí](https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library).
+Ahora, necesitamos escribir el código CEL que obtendrá los Ingresses existentes en el clúster. Para eso, usamos la https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{admc-short-name} biblioteca de extensiones CEL].
+Particularmente, las `kw.k8s` capacidades de host, que nos permiten consultar el clúster por GroupVersionKinds. Puedes ver la documentación disponible para las funciones CEL https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library[aquí].
 
 La biblioteca utiliza un patrón de constructor al igual que las extensiones CEL de Kubernetes upstream; llamar a un método de función CEL devuelve un objeto CEL que por sí mismo tiene métodos de función específicos. Esto simplifica tener certeza sobre el alcance y los valores de retorno de nuestro código CEL.
 

@@ -14,7 +14,7 @@ include::partial$variables.adoc[]
 
 == {project-name}スタックのバージョニング
 
-{short-project-name}プロジェクトは、https://semver.org/[セマンティックバージョニング]を使用して、すべてのコンポーネントの「スタック」バージョンを定義します：バージョンは`MAJOR.MINOR.PATCH`パターンに従います。サポートされているバージョンは最新のリリースです。
+{short-project-name}プロジェクトは、link:https://semver.org/[セマンティックバージョニング]を使用して、すべてのコンポーネントの「スタック」バージョンを定義します：バージョンは`MAJOR.MINOR.PATCH`パターンに従います。サポートされているバージョンは最新のリリースです。
 
 「スタック」バージョンのルールに従う{short-project-name}コンポーネントは次のとおりです：
 
@@ -36,7 +36,7 @@ include::partial$variables.adoc[]
 
 == Helmチャートのバージョン
 
-Helmチャートは、`version`フィールドと`appVersion`フィールドを定義します。`appVersion`フィールドは、前述の{short-project-name}「スタック」バージョンを通知します。`version`フィールドはhttps://semver.org/[セマンティックバージョニング]に従い、チャートテンプレートおよび`values.yaml`の後方互換性のある変更を説明します。
+Helmチャートは、`version`フィールドと`appVersion`フィールドを定義します。`appVersion`フィールドは、前述の{short-project-name}「スタック」バージョンを通知します。`version`フィールドはlink:https://semver.org/[セマンティックバージョニング]に従い、チャートテンプレートおよび`values.yaml`の後方互換性のある変更を説明します。
 
 == アップグレードパス
 

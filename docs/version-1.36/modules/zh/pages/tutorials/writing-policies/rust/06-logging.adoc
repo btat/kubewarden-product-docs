@@ -14,7 +14,7 @@ include::partial$variables.adoc[]
 您可以让您的策略执行日志记录。
 `policy-server`或`kwctl`将这些日志条目转发到包含适当信息的地方。
 
-为Rust SDK选择的日志库是https://github.com/slog-rs/slog[`slog`]。
+为Rust SDK选择的日志库是link:https://github.com/slog-rs/slog[`slog`]。
 这是一个流行且知名的crate，并与{admc-name}无缝集成。
 
 == 初始化记录器
@@ -59,4 +59,4 @@ fn validate(payload: &[u8]) -> CallResult {
 这可以是`kwctl`或`policy-server`。
 然后，策略评估器记录此信息，添加进一步已知的上下文信息，例如Kubernetes请求`uid`。
 
-有关slog提供的https://docs.rs/slog/2.7.0/slog/macro.log.html[日志宏]的更多信息，请参阅其https://docs.rs/slog/2.7.0/slog/index.html[文档]。
+有关slog提供的link:https://docs.rs/slog/2.7.0/slog/macro.log.html[日志宏]的更多信息，请参阅其link:https://docs.rs/slog/2.7.0/slog/index.html[文档]。

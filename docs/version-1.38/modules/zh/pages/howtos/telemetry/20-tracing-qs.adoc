@@ -27,6 +27,7 @@ xref:howtos/telemetry/10-opentelemetry-qs.adoc#_install_opentelemetry[OpenTeleme
 
 您使用 https://www.jaegertracing.io/[Jaeger] -- 来接收、存储和可视化跟踪事件。
 
+[#_install_jaeger]
 == 安装 Jaeger
 
 您使用 https://github.com/jaegertracing/jaeger-operator[Jaeger Operator] 来管理所有不同的 Jaeger 组件。您可以使用 Helm 图表安装 Jaeger Operator。
@@ -34,7 +35,7 @@ xref:howtos/telemetry/10-opentelemetry-qs.adoc#_install_opentelemetry[OpenTeleme
 [NOTE]
 ====
 
-在撰写本文时（2022-06-21），只有特定版本的 Jaeger 与 Cert Manager 兼容，https://github.com/jaegertracing/helm-charts/blob/main/charts/jaeger-operator/COMPATIBILITY.md[请参阅兼容性图表]。
+在撰写本文时（2022-06-21），只有特定版本的 Jaeger 与 Cert Manager 兼容，link:https://github.com/jaegertracing/helm-charts/blob/main/charts/jaeger-operator/COMPATIBILITY.md[请参阅兼容性图表]。
 
 ====
 

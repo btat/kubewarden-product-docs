@@ -10,14 +10,14 @@ include::partial$variables.adoc[]
 :keywords: ["kubewarden", "kubernetes", "writing policies", "golang", "go", "logging"]
 :current-version: {page-origin-branch}
 
-Go SDK几乎开箱即用地与https://github.com/francoispqt/onelog[`onelog`]项目集成。
+Go SDK几乎开箱即用地与link:https://github.com/francoispqt/onelog[`onelog`]项目集成。
 // TODO: Last release 2019. Still good?
 
 该项目选择了这个库作为：
 
 * 它可以与WebAssembly二进制文件一起使用。
 其他流行的日志解决方案无法编译为WebAssembly目标。
-* 它提供了https://github.com/francoispqt/onelog#benchmarks[良好的性能]。
+* 它提供了link:https://github.com/francoispqt/onelog#benchmarks[良好的性能]。
 * 它支持结构化日志记录。
 
 == 初始化日志记录器
@@ -65,7 +65,7 @@ func validate(payload []byte) ([]byte, error) {
 }
 ----
 
-您可以参考https://pkg.go.dev/github.com/francoispqt/onelog?utm_source=godoc[`onelog`文档]以获取更多信息。
+您可以参考link:https://pkg.go.dev/github.com/francoispqt/onelog?utm_source=godoc[`onelog`文档]以获取更多信息。
 
 策略日志记录发送到策略评估器（例如，`kwctl`或`policy-server`），它们代表策略进行日志记录。
-它们使用与其他组件互操作的机制，这些组件支持分布式追踪，例如https://www.jaegertracing.io/[Jaeger]。
+它们使用与其他组件互操作的机制，这些组件支持分布式追踪，例如link:https://www.jaegertracing.io/[Jaeger]。

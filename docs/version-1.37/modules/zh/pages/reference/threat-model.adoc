@@ -14,7 +14,7 @@ include::partial$variables.adoc[]
 
 https://github.com/kubernetes/community/tree/master/sig-security[Kubernetes安全特别兴趣小组（SIG）]已为Kubernetes定义了准入控制威胁模型。{admc-name}团队不断依据该威胁模型对{admc-short-name}进行评估，并致力于提供安全默认设置。建议{admc-short-name}管理员阅读并理解该威胁模型，并根据需要使用它来制定自己的特定情况威胁模型。
 
-有关每个威胁的详细信息请参见https://github.com/kubernetes/sig-security/tree/main/sig-security-docs/papers/admission-control[SIG安全发布的文档]。
+有关每个威胁的详细信息请参见link:https://github.com/kubernetes/sig-security/tree/main/sig-security-docs/papers/admission-control[SIG安全发布的文档]。
 
 == Kubernetes威胁
 

@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = 常用任务
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: 使用 {admc-name} 和 kwctl CLI 工具管理 Kubernetes 集群中的策略。
 :doc-persona: ["kubewarden-all"]
@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{admc-name}", "kubewarden", "kubernetes", "kwctl", "policy", "policyserver", "clusteradmissionpolicy", "admissionpolicy"]
 :current-version: {page-origin-branch}
 
-这描述了在您 xref:quick-start.adoc#installation[安装 {admc-name}] 后在 Kubernetes 集群中常见的任务。
+这描述了在您 xref:quick-start.adoc#_installation[安装 {admc-name}] 后在 Kubernetes 集群中常见的任务。
 
 这些单独的任务是按逻辑顺序排列的。
 

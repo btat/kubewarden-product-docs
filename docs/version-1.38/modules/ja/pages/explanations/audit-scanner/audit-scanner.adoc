@@ -58,10 +58,11 @@ Kubewarden audit scannerは次のように動作します：
 
 詳細についてはポリシー作成者のxref:tutorials/writing-policies/index.adoc[ドキュメント]を参照してください。
 
+[#_permissions_and_serviceaccounts]
 == 権限とサービスアカウント
 
 {admc-short-name}のKubewarden audit scannerは、Kubernetesリソースをスキャンし、結果を保存するために、特定のロールベースのアクセス制御（RBAC）構成を必要とします。インストールにより、これらの権限を持つ正しいデフォルトのサービスアカウントが作成されます。ユーザーはリソースへのアクセスを構成するために、自分自身のサービスアカウントを作成できます。
 
-デフォルトのKubewarden audit scanner`ServiceAccount`は、Kubernetesによって提供される`view` `ClusterRole`にバインドされます。この`ClusterRole`は、ネームスペース内の幅広いKubernetesリソースへの読み取り専用アクセスを許可します。この役割の詳細については、https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles[Kubernetesドキュメント]をご覧ください。
+デフォルトのKubewarden audit scanner`ServiceAccount`は、Kubernetesによって提供される`view` `ClusterRole`にバインドされます。この`ClusterRole`は、ネームスペース内の幅広いKubernetesリソースへの読み取り専用アクセスを許可します。この役割の詳細については、link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles[Kubernetesドキュメント]をご覧ください。
 
 Kubewarden audit scannerは、`ClusterRole`にバインドされ、{admc-short-name}リソースタイプへの読み取りアクセスと`PolicyReport`CRDへの読み書きアクセスを付与します。 これらの権限により、Kubewarden audit scannerは監査評価を実施し、評価結果に基づいてポリシーレポートを作成するためにリソースを取得できます。

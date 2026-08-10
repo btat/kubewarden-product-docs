@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 针对策略作者的测试
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: 学习如何使用kwctl测试策略作者，可以使用bats或标准测试，特别是针对{admc-name}策略在Wasm中的测试。
 :doc-persona: ["kubewarden-policy-developer"]
@@ -47,7 +47,7 @@ include::partial$variables.adoc[]
 
 在测试`kwctl`之后，将`ValidationResponse`对象打印到标准输出。
 
-这就是您如何使用`kwctl`来测试之前提到的https://github.com/kubewarden/ingress-policy[`ingress-policy`]的Wasm二进制文件：
+这就是您如何使用`kwctl`来测试之前提到的link:https://github.com/kubewarden/ingress-policy[`ingress-policy`]的Wasm二进制文件：
 
 [subs="+attributes",console]
 ----

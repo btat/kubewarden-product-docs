@@ -15,7 +15,7 @@ include::partial$variables.adoc[]
 
 [NOTE]
 ====
-既存のポリシーを移植するために使用できるhttps://github.com/kubewarden/opa-policy-template[kubewarden/opa-policy-template]があります。
+既存のポリシーを移植するために使用できるlink:https://github.com/kubewarden/opa-policy-template[kubewarden/opa-policy-template]があります。
 ====
 
 
@@ -123,7 +123,7 @@ response = {
 ----
 
 この時点では、Regoコードの詳細に入る必要はありません。
-それについては、https://www.openpolicyagent.org/docs/latest/policy-language/[ウェブサイト]で学ぶことができます。
+それについては、link:https://www.openpolicyagent.org/docs/latest/policy-language/[ウェブサイト]で学ぶことができます。
 
 この場合、`allowed: true`または`allowed: false`のいずれかを返します。
 これは、他のパッケージ`data.kubernetes.admission`に`deny`ステートメントがあり、それが`true`に評価されるかどうかに依存します。

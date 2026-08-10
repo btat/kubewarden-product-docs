@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Organisation de la documentation
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-04-30
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :sidebar_label: Organisation
 :sidebar_position: 75
@@ -44,5 +44,5 @@ Un lien vers la source de la page sur GitHub se trouve en bas de chaque page.
 Sont également maintenus :
 
 * link:https://github.com/kubewarden/rfc[RFCs] pour le projet.
-* Une série de link:https://www.kubewarden.io/blog/[billets de blog] liés aux versions de {community-name}.
-* Éléments liés à la gestion de link:https://github.com/kubewarden/community[la communauté] de {community-name}.
+* Une série de link:https://www.kubewarden.io/blog/[billets de blog] liés aux versions de {kw-community-project-name}.
+* Éléments liés à la gestion de link:https://github.com/kubewarden/community[la communauté] de {kw-community-project-name}.

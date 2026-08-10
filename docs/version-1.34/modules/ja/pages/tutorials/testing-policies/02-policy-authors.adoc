@@ -47,7 +47,7 @@ Kubernetesクラスターをデプロイせずにこれを行うには、これ�
 
 テスト`kwctl`の後、`ValidationResponse`オブジェクトを標準出力に印刷します。
 
-これが、`kwctl`を使用して前述のhttps://github.com/kubewarden/ingress-policy[`ingress-policy`]のWasmバイナリをテストする方法です：
+これが、`kwctl`を使用して前述のlink:https://github.com/kubewarden/ingress-policy[`ingress-policy`]のWasmバイナリをテストする方法です：
 
 [subs="+attributes",console]
 ----
@@ -58,7 +58,7 @@ $ curl https://raw.githubusercontent.com/kubewarden/ingress-policy/v0.1.8/test_d
         registry://ghcr.io/kubewarden/policies/ingress:v0.1.8 | jq
 ----
 
-`kwctl`の事前ビルドされたバイナリをダウンロードできますhttps://github.com/kubewarden/kwctl/releases[こちら]。
+`kwctl`の事前ビルドされたバイナリをダウンロードできますlink:https://github.com/kubewarden/kwctl/releases[こちら]。
 
 `bats`を使用すると、このコマンドを実行し、期待される出力を探すテストを書くことができます。
 

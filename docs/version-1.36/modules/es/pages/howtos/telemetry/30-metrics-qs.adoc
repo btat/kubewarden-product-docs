@@ -25,6 +25,7 @@ de este libro. Lo necesitas para que esta sección funcione correctamente.
 Utilizas https://prometheus.io/[Prometheus] para recolectar métricas expuestas por el
 Servidor de Políticas.
 
+[#_install_prometheus]
 == Instala Prometheus
 
 Utilizas https://github.com/prometheus-operator/prometheus-operator[Operador de Prometheus], que nos permite definir los objetivos de Prometheus.

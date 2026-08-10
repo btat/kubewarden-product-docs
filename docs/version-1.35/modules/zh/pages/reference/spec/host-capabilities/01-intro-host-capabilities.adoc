@@ -12,7 +12,7 @@ include::partial$variables.adoc[]
 :current-version: {page-origin-branch}
 
 在评估期间，{project-name}策略可以访问主机环境提供的额外能力。
-该机制采用类似于传统的https://en.wikipedia.org/wiki/Remote_procedure_call[RPC]的方法。
+该机制采用类似于传统的link:https://en.wikipedia.org/wiki/Remote_procedure_call[RPC]的方法。
 
 当{short-project-name}策略发出请求时，会发生以下情况：
 
@@ -27,7 +27,7 @@ include::partial$variables.adoc[]
  ** 代码从主机接收答案并恢复执行。
  ** 主机响应会得到相应处理。
 
-主机能力特性是使用https://wapc.io/[waPC]实现的。
+主机能力特性是使用link:https://wapc.io/[waPC]实现的。
 每个能力使用以下细节：
 
 * waPC函数名称：主机暴露的能力名称。

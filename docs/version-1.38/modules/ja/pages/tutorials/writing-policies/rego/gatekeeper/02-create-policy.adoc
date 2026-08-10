@@ -16,7 +16,7 @@ include::partial$variables.adoc[]
 
 [NOTE]
 ====
-既存のポリシーを移植するためのベースとして使用できるhttps://github.com/kubewarden/gatekeeper-policy-template[リポジトリテンプレート]があります。
+既存のポリシーを移植するためのベースとして使用できるlink:https://github.com/kubewarden/gatekeeper-policy-template[リポジトリテンプレート]があります。
 ====
 
 

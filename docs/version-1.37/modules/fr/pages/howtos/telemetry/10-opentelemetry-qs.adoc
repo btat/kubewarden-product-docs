@@ -91,7 +91,7 @@ Les guides suivants créent un Kubernetes standard `Ingress` avec `ingressClassN
 
 Si vous préférez ne pas installer Traefik, les guides de traçage conservent également `kubectl port-forward` comme solution de secours pour accéder directement à Jaeger.
 
-[#install-opentelemetry]
+[#_install_opentelemetry]
 == Installer OpenTelemetry
 
 [NOTE]

@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Définitions de ressources personnalisées (CRD)
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-04-30
+:revdate: 2026-05-04
 :page-revdate: {revdate}
 :description: Découvrez les définitions de ressources personnalisées (CRD) pour {project-name}, et accédez aux références API associées.
 :doc-persona: ["kubewarden-policy-developer"]
