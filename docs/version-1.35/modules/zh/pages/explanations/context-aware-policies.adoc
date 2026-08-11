@@ -19,7 +19,7 @@ include::partial$variables.adoc[]
 上下文感知策略仅在{project-name}版本≥v1.6.0中可用。
 ====
 
-在集群中，策略所能访问的资源，由策略服务器的https://kubernetes.io/docs/concepts/security/service-accounts/[服务账户]决定。集群管理员通过Kubernetes RBAC规则控制策略可以访问的资源。上下文感知策略仅对请求的资源具有*读取*权限。
+在集群中，策略所能访问的资源，由策略服务器的link:https://kubernetes.io/docs/concepts/security/service-accounts/[服务账户]决定。集群管理员通过Kubernetes RBAC规则控制策略可以访问的资源。上下文感知策略仅对请求的资源具有*读取*权限。
 
 出于安全原因，只有`ClusterAdmissionPolicy`策略可以从Kubernetes集群获取信息。这是因为非特权用户可以部署`AdmissionPolicy`资源。
 

@@ -20,6 +20,7 @@ Depuis la version `v9.0.0`, `rancher-backup` prend en charge {project-name}. Cel
 - Les CRD {short-project-name}, qui sont réconciliés après la restauration par le contrôleur {short-project-name}.
 - Le sous-chart `policy-reporter` du chart `kubewarden-controller`, pour leurs valeurs par défaut. Cela n'inclut pas l'intégration Grafana ni d'autres plugins.
 
+[#_user_secrets]
 == Secrets utilisateur
 
 Le processus de sauvegarde n'inclut pas les Secrets créés par l'utilisateur, tels que ceux utilisés pour xref:/howtos/policy-servers/02-private-registry.adoc#_creating_the_secret[configurer les PolicyServers pour les registres privés], à moins qu'ils ne soient correctement étiquetés. Pour cela, étiquetez les secrets de l'une des manières suivantes. Soit :
@@ -38,7 +39,7 @@ kubectl label secret secret-ghcr-docker resources.cattle.io/backup=true
 
 == Installation de Rancher Backup Operator
 
-Suivez le lien : \https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[documentation de Rancher Manager]. Pour une installation Minikube utilisant les PersistentVolumes de type `hostPath` nommés `standard` que Minikube prend en charge par défaut.
+Suivez le lien : https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[documentation de Rancher Manager]. Pour une installation Minikube utilisant les PersistentVolumes de type `hostPath` nommés `standard` que Minikube prend en charge par défaut.
 
 Il faut indiquer à Rancher Backup Operator de sauvegarder également les CRs définis par l'utilisateur {short-project-name} en définissant la valeur `optionalResources.kubewarden.enabled` sur `true`.
 

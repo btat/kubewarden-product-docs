@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Cadeia de suprimento segura
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Configure {admc-name} para validar a integridade das assinaturas de artefatos e políticas de admissão.
 :doc-persona: ["kubewarden-user", "kubewarden-operator", "kubewarden-distributor", "kubewarden-integrator"]

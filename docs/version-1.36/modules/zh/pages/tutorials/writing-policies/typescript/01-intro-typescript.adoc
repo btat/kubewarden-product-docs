@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 在 TypeScript/JavaScript 中编写策略
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: 学习如何使用 TypeScript/JavaScript 编写有效的 {admc-name} 验证策略。
 :keywords: kubewarden，kubernetes，在 TypeScript 中编写策略，在 JavaScript 中编写策略

@@ -36,7 +36,7 @@ helm install kubewarden-crds kubewarden/kubewarden-crds
 
 [NOTE]
 ====
-Kubewarden 1.33では、監査スキャナー機能はデフォルトで[openreports.io](https://openreports.io)のOpenReports CRDsにレポートを保存します。
+Kubewarden 1.33では、監査スキャナー機能はデフォルトでlink:https://openreports.io[openreports.io]のOpenReports CRDsにレポートを保存します。
 
 link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] K8sポリシー作業グループからのCRDsは、デフォルトではインストールされず、非推奨としてマークされ、将来のリリースで削除されます。
 
@@ -73,13 +73,13 @@ helm install kubewarden-controller kubewarden/kubewarden-controller
 
 {short-project-name}のインストールに関する詳細情報は、xref:quick-start.adoc[クイックスタートガイド]をご覧ください。
 
-デフォルトでは、監査スキャナーの実装は、60分ごとにトリガーされるhttps://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs[Cronjob]として行われます。kubewarden-controllerチャートのhttps://github.com/kubewarden/helm-charts/blob/main/charts/kubewarden-controller/values.yaml[values.yaml]を変更することで、監査スキャナーの設定を調整できます。
+デフォルトでは、監査スキャナーの実装は、60分ごとにトリガーされるlink:https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs[Cronjob]として行われます。kubewarden-controllerチャートのlink:https://github.com/kubewarden/helm-charts/blob/main/charts/kubewarden-controller/values.yaml[values.yaml]を変更することで、監査スキャナーの設定を調整できます。
 
 監査スキャナーに関する詳細情報はxref:explanations/audit-scanner/audit-scanner.adoc[こちら]をご覧ください。
 
 === ポリシーレポーターUI（オプション）
 
-`kubewarden-controller`チャートには、https://kyverno.github.io/policy-reporter[ポリシーレポーター]のサブチャートが含まれています。デフォルトでは無効になっており、`auditScanner.policyReporter=true`を設定することで有効にできます。ポリシーレポーターのサブチャートの値は、`policyReporter``kubewarden-controller`キーの下にあります。
+`kubewarden-controller`チャートには、link:https://kyverno.github.io/policy-reporter[ポリシーレポーター]のサブチャートが含まれています。デフォルトでは無効になっており、`auditScanner.policyReporter=true`を設定することで有効にできます。ポリシーレポーターのサブチャートの値は、`policyReporter``kubewarden-controller`キーの下にあります。
 
 これは、クラスター内のPolicyReportsおよびClusterPolicyReportsの視覚化を提供するUIであるポリシーレポーターのアップストリームチャートの一部のみをインストールします。ポリシーレポーターUIに関する詳細情報はxref:explanations/audit-scanner/audit-scanner.adoc[監査スキャナー]をご覧ください。
 
@@ -89,7 +89,7 @@ helm install kubewarden-controller kubewarden/kubewarden-controller
 
 ==== Ingress
 
-ユーザーは独自のIngress構成を提供するか、サブチャート構成https://github.com/kyverno/policy-reporter/blob/policy-reporter-2.19.4/charts/policy-reporter/charts/ui/values.yaml#L172-L189[こちら]を介してIngressを有効にできます。
+ユーザーは独自のIngress構成を提供するか、サブチャート構成link:https://github.com/kyverno/policy-reporter/blob/policy-reporter-2.19.4/charts/policy-reporter/charts/ui/values.yaml#L172-L189[こちら]を介してIngressを有効にできます。
 
 このサブチャートを介したIngress設定の例を参照してください：
 

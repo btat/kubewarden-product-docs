@@ -41,7 +41,7 @@ OpenTelemetryガイド]にあります。
 
 https://minikube.sigs.k8s.io/docs/[minikube]を使用してテスト用のKubernetesクラスターを作成できます。
 
-Minikubeには多くのバックエンドがありますが、この場合はlibvirtに依存するhttps://minikube.sigs.k8s.io/docs/drivers/kvm2/[kvm2]ドライバーを使用できます。
+Minikubeには多くのバックエンドがありますが、この場合はlibvirtに依存するlink:https://minikube.sigs.k8s.io/docs/drivers/kvm2/[kvm2]ドライバーを使用できます。
 
 `libvirtd`が正しくマシン上で実行されていると仮定して、次のコマンドを発行します：
 
@@ -73,7 +73,7 @@ $ minikube start --driver=kvm2
 
 === Traefikをインストールする
 
-次のテレメトリガイドでは、Kubernetes `Ingress`リソースを使用してJaeger UIを公開する際に、https://traefik.io/traefik/[Traefik]をIngressコントローラーとして使用します。
+次のテレメトリガイドでは、Kubernetes `Ingress`リソースを使用してJaeger UIを公開する際に、link:https://traefik.io/traefik/[Traefik]をIngressコントローラーとして使用します。
 
 Helmチャートを使用してTraefikをインストールします。
 
@@ -92,7 +92,7 @@ helm install --wait \
 
 Traefikをインストールしたくない場合、トレースガイドではJaegerに直接アクセスするためのフォールバックとして`kubectl port-forward`を保持します。
 
-[#install-opentelemetry]
+[#_install_opentelemetry]
 == OpenTelemetryをインストールする
 
 [NOTE]
@@ -100,10 +100,10 @@ Traefikをインストールしたくない場合、トレースガイドではJ
 最新のサポートされているコンポーネントバージョンについては、xref:/reference/dependency-matrix.adoc[依存関係マトリックス]を参照してください。
 ====
 
-OpenTelemetry Collectorサイドカーの自動注入をPolicyServerポッドに管理するために、https://github.com/open-telemetry/opentelemetry-operator[OpenTelemetry
+OpenTelemetry Collectorサイドカーの自動注入をPolicyServerポッドに管理するために、link:https://github.com/open-telemetry/opentelemetry-operator[OpenTelemetry
 Operator]を使用します。
 
-OpenTelemetry Operatorは、クラスター内にhttps://cert-manager.io/docs/installation/[cert-manager]のインストールを必要とします。
+OpenTelemetry Operatorは、クラスター内にlink:https://cert-manager.io/docs/installation/[cert-manager]のインストールを必要とします。
 
 
 [subs="+attributes",console]

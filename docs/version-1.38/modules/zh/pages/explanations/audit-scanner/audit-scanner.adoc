@@ -58,6 +58,7 @@ include::partial$variables.adoc[]
 
 有关更多信息，请参见策略作者的xref:tutorials/writing-policies/index.adoc[文档]。
 
+[#_permissions_and_serviceaccounts]
 == 权限和服务账户
 
 {admc-short-name}中的审计扫描器需要特定的基于角色的访问控制（RBAC）配置，以便能够扫描Kubernetes资源并保存结果。安装会创建一个具有这些权限的正确默认服务账户。用户可以创建自己的服务账户来配置对资源的访问。

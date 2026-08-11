@@ -71,8 +71,9 @@ Vous pouvez servir {short-project-name} stratégies en utilisant un serveur web 
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == Neutralité des fournisseurs
 
-{short-project-name} est un projet lien:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[neutre vis-à-vis des fournisseurs] tel que défini par le CNCF.
+{short-project-name} est un projet link:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[neutre vis-à-vis des fournisseurs] tel que défini par le CNCF.
 
 endif::[]

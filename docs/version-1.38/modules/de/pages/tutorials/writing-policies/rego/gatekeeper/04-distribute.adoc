@@ -51,6 +51,7 @@ Fahren Sie fort und annotieren Sie die Richtlinie:
 $ kwctl annotate policy.wasm --metadata-path metadata.yaml --output-path annotated-policy.wasm
 ----
 
+[#_pushing_the_policy]
 == Die Richtlinie pushen
 
 Pushen Sie Ihre Richtlinie in eine OCI-Registry:

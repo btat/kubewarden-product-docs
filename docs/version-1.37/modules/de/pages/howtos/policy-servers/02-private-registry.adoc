@@ -17,6 +17,7 @@ Sobald Sie den PolicyServer so konfigurieren, dass er auf private Registries zug
 
 Um dies zu erreichen, sollten Sie ein Geheimnis erstellen, das die Anmeldeinformationen der privaten Registries enthält. Konfigurieren Sie dann die Ressourcen dieser PolicyServer und anschließend Ihr Helm-Chart, um das Geheimnis zu verwenden.
 
+[#_creating_the_secret]
 == Erstellen des Geheimnisses
 
 PolicyServer unterstützen die üblichen https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Docker-Konfigurationsgeheimnisse], entweder vom Typ `kubernetes.io/dockercfg` oder vom Typ `kubernetes.io/dockerconfigjson`. Sie können diese Geheimnisse mit `kubectl create secret docker-registry` erstellen.

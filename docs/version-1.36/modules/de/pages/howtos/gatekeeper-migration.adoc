@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Migration von Gatekeeper-Richtlinien zu {admc-name}
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Konfigurieren Sie eine {admc-name}-Richtlinie, indem Sie eine vorhandene Gatekeeper-Richtlinie in zwei Hauptschritten migrieren: Kompilierung von Rego-Code in WebAssembly.
 :keywords: ["{admc-name}", kubewarden, gatekeeper]
@@ -175,6 +175,7 @@ touch policy.wasm # opa creates the bundle with unix epoch timestamp, fix it
 
 Es gibt weitere Informationen darüber, wie man Gatekeeper-Richtlinien in unserem xref:/tutorials/writing-policies/rego/gatekeeper/03-build-and-run.adoc[Tutorial] erstellt.
 
+[#_rego_policy_code_and_opa_v1_0_0_compatibility]
 === Rego-Richtliniencode und OPA v1.0.0-Kompatibilität
 
 Mit der Veröffentlichung von OPA (Open Policy Agent) link:https://github.com/open-policy-agent/opa/releases/tag/v1.0.0[v1.0.0] im Dezember 2024 wurde eine inkompatible Änderung bezüglich der Rego-Richtliniensyntax eingeführt.

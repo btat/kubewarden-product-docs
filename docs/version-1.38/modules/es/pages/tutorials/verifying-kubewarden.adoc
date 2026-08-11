@@ -37,7 +37,7 @@ Ten en cuenta que la URL incluye la ruta completa del repositorio, la ruta del a
 
 El equipo {admc-short-name} también está haciendo esfuerzos para mejorar el sistema de suministro seguro y para que todo el stack cumpla con el nivel 3 de SLSA. Por lo tanto, los principales artefactos también incluyen archivos SBOM y de procedencia. En las siguientes secciones, mostraremos cómo verificar los diferentes artefactos producidos por el equipo {admc-short-name} y cómo asegurar el sistema de suministro seguro de los artefactos utilizando archivos SBOM y de procedencia.
 
-[#container-images]
+[#_container_images]
 == Imágenes de contenedor
 
 Para verificar las imágenes de contenedor firmadas sin clave producidas por el equipo {admc-short-name}, puedes usar la herramienta CLI `cosign`. Por ejemplo, para verificar la imagen `kubewarden/policy-server`, puedes ejecutar el siguiente comando:
@@ -95,6 +95,7 @@ slsactl download provenance ghcr.io/kubewarden/policy-server:v1.30.0
 slsactl download sbom ghcr.io/kubewarden/policy-server:v1.30.0
 ----
 
+[#_helm_chart]
 == Gráficos de Helm
 
 Puedes encontrar {admc-short-name} gráficos de Helm en nuestro `https://` repositorio tradicional de Helm bajo https://charts.kubewarden.io..
@@ -105,7 +106,7 @@ Los gráficos de Helm se publican junto a un https://hauler.dev[manifiesto de Ha
 
 === Verificando con Hauler
 
-Hauler verifica automáticamente los artefactos al descargarlos. Para obtener más información, consulta xref:/howtos/airgap/03-hauler.adoc[nuestra documentación].
+Hauler verifica automáticamente los artefactos al descargarlos. Para obtener más información, consulta xref:/howtos/airgap/02-hauler.adoc[nuestra documentación].
 
 === Verificando manualmente
 
@@ -129,7 +130,7 @@ The following checks were performed on each of these signatures:
 
 Puedes verificar que el certificado en el json devuelto contiene el emisor, sujeto y `github_workflow_repository` extensiones correctas.
 
-Las atestaciones del gráfico se envían al registro OCI como una capa de artefacto. Consulta la sección xref:#container-images[imágenes de contenedor] sobre cómo verificarlas.
+Las atestaciones del gráfico se envían al registro OCI como una capa de artefacto. Consulta la sección xref:#_container_images[imágenes de contenedor] sobre cómo verificarlas.
 
 Los {admc-short-name} gráficos incluyen `imagelist.txt` y (`policylist.txt` cuando sea relevante) dentro del gráfico. Por lo tanto, si ya has verificado el gráfico, puedes usar esas listas para verificar las imágenes de contenedor consumidas y las políticas.
 
@@ -153,7 +154,7 @@ ghcr.io/kubewarden/policy-server:v0.3.1
 ghcr.io/kubewarden/kubectl:v1.21.4
 ----
 
-Ahora, para cada imagen en esa lista puedes verificar sus firmas de Sigstore siguiendo las instrucciones de la xref:#container-images[sección anterior].
+Ahora, para cada imagen en esa lista puedes verificar sus firmas de Sigstore siguiendo las instrucciones de la xref:#_container_images[sección anterior].
 
 == kwctl
 

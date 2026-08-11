@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{project-name}", "kubewarden", "kubernetes", "cel", "vap", "validatingadmissionpolicy"]
 :current-version: {page-origin-branch}
 
-从 Kubernetes v1.26 开始，https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/[ValidatingAdmissionPolicy] 提供了一种在 Kubernetes 中编写自定义准入策略的方法。这些策略是使用 https://cel.dev/[通用表达语言 (CEL)] 编写的，并扩展了一些 https://kubernetes.io/docs/reference/using-api/cel/[Kubernetes 特定扩展]。
+从 Kubernetes v1.26 开始，link:https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/[ValidatingAdmissionPolicy] 提供了一种在 Kubernetes 中编写自定义准入策略的方法。这些策略是使用 https://cel.dev/[通用表达语言 (CEL)] 编写的，并扩展了一些 https://kubernetes.io/docs/reference/using-api/cel/[Kubernetes 特定扩展]。
 ValidatingAdmissionPolicy 在 Kubernetes v1.30 中进入稳定状态。
 
 {project-name} 提供了一个 CEL 策略，能够在不进行任何修改的情况下运行 Kubernetes VAP 策略。

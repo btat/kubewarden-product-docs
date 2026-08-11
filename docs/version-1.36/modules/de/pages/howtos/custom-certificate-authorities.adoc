@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Benutzerdefinierte CA
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Konfigurieren Sie benutzerdefinierte CA für den Einsatz in {admc-name}-Installationen, um eine sichere Kommunikation und Authentifizierung zu gewährleisten.
 :doc-persona: ["kubewarden-user", "kubewarden-operator", "kubewarden-distributor", "kubewarden-integrator"]

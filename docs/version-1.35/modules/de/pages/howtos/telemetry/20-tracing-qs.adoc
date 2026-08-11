@@ -30,6 +30,7 @@ und den Richtlinien sein.
 Sie verwenden https://www.jaegertracing.io/[Jaeger] --, um Trace-Ereignisse zu empfangen, zu speichern und
 zu visualisieren.
 
+[#_install_jaeger]
 == Installieren Sie Jaeger
 
 Sie verwenden den https://github.com/jaegertracing/jaeger-operator[Jaeger Operator], um alle verschiedenen Jaeger-Komponenten zu verwalten. Sie können den Jaeger-Operator mit Helm-Charts installieren.

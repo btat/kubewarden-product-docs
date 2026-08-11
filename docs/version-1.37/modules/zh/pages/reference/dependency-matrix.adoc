@@ -16,7 +16,7 @@ include::partial$variables.adoc[]
 
 == OpenTelemetry、指标和追踪依赖关系
 
-在撰写时，https://opentelemetry.io[OpenTelemetry] 堆栈仍在不断改进。然而，它尚不稳定，未公告的向后不兼容更改仍然会发生。{admc-short-name} 开发者努力跟踪 OpenTelemetry 堆栈的变化并进行调整。该项目针对已知有效的 OpenTelemetry、指标和追踪堆栈进行测试。
+在撰写时，link:https://opentelemetry.io[OpenTelemetry] 堆栈仍在不断改进。然而，它尚不稳定，未公告的向后不兼容更改仍然会发生。{admc-short-name} 开发者努力跟踪 OpenTelemetry 堆栈的变化并进行调整。该项目针对已知有效的 OpenTelemetry、指标和追踪堆栈进行测试。
 
 == 可选依赖关系
 

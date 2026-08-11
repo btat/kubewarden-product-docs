@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Richtlinien in Go schreiben
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Schreiben Sie effektive Validierungsrichtlinien für Admission Controller mit TinyGo, unter Verwendung seiner nützlichen Bibliotheken und Werkzeuge, die speziell für Go-Entwickler entwickelt wurden.
 :doc-persona: ["kubewarden-policy-developer"]

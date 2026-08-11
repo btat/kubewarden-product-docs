@@ -163,6 +163,7 @@ touch policy.wasm # opa creates the bundle with unix epoch timestamp, fix it
 
 Gatekeeper ポリシーのビルド方法についての詳細は、私たちの xref:/tutorials/writing-policies/rego/gatekeeper/03-build-and-run.adoc[チュートリアル] にあります。
 
+[#_rego_policy_code_and_opa_v1_0_0_compatibility]
 === Rego ポリシーコードと OPA v1.0.0 の互換性
 
 2024 年 12 月に OPA (Open Policy Agent) link:https://github.com/open-policy-agent/opa/releases/tag/v1.0.0[v1.0.0] がリリースされる際、Rego ポリシー構文に関する破壊的変更が導入されました。

@@ -40,7 +40,7 @@ policy.wasm: WebAssembly (wasm) binary module version 0x1 (MVP)
 
 == その他の例
 
-より多くのRust製{short-project-name}ポリシーは、{short-project-name}のGitHubスペースで見つけることができます。https://github.com/search?l=Rust&q=topic%3Apolicy-as-code+org%3Akubewarden&type=Repositories[このクエリ]を使用すると、見つけるのに役立ちます。
+より多くのRust製{short-project-name}ポリシーは、{short-project-name}のGitHubスペースで見つけることができます。link:https://github.com/search?l=Rust&q=topic%3Apolicy-as-code+org%3Akubewarden&type=Repositories[このクエリ]を使用すると、見つけるのに役立ちます。
 
 そのクエリで示された{short-project-name}ポリシーリポジトリには、次のタスクを自動化するGitHub Actionsがあります：
 

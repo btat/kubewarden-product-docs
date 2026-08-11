@@ -17,7 +17,7 @@ Wenn Sie den {project-name} Audit Scanner verwenden, speichern Sie die Ergebniss
 [CAUTION]
 ====
 
-Mit {project-name} 1.33 speichert die Audit Scanner-Funktion die Berichte standardmäßig in OpenReports CRDs von [openreports.io](https://openreports.io).
+Mit {project-name} 1.33 speichert die Audit Scanner-Funktion die Berichte standardmäßig in OpenReports CRDs von https://openreports.io[openreports.io].
 
 Die link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] CRDs der K8s Policy-Arbeitsgruppe sind standardmäßig nicht installiert, als auslaufend markiert und werden in einer zukünftigen Version entfernt.
 

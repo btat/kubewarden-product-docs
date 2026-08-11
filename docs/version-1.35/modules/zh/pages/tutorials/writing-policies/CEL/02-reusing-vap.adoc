@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 重用验证准入策略
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-04-30
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :description: 了解如何在Kubernetes中使用{project-name}的（cel-policy）重用和验证准入策略。
 :doc-persona: ["kubewarden-policy-developer", "kubewarden-operator"]
@@ -20,7 +20,7 @@ Kubernetes 原生 https://kubernetes.io/docs/reference/access-authn-authz/valida
 
 == ValidatingAdmissionPolicy
 
-以下的ValidatingAdmissionPolicy是从https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/#creating-a-validatingadmissionpolicy[Kubernetes文档]改编而来的。
+以下的ValidatingAdmissionPolicy是从link:https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/#creating-a-validatingadmissionpolicy[Kubernetes文档]改编而来的。
 
 该策略检查部署中的副本数是否小于或等于默认的`maxreplicas`，即5。用户可以通过使用参数在每个名称空间或部署中覆盖此默认值，并选择一个更小的数字。
 

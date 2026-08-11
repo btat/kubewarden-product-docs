@@ -1,6 +1,8 @@
 include::partial$variables.adoc[]
 
 = プライベートSigstoreインスタンスを使用するためのPolicyServersの設定
+:revdate: 2026-06-02
+:page-revdate: {revdate}
 :page-languages: [en, de, es, fr, ja, pt, zh]
 :description: ポリシー署名検証のために、{admc-name}でプライベートまたは自己ホスト型のSigstoreインスタンスを使用するようにPolicyServersを設定します。
 :keywords: ["kubewarden", "kubernetes", "policyservers", "sigstore", "private sigstore", "policy signing"]
@@ -16,8 +18,8 @@ PolicyServerをプライベートまたは自己ホスト型のSigstoreインス
 
 * Fulcio、Rekor、TSA、およびCTログサービスにアクセス可能な稼働中のプライベートSigstoreインスタンス
 * `kubectl`の`kubewarden`ネームスペースへのアクセス
-* ローカルにインストールされたhttps://docs.sigstore.dev/cosign/system_config/installation/[`cosign`] CLI。
-* ローカルにインストールされたhttps://jqlang.org/[`jq`]
+* ローカルにインストールされたlink:https://docs.sigstore.dev/cosign/system_config/installation/[`cosign`] CLI。
+* ローカルにインストールされたlink:https://jqlang.org/[`jq`]
 
 == ステップ1 - `ClientTrustConfig` JSONを生成する
 
@@ -105,7 +107,7 @@ cosign signing-config create \
 `start-time`の値は、証明書が発行される前の日付（またはSigstoreインスタンスのデプロイ日）に設定する必要があります。
 ====
 
-両方のコマンドのすべての利用可能なフラグとJSONフィールド定義の完全な説明については、https://docs.sigstore.dev/cosign/system_config/installation/[cosign CLIリファレンス]およびhttps://github.com/sigstore/protobuf-specs[Sigstoreクライアント信頼設定仕様]を参照してください。
+両方のコマンドのすべての利用可能なフラグとJSONフィールド定義の完全な説明については、link:https://docs.sigstore.dev/cosign/system_config/installation/[cosign CLIリファレンス]およびlink:https://github.com/sigstore/protobuf-specs[Sigstoreクライアント信頼設定仕様]を参照してください。
 
 === `trust_config.json`に統合してください。
 

@@ -83,7 +83,7 @@ Dockerはエアギャップインストールに使用されるイメージの�
 cat */policylist.txt > policies.txt
 ----
 +
-デフォルトポリシーのリストを含むファイルは、{short-project-name}デフォルトhttps://github.com/kubewarden/helm-charts/releases/[リリースページ]にあります。
+デフォルトポリシーのリストを含むファイルは、{short-project-name}デフォルトlink:https://github.com/kubewarden/helm-charts/releases/[リリースページ]にあります。
 
 . https://github.com/kubewarden/kubewarden-controller/blob/main/scripts[`kubewarden-controller`リポジトリ]から`kubewarden-save-policies.sh`と`kubewarden-load-policies.sh`をダウンロードします。
 
@@ -188,7 +188,7 @@ helm install --wait -n kubewarden kubewarden-controller kubewarden-controller.tg
     --set policy-reporter.ui.image.repository=kyverno/policy-reporter-ui
 ----
 
-サブチャートを有効にするために`auditScanner.policyReporter`を定義し、Policy Reporterのイメージを保存するレジストリとリポジトリを構成するために4つの値を定義する必要があります。Policy Reporterサブチャートの値に関する詳細情報は、https://github.com/kyverno/policy-reporter/tree/policy-reporter-2.19.4/charts/policy-reporter[Policy Reporterのドキュメント]を参照してください。
+サブチャートを有効にするために`auditScanner.policyReporter`を定義し、Policy Reporterのイメージを保存するレジストリとリポジトリを構成するために4つの値を定義する必要があります。Policy Reporterサブチャートの値に関する詳細情報は、link:https://github.com/kyverno/policy-reporter/tree/policy-reporter-2.19.4/charts/policy-reporter[Policy Reporterのドキュメント]を参照してください。
 
 ====
 

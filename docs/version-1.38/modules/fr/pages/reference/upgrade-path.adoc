@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Chemin de mise à niveau
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-06-18
+:revdate: 2026-07-28
 :page-revdate: {revdate}
 :description: Mettez à niveau votre {admc-name} pile en utilisant des stratégies de versionnement et des règles de compatibilité prises en charge parmi ses composants.
 :doc-persona: ["kubewarden-operator"]

@@ -44,6 +44,7 @@ Kubernetes CEL 验证规则可以访问多个函数库：
 
 `cel-policy` 被编译并作为 CEL 解释器运行。政策的用户在 (Cluster)AdmissionPolicy 的 `spec.settings` 中传递所需的 CEL 表达式，得益于 CEL 的特性，表达式在创建或更新 (Cluster)AdmissionPolicy 时会被编译并进行类型检查以确保正确性。这意味着不需要自定义构建`cel-policy`。
 
+[#_benefits_of_kubewardens_cel_policy_in_comparison_with_validatingadmissionpolicies]
 === 与 ValidatingAdmissionPolicies 相比，{admc-short-name} 的 `cel-policy` 的优势
 
 {admc-short-name} `cel-policy`：

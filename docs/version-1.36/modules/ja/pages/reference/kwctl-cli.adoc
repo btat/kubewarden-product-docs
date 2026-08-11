@@ -3,7 +3,7 @@
 include::partial$variables.adoc[]
 = kwctl CLI
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :title: kwctl CLI
 :description: \`kwctl` コマンドラインツールを探索して、{admc-name} ポリシーを管理し、ポリシーの読み込みなどのタスクを実行します。
@@ -491,4 +491,4 @@ Kubernetes `ValidatingAdmissionPolicy`を{admc-short-name} `ClusterAdmissionPoli
 
 '''
 
-この文書はhttps://crates.io/crates/clap-markdown[`clap-markdown`]によって自動的に生成されました。
+この文書はlink:https://crates.io/crates/clap-markdown[`clap-markdown`]によって自動的に生成されました。

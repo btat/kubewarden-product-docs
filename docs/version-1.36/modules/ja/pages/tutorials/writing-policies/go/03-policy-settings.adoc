@@ -50,7 +50,7 @@ type RegularExpression struct {
 ====
 
 
-正規表現オブジェクトを処理するために`regexp`パッケージを使用しており、拒否されたラベルのリストを格納するためにhttps://github.com/deckarep/golang-set[`mapset.Set`]型を使用しています。
+正規表現オブジェクトを処理するために`regexp`パッケージを使用しており、拒否されたラベルのリストを格納するためにlink:https://github.com/deckarep/golang-set[`mapset.Set`]型を使用しています。
 
 `regexp.Regexp`はデシリアライズを処理しないため、正規表現のマーシャリングおよびアンマーシャリングを処理するカスタム関数を定義する必要があります：
 
@@ -105,7 +105,7 @@ func (s *Settings) UnmarshalJSON(data []byte) error {
 {admc-short-name}ポリシーは、ポリシー設定を入力として受け取る2つの異なる関数を公開します：
 
 * `validate`:Kubernetesオブジェクトがポリシーによる検証を必要とする場合は、この関数を使用してください。
-設定は、https://pkg.go.dev/github.com/kubewarden/policy-sdk-go@v0.2.1/protocol#ValidationRequest[`ValidationRequest`]オブジェクトの一部です。
+設定は、link:https://pkg.go.dev/github.com/kubewarden/policy-sdk-go@v0.2.1/protocol#ValidationRequest[`ValidationRequest`]オブジェクトの一部です。
 * `validate_settings`:ポリシーが最初に{admc-short-name}によって読み込まれたときにこの関数を呼び出します。
 この関数は、ポリシー設定を入力として受け取り、有効性をチェックします。
 
@@ -126,11 +126,11 @@ func NewSettingsFromValidationReq(validationReq *kubewarden_protocol.ValidationR
 
 [NOTE]
 ====
-すべての`mapset.Set`オブジェクトは、https://pkg.go.dev/github.com/deckarep/golang-set?utm_source=godoc#NewThreadUnsafeSet[スレッド非安全なバリアント]を使用して作成されます。
+すべての`mapset.Set`オブジェクトは、link:https://pkg.go.dev/github.com/deckarep/golang-set?utm_source=godoc#NewThreadUnsafeSet[スレッド非安全なバリアント]を使用して作成されます。
 WebAssemblyコードは単一スレッドで実行されるため、競合の問題はありません。
 
 WebAssembly標準はまだスレッドをカバーしていません。
-詳細については、https://github.com/WebAssembly/threads[公式提案]を参照してください。
+詳細については、link:https://github.com/WebAssembly/threads[公式提案]を参照してください。
 ====
 
 
@@ -191,7 +191,7 @@ func validateSettings(payload []byte) ([]byte, error) {
 }
 ----
 
-この関数は、https://github.com/kubewarden/policy-sdk-go[{admc-short-name}のSDK]によって提供されるヘルパー関数を活用していることがわかります。
+この関数は、link:https://github.com/kubewarden/policy-sdk-go[{admc-short-name}のSDK]によって提供されるヘルパー関数を活用していることがわかります。
 
 == 設定コードのテスト
 

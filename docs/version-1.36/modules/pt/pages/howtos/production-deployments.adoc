@@ -140,6 +140,7 @@ O Kubernetes já vem com duas classes de prioridade que são boas candidatas: `s
 Se você excluir uma classe de prioridade, os Pods existentes que usam o nome da classe de prioridade excluída permanecem inalterados, mas os Pods subsequentes que usam o nome da classe de prioridade excluída não serão criados pelo Kubernetes.
 ====
 
+[#_policyserver_production_configuration]
 == `PolicyServer` Configuração de produção
 
 `PolicyServers` são críticos para o cluster. A confiabilidade deles é importante, pois processam Solicitações de Admissão destinadas à API do Kubernetes via os Webhooks de Validação e Mutação.

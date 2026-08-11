@@ -14,7 +14,7 @@ include::partial$variables.adoc[]
 
 Goチュートリアルを通じて、長く、そしてきっと楽しい旅路を歩んできました。ここまで辿り着いた皆さん、おめでとうございます🎉。
 
-このチュートリアルでは、https://github.com/kubewarden/safe-labels-policy[safe-labels-policy]を再作成しました。
+このチュートリアルでは、link:https://github.com/kubewarden/safe-labels-policy[safe-labels-policy]を再作成しました。
 
 ポリシーを配布する際に特別なことはありません。
 このガイドに従った場合、最後の章で定義されたGitHub `release.yml` Actionを使用して、すでにポリシーを公開しています。

@@ -15,7 +15,7 @@ include::partial$variables.adoc[]
 
 [NOTE]
 ====
-您可以使用一个https://github.com/kubewarden/opa-policy-template[kubewarden/opa-policy-template]来移植现有策略。
+您可以使用一个link:https://github.com/kubewarden/opa-policy-template[kubewarden/opa-policy-template]来移植现有策略。
 ====
 
 

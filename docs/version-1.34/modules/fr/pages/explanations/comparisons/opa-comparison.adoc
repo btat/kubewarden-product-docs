@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = {project-name} vs OPA Gatekeeper
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-03-18
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :page-aliases: explanations/opa-comparison.adoc
 :description: Comparez OPA Gatekeeper et la gestion des stratégies de {project-name} pour les environnements Kubernetes afin de déterminer la meilleure approche pour votre cas d'utilisation.
@@ -69,12 +69,14 @@ Ce tableau fournit une comparaison entre OPA Gatekeeper et {short-project-name}.
 | ✅
 |===
 
+[#_types_of_policies]
 == Types de stratégies
 
 À la fois OPA Gatekeeper et Kubernetes peuvent écrire des stratégies de validation et de mutation.
 
 Ces stratégies peuvent cibler tout type de ressource Kubernetes, y compris les ressources personnalisées.
 
+[#_writing_policies]
 == Écriture de stratégies
 
 Vous écrivez des stratégies OPA Gatekeeper en utilisant https://www.openpolicyagent.org/docs/latest/#rego[Rego]. Rego est un langage de requête créé par le projet Open Policy Agent.
@@ -101,6 +103,7 @@ Bien que utilisant le même langage, les stratégies écrites pour kube-mgmt ne 
 ====
 
 
+[#_context_aware]
 == Contexte conscient
 
 Parfois, une stratégie a besoin de données sur l'état actuel du cluster pour prendre une décision de validation ou de mutation. Par exemple, une stratégie validant les ressources Ingress pourrait avoir besoin de connaître d'autres ressources Ingress déjà définies dans le cluster pour s'assurer qu'aucun conflit ne se produise. {short-project-name} appelle ces stratégies « conscientes du contexte ».
@@ -116,6 +119,7 @@ Par exemple, si une stratégie OPA Gatekeeper nécessite l'accès aux Secrets Ku
 Inversement, {short-project-name} fournit un accès granulaire aux ressources du cluster.
 Chaque stratégie n'a accès qu'aux ressources que l'administrateur Kubernetes spécifie. Tenter de lire des données non autorisées est immédiatement bloqué et signalé aux administrateurs du cluster.
 
+[#_kubernetes_integration]
 == Intégration Kubernetes
 
 OPA Gatekeeper dispose d'une ressource personnalisée à l'échelle du cluster, permettant la définition de stratégies et leur application.
@@ -126,6 +130,7 @@ Les stratégies déployées via une ressource `AdmissionPolicy` n'affectent que 
 
 Cela permet aux administrateurs Kubernetes de déléguer le travail lié aux stratégies.
 
+[#_policy_distribution]
 == Distribution des stratégies
 
 OPA Gatekeeper et les stratégies {short-project-name} ont le code source de la stratégie (Rego pour OPA Gatekeeper, CEL pour {short-project-name}) dans la ressource personnalisée définissant une stratégie dans Kubernetes.
@@ -136,6 +141,7 @@ Vous pouvez signer et vérifier les stratégies {short-project-name} en utilisan
 
 Vous pouvez distribuer les stratégies {short-project-name} entre des registres de conteneurs géographiquement distribués en utilisant les outils et processus traditionnels adoptés pour les images de conteneurs.
 
+[#_cicd_integration]
 == Intégration CI/CD
 
 Tant OPA Gatekeeper que {short-project-name} sont gérés en utilisant des méthodologies GitOps.
@@ -154,6 +160,7 @@ Les administrateurs Kubernetes maintiennent généralement d'autres pipelines d'
 
 Le pipeline teste la stratégie contre différents types de requêtes. Vous pouvez effectuer les tests en utilisant l'outil CLI https://github.com/kubewarden/kwctl[`kwctl`], sans nécessiter un cluster Kubernetes en cours d'exécution. L'outil CLI `kwctl` utilise le même moteur d'évaluation que celui utilisé par la pile {short-project-name} déployée dans un cluster Kubernetes.
 
+[#_policy_enforcement_modes]
 == Modes d'imposition des stratégies
 
 Tant OPA Gatekeeper que {short-project-name} peuvent déployer des stratégies en utilisant deux modes d'opération différents :
@@ -161,6 +168,7 @@ Tant OPA Gatekeeper que {short-project-name} peuvent déployer des stratégies e
 * `deny` : la violation d'une stratégie rejette la requête
 * `warn` : la violation d'une stratégie ne cause pas de rejet et est enregistrée
 
+[#_deployment_mode]
 == Mode de déploiement
 
 Le même serveur évalue toutes les stratégies OPA Gatekeeper. Inversement, {short-project-name} permet la définition de plusieurs serveurs d'évaluation. Vous définissez ces serveurs par une ressource personnalisée appelée `PolicyServer`.
@@ -182,6 +190,7 @@ Cela permet des scénarios intéressants comme les suivants :
 * Déployez des stratégies critiques sur un pool de serveurs de stratégies dédié.
 * Déployez les stratégies d'un locataire bruyant sur un pool de serveurs de stratégies dédié.
 
+[#_background_checks]
 == Vérifications de fond
 
 À mesure que des stratégies sont ajoutées, supprimées et reconfigurées, les ressources déjà présentes dans le cluster peuvent devenir non conformes.

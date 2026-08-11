@@ -53,8 +53,8 @@ spec:
 
 ----
 
-Maintenant, nous devons écrire le code CEL qui récupérera les Ingress existants dans le cluster. Pour cela, nous utilisons la [{short-project-name}bibliothèque d'extensions CEL](https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities).
-Particulièrement, les capacités d'hôte `kw.k8s`, qui nous permettent d'interroger le cluster pour les GroupVersionKinds. Vous pouvez voir la documentation disponible pour les fonctions CEL [ici](https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library).
+Maintenant, nous devons écrire le code CEL qui récupérera les Ingress existants dans le cluster. Pour cela, nous utilisons la https://github.com/kubewarden/cel-policy?tab=readme-ov-file#host-capabilities[{short-project-name}bibliothèque d'extensions CEL].
+Particulièrement, les capacités d'hôte `kw.k8s`, qui nous permettent d'interroger le cluster pour les GroupVersionKinds. Vous pouvez voir la documentation disponible pour les fonctions CEL https://pkg.go.dev/github.com/kubewarden/cel-policy/internal/cel/library[ici].
 
 La bibliothèque utilise un modèle de constructeur tout comme les extensions Kubernetes CEL en amont ; appeler une méthode de fonction CEL renvoie un objet CEL qui, à lui seul, possède des méthodes de fonction spécifiques. Cela facilite l'assurance quant à la portée et aux valeurs de retour de notre code CEL.
 

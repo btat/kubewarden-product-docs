@@ -142,7 +142,7 @@ helm install --wait -n kubewarden kubewarden-controller oci://<REGISTRY.YOURDOMA
     --set policy-reporter.ui.image.repository=kyverno/policy-reporter-ui
 ----
 
-必须定义 `auditScanner.policyReporter` 和其他四个值，以启用子图表并配置注册表和储存库，以便指定 Policy Reporter 镜像存储的位置。有关策略报告子图表值的更多信息，请参阅链接：https://kyverno.github.io/policy-reporter-docs/getting-started/helm.html[Policy Reporter 文档]。
+必须定义 `auditScanner.policyReporter` 和其他四个值，以启用子图表并配置注册表和储存库，以便指定 Policy Reporter 镜像存储的位置。有关策略报告子图表值的更多信息，请参阅链接：link:https://kyverno.github.io/policy-reporter-docs/getting-started/helm.html[Policy Reporter 文档]。
 
 ====
 

@@ -37,7 +37,7 @@ helm pull kubewarden/sbomscanner
 
 [NOTE]
 ====
-可选地，您可以验证 xref:/tutorials/verifying-kubewarden.adoc#_helm_charts[helm 图表] 和 xref:/tutorials/verifying-kubewarden.adoc#_container_images[容器镜像] 的签名。
+可选地，您可以验证 xref:/tutorials/verifying-kubewarden.adoc#_helm_chart[helm 图表] 和 xref:/tutorials/verifying-kubewarden.adoc#_container_images[容器镜像] 的签名。
 ====
 
 == 将容器镜像保存在本地

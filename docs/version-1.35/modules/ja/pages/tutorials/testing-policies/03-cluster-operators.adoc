@@ -21,7 +21,7 @@ Kubernetesクラスターオペレーターとして、使用したい{project-n
  ** ポリシーの設定パラメータを変更する場合？
  ** などなど？
 
-{short-project-name}には、Kubernetesの外部でポリシーのテストを許可するユーティリティ、https://github.com/kubewarden/kwctl[`kwctl`]があります。
+{short-project-name}には、Kubernetesの外部でポリシーのテストを許可するユーティリティ、link:https://github.com/kubewarden/kwctl[`kwctl`]があります。
 
 `kwctl`を使用するには、次の入力で呼び出します：
 
@@ -43,7 +43,7 @@ https://github.com/kubewarden/kwctl/releases[こちら]。
 
 == テストの例
 
-このセクションでは、異なる設定と検証リクエストオブジェクトを使用して、https://github.com/kubewarden/psp-apparmor[psp-apparmor]ポリシーをテストする方法について説明します。
+このセクションでは、異なる設定と検証リクエストオブジェクトを使用して、link:https://github.com/kubewarden/psp-apparmor[psp-apparmor]ポリシーをテストする方法について説明します。
 
 === `AdmissionReview`リクエストを作成します。
 

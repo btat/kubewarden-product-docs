@@ -37,7 +37,7 @@ endif::[]
 * 导航到问题选项卡并点击 *新问题*。
 * 描述问题或改进建议。细节越多，越好。
 * 点击 *提交新问题*。
-* 提交问题后，您可以将其分配给自己，或者等待社区成员来处理。文档团队和社区的成员可能会在处理您的问题之前请求澄清。您应该主动检查您的问题或https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications[开启 GitHub 通知]。
+* 提交问题后，您可以将其分配给自己，或者等待社区成员来处理。文档团队和社区的成员可能会在处理您的问题之前请求澄清。您应该主动检查您的问题或link:https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications[开启 GitHub 通知]。
 
 == 新内容建议
 
@@ -45,10 +45,10 @@ endif::[]
 
 * 选择您认为内容所属的部分中的现有页面，然后点击 *创建一个问题*。或
 ifeval::["{build-type}" == "community"]
-* 导航到https://github.com/kubewarden/docs/issues/new/choose[GitHub]并直接提交问题。
+* 导航到link:https://github.com/kubewarden/docs/issues/new/choose[GitHub]并直接提交问题。
 endif::[]
 ifeval::["{build-type}" == "product"]
-* 导航到https://github.com/rancher/kubewarden-product-docs/issues/new/choose[GitHub]并直接提交问题。
+* 导航到link:https://github.com/rancher/kubewarden-product-docs/issues/new/choose[GitHub]并直接提交问题。
 endif::[]
 
 == 如何让您的贡献产生实际效果？

@@ -17,7 +17,7 @@ Al utilizar el Escáner de Auditoría {admc-name}, almacenas los resultados de l
 [CAUTION]
 ====
 
-Con {admc-name} 1.33, la función del Escáner de Auditoría guarda los informes en los CRDs de OpenReports de [openreports.io](https://openreports.io) por defecto.
+Con {admc-name} 1.33, la función del Escáner de Auditoría guarda los informes en los CRDs de OpenReports de https://openreports.io[openreports.io] por defecto.
 
 Los CRDs de link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] del grupo de trabajo de Directivas de K8s no están instalados por defecto, están marcados como obsoletos y se eliminarán en una futura versión.
 

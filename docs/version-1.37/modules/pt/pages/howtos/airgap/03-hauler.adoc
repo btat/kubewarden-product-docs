@@ -142,7 +142,7 @@ helm install --wait -n kubewarden kubewarden-controller oci://<REGISTRY.YOURDOMA
     --set policy-reporter.ui.image.repository=kyverno/policy-reporter-ui
 ----
 
-É necessário definir `auditScanner.policyReporter` e quatro outros valores para habilitar o sub-gráfico e configurar o registro e repositório com a localização do armazenamento da imagem do Policy Reporter. Para mais informações sobre os valores do sub-gráfico de relatório de políticas, consulte o \link: \https://kyverno.github.io/policy-reporter-docs/getting-started/helm.html[documentação do Policy Reporter].
+É necessário definir `auditScanner.policyReporter` e quatro outros valores para habilitar o sub-gráfico e configurar o registro e repositório com a localização do armazenamento da imagem do Policy Reporter. Para mais informações sobre os valores do sub-gráfico de relatório de políticas, consulte o \link: https://kyverno.github.io/policy-reporter-docs/getting-started/helm.html[documentação do Policy Reporter].
 
 ====
 

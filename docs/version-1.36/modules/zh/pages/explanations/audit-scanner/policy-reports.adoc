@@ -17,7 +17,7 @@ include::partial$variables.adoc[]
 [CAUTION]
 ====
 
-在 {admc-name} 1.33 中，审计扫描器功能默认将报告保存到来自 [openreports.io](https://openreports.io) 的 OpenReports CRD。
+在 {admc-name} 1.33 中，审计扫描器功能默认将报告保存到来自 https://openreports.io[openreports.io] 的 OpenReports CRD。
 
 来自 K8s 政策工作组的 link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] CRD 默认未安装，标记为弃用，并将在未来版本中去除。
 
@@ -40,7 +40,7 @@ include::partial$variables.adoc[]
 
 您还可以为您的策略定义严重性和类别注释。
 
-操作员可以使用`kubectl`查询报告。他们还可以使用由https://kyverno.github.io/policy-reporter[policy-reporter]开源项目提供的可选用户界面来监控并实现 OpenReports CRD 的可观测性。
+操作员可以使用`kubectl`查询报告。他们还可以使用由link:https://kyverno.github.io/policy-reporter[policy-reporter]开源项目提供的可选用户界面来监控并实现 OpenReports CRD 的可观测性。
 
 == 查询报告
 

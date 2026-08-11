@@ -79,9 +79,9 @@ https://github.com/kubernetes/kubernetes/tree/master/staging/src/k8s.io[官方 K
 == 获取 TinyGo 依赖项。
 
 获取 TinyGo 的最简单方法是使用上游容器镜像。
-官方发布在https://hub.docker.com/r/tinygo/tinygo[这里]，而开发分支的构建会自动推送到https://hub.docker.com/r/tinygo/tinygo-dev[这里]。
+官方发布在link:https://hub.docker.com/r/tinygo/tinygo[这里]，而开发分支的构建会自动推送到link:https://hub.docker.com/r/tinygo/tinygo-dev[这里]。
 
-如有需要，请查看 TinyGo 的https://tinygo.org/getting-started/[入门]页面以获取更多信息。
+如有需要，请查看 TinyGo 的link:https://tinygo.org/getting-started/[入门]页面以获取更多信息。
 
 == 教程前提条件。
 

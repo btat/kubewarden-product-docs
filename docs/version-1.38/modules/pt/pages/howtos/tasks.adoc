@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{admc-name}", "kubewarden", "kubernetes", "kwctl", "política", "servidor-de-política", "política-de-admissão-do-cluster", "política-de-admissão"]
 :current-version: {page-origin-branch}
 
-Isso descreve tarefas comuns para depois que você xref:quick-start.adoc#installation[instalar {admc-name}] em seu cluster Kubernetes.
+Isso descreve tarefas comuns para depois que você xref:quick-start.adoc#_installation[instalar {admc-name}] em seu cluster Kubernetes.
 
 As tarefas separadas estão em uma ordem lógica.
 

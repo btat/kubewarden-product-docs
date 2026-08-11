@@ -25,7 +25,7 @@ https://github.com/kubewarden/policy-server[policy-server]组件执行这些操�
 您可以通过附加组件在运行时添加处理能力。
 这些附加组件就是{admc-short-name}策略。
 
-因此，{admc-short-name}策略就像是"策略服务器"程序的https://en.wikipedia.org/wiki/Plug-in_%28computing%29[传统插件]。
+因此，{admc-short-name}策略就像是"策略服务器"程序的link:https://en.wikipedia.org/wiki/Plug-in_%28computing%29[传统插件]。
 
 总结：
 
@@ -36,13 +36,13 @@ https://github.com/kubewarden/policy-server[policy-server]组件执行这些操�
 
 == 编程语言要求
 
-您提供{admc-short-name}策略作为https://webassembly.org/[WebAssembly]二进制文件。
+您提供{admc-short-name}策略作为link:https://webassembly.org/[WebAssembly]二进制文件。
 
 策略作者可以使用任何支持 WebAssembly 作为编译目标的编程语言编写策略。
-支持的语言列表不断发展，https://github.com/appcypher/awesome-wasm-langs[此页面] 提供了 WebAssembly 生态系统的良好概述。
+支持的语言列表不断发展，link:https://github.com/appcypher/awesome-wasm-langs[此页面] 提供了 WebAssembly 生态系统的良好概述。
 
 目前，WebAssembly 没有官方的方法在主机和 WebAssembly 客户端之间共享复杂数据类型。
-为了克服这一限制，{admc-short-name}策略使用https://github.com/wapc[waPC]项目，该项目提供了双向通信通道。
+为了克服这一限制，{admc-short-name}策略使用link:https://github.com/wapc[waPC]项目，该项目提供了双向通信通道。
 
 因此，您选择的编程语言必须有可用的 waPC 客户端 SDK。
 如果不是这种情况，请随时与我们联系。

@@ -40,7 +40,7 @@ policy.wasm: WebAssembly (wasm) binary module version 0x1 (MVP)
 
 == 更多示例
 
-您可以在 {short-project-name} 的 GitHub 空间中找到更多 Rust {short-project-name} 策略。https://github.com/search?l=Rust&q=topic%3Apolicy-as-code+org%3Akubewarden&type=Repositories[此查询]可以帮助您找到它们。
+您可以在 {short-project-name} 的 GitHub 空间中找到更多 Rust {short-project-name} 策略。link:https://github.com/search?l=Rust&q=topic%3Apolicy-as-code+org%3Akubewarden&type=Repositories[此查询]可以帮助您找到它们。
 
 该查询显示的 {short-project-name} 策略库具有自动化以下任务的 GitHub Actions：
 

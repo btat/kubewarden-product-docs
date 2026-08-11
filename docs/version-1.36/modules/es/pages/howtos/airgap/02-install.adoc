@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = Instalación en entorno aislado
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Configura un registro privado con imágenes y políticas de {admc-name} para instalar {admc-name} en un entorno aislado.
 :doc-persona: [“kubewarden-operator”, “kubewarden-integrator”]

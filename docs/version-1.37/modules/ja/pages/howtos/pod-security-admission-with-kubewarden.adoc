@@ -13,11 +13,11 @@ include::partial$variables.adoc[]
 :current-version: {page-origin-branch}
 
 ポッドセキュリティポリシー（PSP）は、Kubernetes 1.25リリース以降に削除されました。
-それらはhttps://kubernetes.io/docs/concepts/security/pod-security-admission/[ポッドセキュリティアドミッション]（PSA）に置き換えられました。
+それらはlink:https://kubernetes.io/docs/concepts/security/pod-security-admission/[ポッドセキュリティアドミッション]（PSA）に置き換えられました。
 
 PSAはKubernetesクラスター内のポッドの保護を簡素化します。
 
-PSAには、ネームスペース用の3つのプロファイル（https://kubernetes.io/docs/concepts/security/pod-security-standards/[ポッドセキュリティスタンダード]に記載）があります。
+PSAには、ネームスペース用の3つのプロファイル（link:https://kubernetes.io/docs/concepts/security/pod-security-standards/[ポッドセキュリティスタンダード]に記載）があります。
 
 * *特権*、最も広範な権限を提供します。
 * *ベースライン*、新しい特権の昇格を防ぎます。

@@ -3,7 +3,7 @@
 include::partial$variables.adoc[]
 = kwctl CLI
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-04-30
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :title: kwctl CLI
 :description: Erforschen Sie das \`kwctl` Kommandozeilenwerkzeug zur Verwaltung von {project-name} Richtlinien und zur Durchführung von Aufgaben wie das Laden von Richtlinien.

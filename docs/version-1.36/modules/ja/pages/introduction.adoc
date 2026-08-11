@@ -67,12 +67,13 @@ Wasmモジュールはポータブルで、一度構築されると、あらゆ�
 
 == ポリシー配布
 
-標準のウェブサーバーを使用して{admc-short-name}ポリシーを提供することができます。または、より良い方法として、https://github.com/opencontainers/artifacts[OCIアーティファクト]としてOCI準拠のレジストリに公開することができます。
+標準のウェブサーバーを使用して{admc-short-name}ポリシーを提供することができます。または、より良い方法として、link:https://github.com/opencontainers/artifacts[OCIアーティファクト]としてOCI準拠のレジストリに公開することができます。
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == ベンダーの中立性
 
-{admc-short-name}はCNCFによって定義されたリンク:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[ベンダー中立]プロジェクトです。
+{admc-short-name}はCNCFによって定義されたlink:https://contribute.cncf.io/maintainers/community/vendor-neutrality/[ベンダー中立]プロジェクトです。
 
 endif::[]

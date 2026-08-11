@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 创建新策略
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: 创建一个评估所有名称空间资源并禁止在默认名称空间中创建它们的策略，以便进行实践学习。
 :doc-persona: ["kubewarden-policy-developer"]
@@ -15,7 +15,7 @@ include::partial$variables.adoc[]
 
 [NOTE]
 ====
-您可以使用一个https://github.com/kubewarden/opa-policy-template[kubewarden/opa-policy-template]来移植现有策略。
+您可以使用一个link:https://github.com/kubewarden/opa-policy-template[kubewarden/opa-policy-template]来移植现有策略。
 ====
 
 

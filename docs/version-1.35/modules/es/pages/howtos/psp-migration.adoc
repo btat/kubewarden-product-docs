@@ -17,7 +17,7 @@ include::partial$variables.adoc[]
 Para Kubernetes ≥ v1.25.
 https://kubernetes.io/docs/concepts/security/pod-security-policy/[PodSecurityPolicy] (PSP) es eliminado. Ahora puedes usar {project-name} para el control de admisión en tus clústeres de Kubernetes.
 
-{short-project-name} tiene políticas separadas para lograr el mismo objetivo que una configuración monolítica de PSP. Cada definición de directiva {short-project-name} funciona como una sección de configuración diferente en la especificación de un PSP. El mapeo de los campos de configuración de PSP a sus respectivas directivas {short-project-name} está en la <<_mapping_kubewarden_policies_to_psp_fields,tabla de mapeo>> a continuación.
+{short-project-name} tiene políticas separadas para lograr el mismo objetivo que una configuración monolítica de PSP. Cada definición de directiva {short-project-name} funciona como una sección de configuración diferente en la especificación de un PSP. El mapeo de los campos de configuración de PSP a sus respectivas directivas {short-project-name} está en la <<_mapping_policies_to_psp_fields,tabla de mapeo>> a continuación.
 
 Con {short-project-name}, los operadores tienen control granular de la configuración de directivas en sus clústeres.
 
@@ -465,6 +465,7 @@ Error from server: error when creating "STDIN": admission webhook "clusterwide-p
 
 ======
 
+[#_mapping_policies_to_psp_fields]
 == Asignando políticas de {short-project-name} a campos de PSP
 
 Esta tabla asigna los campos de configuración de PSP a las políticas correspondientes de {short-project-name}.

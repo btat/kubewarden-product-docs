@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Arquitetura do {admc-name}
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Descubra como {admc-name} utiliza recursos essenciais do Kubernetes para se integrar perfeitamente ao seu cluster.
 :doc-persona: ["kubewarden-all"]

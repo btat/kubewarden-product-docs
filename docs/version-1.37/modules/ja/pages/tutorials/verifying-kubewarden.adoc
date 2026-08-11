@@ -12,11 +12,11 @@ include::partial$variables.adoc[]
 
 {admc-name} スタックはさまざまな証明と保証を提供します：
 
-- 来歴の証明：ビルドプロセスやビルド依存関係の情報を提供し、ビルドの再現を支援します。https://slsa.dev/spec/v1.0/[SLSA] 標準を実装します（私たちの場合はレベル 3）。
+- 来歴の証明：ビルドプロセスやビルド依存関係の情報を提供し、ビルドの再現を支援します。link:https://slsa.dev/spec/v1.0/[SLSA] 標準を実装します（私たちの場合はレベル 3）。
 - SBOM の証明：ソフトウェアの依存関係を含みます。ダウンストリームの消費者が {admc-short-name} とその依存関係の脆弱性を確認するのに役立ちます。
 - 署名されたアーティファクト：アーティファクトが本物かどうかを示し、サプライチェーンのセキュリティを提供します。これには成果物だけでなく、来歴の証明およびSBOMの証明も含まれます。
 
-{admc-short-name} アーティファクト、来歴の証明、および SBOM は、https://docs.sigstore.dev[Sigstore] を使用して署名され、キーなしのワークフローで行われます。これは、署名証明書に次の情報が含まれていることを意味し、`*` はその後の任意の文字に一致します：
+{admc-short-name} アーティファクト、来歴の証明、および SBOM は、link:https://docs.sigstore.dev[Sigstore] を使用して署名され、キーなしのワークフローで行われます。これは、署名証明書に次の情報が含まれていることを意味し、`*` はその後の任意の文字に一致します：
 
 * 発行者: `https://token.actions.githubusercontent.com`
 * サブジェクト: `https://github.com/kubewarden/*`
@@ -37,7 +37,7 @@ URLには、完全なリポジトリパス、ワークフローファイルパ�
 
 {admc-short-name}チームは、セキュアなサプライチェーンを改善し、全体のスタックをSLSAレベル3に準拠させるための努力もしています。したがって、主要なアーティファクトにはSBOMおよび来歴ファイルも含まれています。次のセクションでは、{admc-short-name}チームが生成したさまざまなアーティファクトを検証する方法と、SBOMおよび来歴ファイルを使用してアーティファクトのセキュアなサプライチェーンを確保する方法を示します。
 
-[#container-images]
+[#_container_images]
 == コンテナイメージ
 
 {admc-short-name}チームが生成したキーレス署名されたコンテナイメージを検証するには、`cosign` CLIツールを使用できます。たとえば、`kubewarden/policy-server`イメージを検証するには、次のコマンドを実行できます：
@@ -71,8 +71,8 @@ slsactl verify ghcr.io/kubewarden/policy-server:v1.30.0
 
 すべてのコンテナイメージには、イメージのセキュアなサプライチェーンを確保するために使用できるSBOMおよび来歴ファイルもあります。コンポーネントのリリースページまたはOCIレジストリのコンテナイメージに添付された証明書ファイルを見つけることができます。
 
-私たちはDockerを使用してイメージとその証明書を構築します。しかし、コサインコマンドhttps://github.com/sigstore/cosign/issues/2688[はまだ]OCIレジストリからDockerによって生成された証明の検証をサポートしていません。
-このため、リリースページまたはレジストリからファイルをダウンロードし、ローカルで検証する必要があります。OCIレジストリから証明ファイルをダウンロードしたい場合は、https://docs.docker.com/build/metadata/attestations/attestation-storage/[Dockerドキュメント]に従い、`crane`や`docker`自体のようなツールを使用してレジストリからファイルをダウンロードできます。
+私たちはDockerを使用してイメージとその証明書を構築します。しかし、コサインコマンドlink:https://github.com/sigstore/cosign/issues/2688[はまだ]OCIレジストリからDockerによって生成された証明の検証をサポートしていません。
+このため、リリースページまたはレジストリからファイルをダウンロードし、ローカルで検証する必要があります。OCIレジストリから証明ファイルをダウンロードしたい場合は、link:https://docs.docker.com/build/metadata/attestations/attestation-storage/[Dockerドキュメント]に従い、`crane`や`docker`自体のようなツールを使用してレジストリからファイルをダウンロードできます。
 
 リリースページから{admc-short-name}コンポーネントの証明ファイルをダウンロードする際は、それらを確認してください。
 
@@ -95,13 +95,14 @@ slsactl download provenance ghcr.io/kubewarden/policy-server:v1.30.0
 slsactl download sbom ghcr.io/kubewarden/policy-server:v1.30.0
 ----
 
+[#_helm_chart]
 == Helmチャート
 
-{admc-short-name} Helmチャートは、`https://`従来のHelmリポジトリのhttps://charts.kubewarden.io.にあります。
+{admc-short-name} Helmチャートは、`https://`従来のHelmリポジトリのlink:https://charts.kubewarden.io[].にあります。
 
 同じHelmチャートは、Sigstoreのキーレス署名を介して署名され、Helmチャートとその来歴の証明をOCIアーティファクトとして保持するOCIリポジトリにプッシュされます。
 
-Helmチャートは、必要なすべてのアーティファクトをリストしたhttps://hauler.dev[Hauler]マニフェストとともに公開されます。
+Helmチャートは、必要なすべてのアーティファクトをリストしたlink:https://hauler.dev[Hauler]マニフェストとともに公開されます。
 
 === Haulerによる検証
 
@@ -109,7 +110,7 @@ Haulerは、ダウンロード時にアーティファクトを自動的に検�
 
 === 手動での検証
 
-Helm 3.8.0以降、HelmはOCIレジストリをサポートしていますが、それらの制約により、`helm`を介して検索することはできません。https://github.com/orgs/kubewarden/packages?tab=packages&q=charts[GitHubコンテナレジストリのチャートのリスト]を見つけることができます。
+Helm 3.8.0以降、HelmはOCIレジストリをサポートしていますが、それらの制約により、`helm`を介して検索することはできません。link:https://github.com/orgs/kubewarden/packages?tab=packages&q=charts[GitHubコンテナレジストリのチャートのリスト]を見つけることができます。
 
 Helmチャートを検証するには、`cosign`がインストールされている必要があります。次に、例えば次のコマンドを実行します。
 
@@ -129,11 +130,11 @@ The following checks were performed on each of these signatures:
 
 その後、返されたjson内の証明書が正しい発行者、サブジェクト、および`github_workflow_repository`拡張機能を含んでいることを確認できます。
 
-チャートのアテステーションは、アーティファクト階層化としてOCIレジストリにプッシュされます。それらを検証する方法については、xref:#container-images[コンテナイメージ]セクションを参照してください。
+チャートのアテステーションは、アーティファクト階層化としてOCIレジストリにプッシュされます。それらを検証する方法については、xref:#_container_images[コンテナイメージ]セクションを参照してください。
 
 {admc-short-name}チャートは、チャート内に`imagelist.txt`および（関連する場合は`policylist.txt`）を含めて出荷されます。したがって、すでにチャートを検証している場合は、それらのリストを使用して消費されたコンテナイメージとポリシーを検証できます。
 
-{admc-short-name}はHelmチャートに関する通常の慣行に従っています。したがって、https://github.com/cvila84/helm-image[helm-image]のようなプラグインを使用することで、Helmチャート内のすべてのイメージを見つけることもできます。または、次のスクリプトを使用します：
+{admc-short-name}はHelmチャートに関する通常の慣行に従っています。したがって、link:https://github.com/cvila84/helm-image[helm-image]のようなプラグインを使用することで、Helmチャート内のすべてのイメージを見つけることもできます。または、次のスクリプトを使用します：
 
 [subs="+attributes",bash]
 ----
@@ -153,11 +154,11 @@ ghcr.io/kubewarden/policy-server:v0.3.1
 ghcr.io/kubewarden/kubectl:v1.21.4
 ----
 
-そのリスト内の各イメージについて、xref:#container-images[前のセクション]の指示に従ってSigstoreの署名を確認できます。
+そのリスト内の各イメージについて、xref:#_container_images[前のセクション]の指示に従ってSigstoreの署名を確認できます。
 
 == kwctl
 
-kwctlバイナリはhttps://docs.sigstore.dev/cosign/signing/signing_with_blobs/[Sigstoreのブロブ署名]を使用して署名されています。
+kwctlバイナリはlink:https://docs.sigstore.dev/cosign/signing/signing_with_blobs/[Sigstoreのブロブ署名]を使用して署名されています。
 
 https://github.com/kubewarden/kwctl/releases/[`kwctl`リリース]をダウンロードすると、各zipファイルには検証に使用できるSigstoreバンドルファイルが含まれています：`kwctl-*bundle.sigstore`。
 
@@ -175,9 +176,9 @@ Verified OK
 
 その後、返されたjson内の証明書が正しい発行者、サブジェクト、および`github_workflow_repository`拡張を含んでいることを確認できます。
 
-SBOMは署名され、プロジェクトのhttps://github.com/kubewarden/kwctl/releases[GitHub Releases]に公開されています。
+SBOMは署名され、プロジェクトのlink:https://github.com/kubewarden/kwctl/releases[GitHub Releases]に公開されています。
 
-`kwctl`の来歴アテステーションは、https://cli.github.com/manual/gh_attestation_verify[`gh attestation verify`]を使用して検証されます。例えば、`gh attestation verify kwctl-linux-x86_64 --repo kubewarden/kwctl`を使用します。
+`kwctl`の来歴アテステーションは、link:https://cli.github.com/manual/gh_attestation_verify[`gh attestation verify`]を使用して検証されます。例えば、`gh attestation verify kwctl-linux-x86_64 --repo kubewarden/kwctl`を使用します。
 
 == ポリシー
 

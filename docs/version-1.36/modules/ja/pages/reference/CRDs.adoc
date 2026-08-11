@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = カスタムリソース定義 (CRD)
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: のカスタムリソース定義 (CRD){admc-name} について学び、関連する API リファレンスにアクセスしてください。
 :doc-persona: ["kubewarden-policy-developer"]

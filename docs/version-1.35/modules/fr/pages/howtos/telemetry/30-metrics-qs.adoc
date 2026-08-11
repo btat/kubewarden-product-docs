@@ -24,6 +24,7 @@ de ce livre. Vous en avez besoin pour que cette section fonctionne correctement.
 
 Vous utilisez https://prometheus.io/[Prometheus] pour collecter les métriques exposées par le serveur de stratégie.
 
+[#_install_prometheus]
 == Installez Prometheus
 
 Vous utilisez https://github.com/prometheus-operator/prometheus-operator[Opérateur Prometheus], qui nous permet de définir les cibles de Prometheus.

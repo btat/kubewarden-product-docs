@@ -1,6 +1,8 @@
 include::partial$variables.adoc[]
 
 = Konfigurieren von PolicyServern zur Verwendung einer privaten Sigstore-Instanz
+:revdate: 2026-06-02
+:page-revdate: {revdate}
 :page-languages: [en, de, es, fr, ja, pt, zh]
 :description: Konfigurieren von PolicyServern zur Verwendung einer privaten oder selbst gehosteten Sigstore-Instanz zur Überprüfung von Richtlinienunterschriften in {admc-name}.
 :keywords: ["kubewarden", "kubernetes", "policyservers", "sigstore", "private sigstore", "policy signing"]

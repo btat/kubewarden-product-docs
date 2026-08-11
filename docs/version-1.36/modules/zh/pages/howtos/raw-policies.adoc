@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 原始策略
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: 将原始策略配置为通用策略评估引擎，使用 {admc-name}。
 :doc-persona: ["kubewarden-distributor", "kubewarden-integrator", "kubewarden-operator", "kubewarden-policy-developer"]

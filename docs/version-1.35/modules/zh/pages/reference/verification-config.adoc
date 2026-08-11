@@ -83,6 +83,7 @@ anyOf: # at least `+anyOf.minimumMatches+` are required to match
       urlPrefix: https://github.com/bob # <- it will be post-fixed with `+/+` for security reasons
 ----
 
+[#_signature_configuration_reference]
 == 签名配置参考
 
 您可以验证文件中包含的签名要求。展开以查看示例：

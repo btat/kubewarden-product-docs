@@ -58,6 +58,7 @@ Además, las políticas en {short-project-name} ahora admiten dos anotaciones op
 
 Consulta la xref:tutorials/writing-policies/index.adoc[documentación] de los autores de la directiva para más información.
 
+[#_permissions_and_serviceaccounts]
 == Permisos y Cuentas de Servicio
 
 El Audit Scanner en {short-project-name} requiere configuraciones específicas de control de acceso basado en funciones (RBAC) para poder escanear recursos de Kubernetes y guardar los resultados. La instalación crea una Cuenta de Servicio predeterminada correcta con esos permisos. El usuario puede crear su propia Cuenta de Servicio para configurar el acceso a los recursos.

@@ -58,6 +58,7 @@ Além disso, as políticas em {admc-short-name} agora suportam duas anotações 
 
 Consulte a xref:tutorials/writing-policies/index.adoc[documentação dos autores da política] para mais informações.
 
+[#_permissions_and_serviceaccounts]
 == Permissões e ServiceAccounts
 
 O Kubewarden audit scanner em {admc-short-name} requer configurações específicas de controle de acesso com base em função (RBAC) para poder escanear recursos do Kubernetes e salvar os resultados. A instalação cria uma Conta de Serviço padrão correta com essas permissões. O usuário pode criar sua própria ServiceAccount para configurar o acesso aos recursos.

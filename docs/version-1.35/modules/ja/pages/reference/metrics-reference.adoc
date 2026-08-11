@@ -35,6 +35,7 @@ https://opentelemetry.io/docs/concepts/signals/baggage/[バゲージ]メトリ�
 | <<_kubewarden_policy_evaluations_total,バゲージ>>
 |===
 
+[#_kubewarden_policy_evaluations_total]
 ==== `kubewarden_policy_evaluations_total`
 
 ===== バゲージ

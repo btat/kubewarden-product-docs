@@ -25,6 +25,7 @@ include::partial$variables.adoc[]
 
 https://www.jaegertracing.io/[Jaeger] --を使用して、トレースイベントを受信、保存、視覚化します。
 
+[#_install_jaeger]
 == Jaegerをインストールします。
 
 https://github.com/jaegertracing/jaeger-operator[Jaeger Operator]を使用して、さまざまなJaegerコンポーネントを管理します。Helmチャートを使用してJaeger Operatorをインストールできます。
@@ -32,7 +33,7 @@ https://github.com/jaegertracing/jaeger-operator[Jaeger Operator]を使用して
 [NOTE]
 ====
 
-執筆時点（2022-06-21）では、特定のバージョンのJaegerのみがCert Managerと互換性があります。https://github.com/jaegertracing/helm-charts/blob/main/charts/jaeger-operator/COMPATIBILITY.md[互換性チャートを参照してください]。
+執筆時点（2022-06-21）では、特定のバージョンのJaegerのみがCert Managerと互換性があります。link:https://github.com/jaegertracing/helm-charts/blob/main/charts/jaeger-operator/COMPATIBILITY.md[互換性チャートを参照してください]。
 
 ====
 
@@ -53,7 +54,7 @@ helm upgrade -i --wait \
 [CAUTION]
 ====
 
-これは*本番環境のデプロイメントには適していません*。Jaegerのhttps://www.jaegertracing.io/docs/latest/kubernetes/[公式ドキュメント]を参照してください。
+これは*本番環境のデプロイメントには適していません*。Jaegerのlink:https://www.jaegertracing.io/docs/latest/kubernetes/[公式ドキュメント]を参照してください。
 
 ====
 
@@ -123,7 +124,7 @@ telemetry:
 
 簡単のために、OpenTelemetryコレクターとJaegerエンドポイント間の通信は暗号化されていません。
 
-再度、これは*本番環境でのデプロイには不適切です*。Jaegerのhttps://www.jaegertracing.io/docs/latest/kubernetes/[公式ドキュメント]を参照してください。
+再度、これは*本番環境でのデプロイには不適切です*。Jaegerのlink:https://www.jaegertracing.io/docs/latest/kubernetes/[公式ドキュメント]を参照してください。
 
 ====
 

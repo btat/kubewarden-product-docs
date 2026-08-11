@@ -91,7 +91,7 @@ Die folgenden Leitfäden erstellen einen Standard-Kubernetes-`Ingress` mit `ingr
 
 Wenn Sie Traefik nicht installieren möchten, behalten die Tracing-Leitfäden auch `kubectl port-forward` als Fallback, um direkt auf Jaeger zuzugreifen.
 
-[#install-opentelemetry]
+[#_install_opentelemetry]
 == Install OpenTelemetry
 
 [NOTE]

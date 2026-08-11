@@ -201,7 +201,7 @@ kubectl get pods -n my-namespace nginx-deployment-57d8568bbb-h4bx7 -o json | jq 
 ----
 
 在这里，{admc-short-name}可以提供帮助。
-您可以使用https://artifacthub.io/packages/kubewarden/user-group-psp/user-group-psp[`user-group-policy`]策略来变更部署定义。
+您可以使用link:https://artifacthub.io/packages/kubewarden/user-group-psp/user-group-psp[`user-group-policy`]策略来变更部署定义。
 这为省略该信息的容器配置了默认用户。
 
 [NOTE]

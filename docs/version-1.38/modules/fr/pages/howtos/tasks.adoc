@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{admc-name}", "kubewarden", "kubernetes", "kwctl", "stratégie", "serveur de stratégie", "stratégie d'admission de cluster", "stratégie d'admission"]
 :current-version: {page-origin-branch}
 
-Cela décrit les tâches courantes après que vous xref:quick-start.adoc#installation[installiez {admc-name}] dans votre cluster Kubernetes.
+Cela décrit les tâches courantes après que vous xref:quick-start.adoc#_installation[installiez {admc-name}] dans votre cluster Kubernetes.
 
 Les tâches séparées sont dans un ordre logique.
 

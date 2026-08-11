@@ -12,9 +12,9 @@ include::partial$variables.adoc[]
 :sidebar_position: 130
 :current-version: {page-origin-branch}
 
-他のHelmチャートと同様に、https://fleet.rancher.io/[Rancher Fleet]を使用して{project-name} Helmチャートを管理できます。
+他のHelmチャートと同様に、link:https://fleet.rancher.io/[Rancher Fleet]を使用して{project-name} Helmチャートを管理できます。
 Rancher FleetはKubernetes CRDを使用して、Kubernetesクラスターの管理にGitOpsアプローチを定義します。
-これはhttps://fleet.rancher.io/concepts[Fleet Bundles]を定義することによって行われます。
+これはlink:https://fleet.rancher.io/concepts[Fleet Bundles]を定義することによって行われます。
 
 == インストール中
 
@@ -24,7 +24,7 @@ Rancher FleetはKubernetes CRDを使用して、Kubernetesクラスターの管�
 
 詳細については、xref:/quick-start.adoc[クイックスタートドキュメント]をご覧ください。
 
-Rancher Fleetを使用すると、https://fleet.rancher.io/ref-fleet-yaml[`fleet.yaml`]ファイル内で`dependsOn`を使用してチャートの依存関係をコード化できます。
+Rancher Fleetを使用すると、link:https://fleet.rancher.io/ref-fleet-yaml[`fleet.yaml`]ファイル内で`dependsOn`を使用してチャートの依存関係をコード化できます。
 
 チャートが準備できるまで、一時的なエラーが表示されることがあります。例：
 
@@ -65,4 +65,4 @@ CRD の自動アンインストールは通常、どのツールでもサポー�
 
 == 例
 
-Fleet バンドル定義の例については、https://github.com/kubewarden/fleet-example[github.com/kubewarden/fleet-example] を参照してください。
+Fleet バンドル定義の例については、link:https://github.com/kubewarden/fleet-example[github.com/kubewarden/fleet-example] を参照してください。

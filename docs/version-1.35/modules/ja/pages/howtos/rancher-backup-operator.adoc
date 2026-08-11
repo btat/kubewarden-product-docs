@@ -20,6 +20,7 @@ include::partial$variables.adoc[]
 - {short-project-name}のCRDは、{short-project-name}コントローラーによって復元後に調整されます。
 - `policy-reporter`チャートの`kubewarden-controller`サブチャート、デフォルト値について。これにはGrafana統合やその他のプラグインは含まれません。
 
+[#_user_secrets]
 == ユーザーシークレット
 
 バックアッププロセスには、正しくラベル付けされていない限り、xref:/howtos/policy-servers/02-private-registry.adoc#_creating_the_secret[プライベートレジストリ用のPolicyServersを構成するために使用されるなどの]ユーザー作成のシークレットは含まれません。そのためには、以下のいずれかの方法でシークレットにラベルを付けてください。次のいずれかです。
@@ -38,7 +39,7 @@ kubectl label secret secret-ghcr-docker resources.cattle.io/backup=true
 
 == Rancher Backup Operatorのインストール
 
-リンクに従ってください：https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[Rancher Manager]のドキュメント。Minikubeインストールでは、Minikubeが標準でサポートするタイプ`hostPath`のPersistentVolumesを使用して`standard`という名前のものを使用します。
+リンクに従ってください：link:https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[Rancher Manager]のドキュメント。Minikubeインストールでは、Minikubeが標準でサポートするタイプ`hostPath`のPersistentVolumesを使用して`standard`という名前のものを使用します。
 
 バックアップオペレーターに、値`optionalResources.kubewarden.enabled`を`true`に設定することで、{short-project-name}のユーザー定義CRもバックアップするよう指示する必要があります。
 

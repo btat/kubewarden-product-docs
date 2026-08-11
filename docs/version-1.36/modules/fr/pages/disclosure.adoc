@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = Divulgation de la sécurité
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :description: Les chercheurs en sécurité d'investigation travaillent avec l'équipe de {admc-name} pour identifier les vulnérabilités en utilisant des protocoles de divulgation responsable.
 :doc-persona: ["kubewarden-all"]
@@ -13,7 +13,7 @@ include::partial$variables.adoc[]
 :sidebar_position: 80
 :current-version: {page-origin-branch}
 
-L'équipe de {admc-name} apprécie le travail d'investigation sur les vulnérabilités de sécurité réalisé par des chercheurs en sécurité bien intentionnés et éthiques. {admc-short-name} suit la pratique de la [divulgation responsable](https://en.wikipedia.org/wiki/Responsible_disclosure) pour mieux protéger la base d'utilisateurs de {admc-short-name} des impacts des problèmes de sécurité. Du côté de {admc-short-name}, cela signifie :
+L'équipe de {admc-name} apprécie le travail d'investigation sur les vulnérabilités de sécurité réalisé par des chercheurs en sécurité bien intentionnés et éthiques. {admc-short-name} suit la pratique de la https://en.wikipedia.org/wiki/Responsible_disclosure[divulgation responsable] pour mieux protéger la base d'utilisateurs de {admc-short-name} des impacts des problèmes de sécurité. Du côté de {admc-short-name}, cela signifie :
 
 * {admc-short-name} répond en priorité aux incidents de sécurité.
 * {admc-short-name} publie des correctifs pour les problèmes dès que possible, en les priorisant en fonction du risque.
@@ -21,7 +21,7 @@ L'équipe de {admc-name} apprécie le travail d'investigation sur les vulnérabi
 
 Si vous avez trouvé une vulnérabilité de sécurité dans {admc-short-name}, le moyen le plus simple de signaler une vulnérabilité est de passer par le https://github.com/kubewarden/community/security/advisories[onglet Sécurité sur GitHub]. Ce mécanisme permet aux mainteneurs de communiquer avec vous de manière privée, et vous n'avez pas besoin de chiffrer vos messages.
 
-Alternativement, vous pouvez la divulguer de manière responsable en envoyant un courriel à xref:mailto:cncf-kubewarden-maintainers@lists.cncf.io.adoc[cncf-kubewarden-maintainers@lists.cncf.io] dans un message *non chiffré*. Veuillez ne pas discuter des vulnérabilités potentielles en public sans obtenir d'abord notre validation.
+Alternativement, vous pouvez la divulguer de manière responsable en envoyant un courriel à mailto:cncf-kubewarden-maintainers@lists.cncf.io[cncf-kubewarden-maintainers@lists.cncf.io] dans un message *non chiffré*. Veuillez ne pas discuter des vulnérabilités potentielles en public sans obtenir d'abord notre validation.
 
 Vous pouvez également venir discuter dans notre https://kubernetes.slack.com/archives/C03L52JRAFM[canal Slack] sur le serveur Slack de Kubernetes.
 

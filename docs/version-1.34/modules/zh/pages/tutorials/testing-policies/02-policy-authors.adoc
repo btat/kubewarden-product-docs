@@ -47,7 +47,7 @@ include::partial$variables.adoc[]
 
 在测试`kwctl`之后，将`ValidationResponse`对象打印到标准输出。
 
-这就是您如何使用`kwctl`来测试之前提到的https://github.com/kubewarden/ingress-policy[`ingress-policy`]的Wasm二进制文件：
+这就是您如何使用`kwctl`来测试之前提到的link:https://github.com/kubewarden/ingress-policy[`ingress-policy`]的Wasm二进制文件：
 
 [subs="+attributes",console]
 ----

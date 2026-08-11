@@ -37,7 +37,7 @@ https://github.com/kubewarden/policy-server/.github/workflows/container-image.ym
 
 {admc-short-name} 团队也在努力改善安全供应链，并使整个堆栈符合 SLSA 级别 3。因此，主要工件还包括 SBOM 和溯源文件。在接下来的部分中，我们将展示如何验证 {admc-short-name} 团队生成的不同工件，以及如何使用 SBOM 和溯源文件确保工件的安全供应链。
 
-[#container-images]
+[#_container_images]
 == 容器映像
 
 要验证 {admc-short-name} 团队生成的无密钥签名容器镜像，您可以使用 `cosign` CLI 工具。例如，要验证 `kubewarden/policy-server` 镜像，您可以执行以下命令：
@@ -95,6 +95,7 @@ slsactl download provenance ghcr.io/kubewarden/policy-server:v1.30.0
 slsactl download sbom ghcr.io/kubewarden/policy-server:v1.30.0
 ----
 
+[#_helm_chart]
 == Helm 图表
 
 您可以在我们的 `https://` 传统 Helm 储存库的 https://charts.kubewarden.io. 中找到 {admc-short-name} Helm 图表。
@@ -129,7 +130,7 @@ The following checks were performed on each of these signatures:
 
 然后您可以验证返回的 JSON 中的证书是否包含正确的颁发者、主题和 `github_workflow_repository` 扩展。
 
-图表证明作为工件层推送到 OCI 注册表。请参见 xref:#container-images[容器镜像] 部分以了解如何验证它们。
+图表证明作为工件层推送到 OCI 注册表。请参见 xref:#_container_images[容器镜像] 部分以了解如何验证它们。
 
 {admc-short-name} 图表内含 `imagelist.txt` 以及（如适用时）`policylist.txt`。因此，如果您已经验证了图表，您可以使用这些列表来验证所使用的容器镜像和策略。
 
@@ -153,7 +154,7 @@ ghcr.io/kubewarden/policy-server:v0.3.1
 ghcr.io/kubewarden/kubectl:v1.21.4
 ----
 
-现在，对于该列表中的每个镜像，您可以按照 xref:#container-images[前一部分] 的说明验证它们的 Sigstore 签名。
+现在，对于该列表中的每个镜像，您可以按照 xref:#_container_images[前一部分] 的说明验证它们的 Sigstore 签名。
 
 == kwctl
 

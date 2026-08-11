@@ -19,7 +19,7 @@ include::partial$variables.adoc[]
 
 == トレランスとアフィニティ/アンチアフィニティの設定
 
-`tolerations`および`affinity`フィールドを使用することで、オペレーターは{admc-short-name}スタックのスケジューリングと信頼性を特定のデプロイメントニーズと制約に合わせて微調整できます。正確なフィールドとその設定の詳細については、https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/[Kubernetesのテイントとトレランスに関するドキュメント]およびhttps://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[アフィニティとアンチアフィニティ]を参照してください。
+`tolerations`および`affinity`フィールドを使用することで、オペレーターは{admc-short-name}スタックのスケジューリングと信頼性を特定のデプロイメントニーズと制約に合わせて微調整できます。正確なフィールドとその設定の詳細については、link:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/[Kubernetesのテイントとトレランスに関するドキュメント]およびlink:https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[アフィニティとアンチアフィニティ]を参照してください。
 
 {admc-short-name}スタックのバージョン1.15から、{admc-short-name}Helmチャートには2つの新しい値が含まれています：
 
@@ -112,7 +112,7 @@ global:
 
 == priorityClassesの設定
 
-priorityClassesを使用することで、オペレーターは{admc-short-name}スタックのワークロードポッドに対してスケジューリングの優先度を強制できます。これにより、{admc-short-name}ワークロードが他のワークロードよりも優先され、追い出しを防ぎ、サービスの信頼性が確保されます。詳細については、https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Priorityclassesに関するKubernetesドキュメント]を参照してください。
+priorityClassesを使用することで、オペレーターは{admc-short-name}スタックのワークロードポッドに対してスケジューリングの優先度を強制できます。これにより、{admc-short-name}ワークロードが他のワークロードよりも優先され、追い出しを防ぎ、サービスの信頼性が確保されます。詳細については、link:https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Priorityclassesに関するKubernetesドキュメント]を参照してください。
 
 {admc-short-name}スタックのバージョン1.25から、{admc-short-name} Helmチャートには新しい値が付属しています：
 
@@ -133,13 +133,14 @@ globalDefault: false
 description: "This priority class should be used for XYZ service pods only."
 ----
 
-Kubernetesには、良い候補となる2つのPriorityClassがすでに付属しています：`system-cluster-critical`と`system-node-critical`。これらは一般的なクラスであり、https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/[重要なコンポーネントが常に最初にスケジュールされることを保証するため]に使用されます。
+Kubernetesには、良い候補となる2つのPriorityClassがすでに付属しています：`system-cluster-critical`と`system-node-critical`。これらは一般的なクラスであり、link:https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/[重要なコンポーネントが常に最初にスケジュールされることを保証するため]に使用されます。
 
 [WARNING]
 ====
 PriorityClassを削除すると、削除されたPriorityClassの名前を使用している既存のポッドは変更されませんが、削除されたPriorityClassの名前を使用するポッドはKubernetesによって作成されません。
 ====
 
+[#_policyserver_production_configuration]
 == `PolicyServer`本番設定
 
 `PolicyServers`はクラスターにとって重要です。それらの信頼性は重要であり、Kubernetes APIに向けたAdmission RequestsをValidatingおよびMutating Webhooksを介して処理します。
@@ -150,7 +151,7 @@ PriorityClassを削除すると、削除されたPriorityClassの名前を使用
 
 === PodDisruptionBudgets
 
-{admc-short-name}コントローラーは、`PolicyServer` Podsのためにhttps://kubernetes.io/docs/tasks/run-application/configure-pdb/[PodDisruptionBudget]（PDB）を作成できます。これは、`PolicyServer`に関連付けられた`PolicyServer` Podレプリカの範囲を制御し、高可用性を確保し、ノードのメンテナンス、スケーリング操作、またはクラスターのアップグレード時に制御された退去を保証します。
+{admc-short-name}コントローラーは、`PolicyServer` Podsのためにlink:https://kubernetes.io/docs/tasks/run-application/configure-pdb/[PodDisruptionBudget]（PDB）を作成できます。これは、`PolicyServer`に関連付けられた`PolicyServer` Podレプリカの範囲を制御し、高可用性を確保し、ノードのメンテナンス、スケーリング操作、またはクラスターのアップグレード時に制御された退去を保証します。
 
 これは、`spec.minAvailable`または`spec.maxUnavailable`の`PolicyServer`リソースを設定することによって達成されます：
 
@@ -197,7 +198,7 @@ spec:
 
 === アフィニティ / アンチアフィニティ
 
-{admc-short-name}コントローラーは、`PolicyServer` Podsのアフィニティを設定できます。これにより、特定のノードにポッドを制約したり、他のポッドに対して制約をかけたりすることができます。アフィニティに関する詳細は、https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[Kubernetes docs]を参照してください。
+{admc-short-name}コントローラーは、`PolicyServer` Podsのアフィニティを設定できます。これにより、特定のノードにポッドを制約したり、他のポッドに対して制約をかけたりすることができます。アフィニティに関する詳細は、link:https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity[Kubernetes docs]を参照してください。
 
 Kubernetesのアフィニティ構成は、ノードにポッドを制約すること（`spec.affinity.nodeAffinity`を介して）や、他のポッドに関して制約すること（`spec.affinity.podAffinity`を介して）を可能にします。アフィニティはソフト制約（`preferredDuringSchedulingIgnoredDuringExecution`を使用）またはハード制約（`requiredDuringSchedulingIgnoredDuringExecution`を使用）として設定できます。
 
@@ -263,7 +264,7 @@ spec:
 
 === 制限とリクエスト
 
-{admc-short-name}コントローラーは、`PolicyServer`ポッドのリソース制限とリクエストを設定できます。これは、`PolicyServer`ポッドに関連付けられた各コンテナが必要とする各リソースの量を指定します。`PolicyServers`の場合、`cpu`および`memory`リソースのみが関連します。リソース単位に関する詳細は、https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-units-in-kubernetes [Kubernetesドキュメント] を参照してください。
+{admc-short-name}コントローラーは、`PolicyServer`ポッドのリソース制限とリクエストを設定できます。これは、`PolicyServer`ポッドに関連付けられた各コンテナが必要とする各リソースの量を指定します。`PolicyServers`の場合、`cpu`および`memory`リソースのみが関連します。リソース単位に関する詳細は、link:https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-units-in-kubernetes[] [Kubernetesドキュメント] を参照してください。
 
 これは、次の`PolicyServer`リソースフィールドを設定することで達成されます：
 
@@ -297,7 +298,7 @@ spec:
 
 === プライオリティクラス
 
-{admc-short-name}コントローラーは、`PolicyServers`のポッドに使用されるプライオリティクラスを設定できます。これは、`PolicyServer`ワークロードが優先的にスケジュールされ、追い出しを防ぎ、サービスの信頼性を確保することを意味します。詳細については、https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Kubernetesドキュメント]を参照してください。
+{admc-short-name}コントローラーは、`PolicyServers`のポッドに使用されるプライオリティクラスを設定できます。これは、`PolicyServer`ワークロードが優先的にスケジュールされ、追い出しを防ぎ、サービスの信頼性を確保することを意味します。詳細については、link:https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/[Kubernetesドキュメント]を参照してください。
 
 [WARNING]
 ====

@@ -20,6 +20,7 @@ include::partial$variables.adoc[]
 - {admc-short-name} CRD，在恢复后由 {admc-short-name} 控制器进行协调。
 - `policy-reporter` 图表的 `kubewarden-controller` 子图表，用于其默认值。这不包括 Grafana 集成或其他插件。
 
+[#_user_secrets]
 == 用户机密
 
 备份过程不包括用户创建的机密，例如用于 xref:/howtos/policy-servers/02-private-registry.adoc#_creating_the_secret[配置 私有注册表的 PolicyServers] 的机密，除非它们被正确标记。为此，请以以下方式之一标记机密。或者：
@@ -38,7 +39,7 @@ kubectl label secret secret-ghcr-docker resources.cattle.io/backup=true
 
 == 安装 Rancher Backup Operator
 
-请访问链接：https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html [Rancher Manager] 文档。对于使用 Minikube 安装的类型为 `hostPath` 的 PersistentVolumes，名称为 `standard`，Minikube 开箱即用支持。
+请访问链接：link:https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[] [Rancher Manager] 文档。对于使用 Minikube 安装的类型为 `hostPath` 的 PersistentVolumes，名称为 `standard`，Minikube 开箱即用支持。
 
 需要指示 Backup Operator 通过将值 `optionalResources.kubewarden.enabled` 设置为 `true`，还备份 {admc-short-name} 用户定义的 CR。
 

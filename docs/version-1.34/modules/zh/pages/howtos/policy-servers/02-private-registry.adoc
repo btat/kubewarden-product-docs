@@ -17,6 +17,7 @@ include::partial$variables.adoc[]
 
 要实现这一点，您应该创建一个包含私有仓库凭据的 Secret。然后配置您的 PolicyServers 资源，以及您的 Helm 图表以使用它。
 
+[#_creating_the_secret]
 == 创建 Secret
 
 PolicyServers 支持常规的 https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Docker 配置密钥]，可以是 `kubernetes.io/dockercfg` 类型或 `kubernetes.io/dockerconfigjson` 类型。您可以使用 `kubectl create secret docker-registry` 创建这些密钥。
@@ -41,7 +42,7 @@ kubectl --namespace kubewarden create secret docker-registry secret-ghcr-docker 
 
 ====
 
-有关如何创建 Docker Secret 的更多信息，请参见https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Kubernetes 文档]。
+有关如何创建 Docker Secret 的更多信息，请参见link:https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets[Kubernetes 文档]。
 
 == 在 PolicyServers 中使用 Secret
 

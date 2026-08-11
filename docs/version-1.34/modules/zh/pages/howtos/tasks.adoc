@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{project-name}", "kubewarden", "kubernetes", "kwctl", "policy", "policyserver", "clusteradmissionpolicy", "admissionpolicy"]
 :current-version: {page-origin-branch}
 
-这描述了在您 xref:quick-start.adoc#installation[安装 {project-name}] 后在 Kubernetes 集群中常见的任务。
+这描述了在您 xref:quick-start.adoc#_installation[安装 {project-name}] 后在 Kubernetes 集群中常见的任务。
 
 这些单独的任务是按逻辑顺序排列的。
 

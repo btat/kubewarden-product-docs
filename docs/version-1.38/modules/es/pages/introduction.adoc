@@ -71,8 +71,9 @@ Puedes servir {admc-short-name} políticas utilizando un servidor web estándar 
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == Neutralidad del proveedor
 
-{admc-short-name} es un proyecto [neutral al proveedor](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) según lo definido por la CNCF.
+{admc-short-name} es un proyecto https://contribute.cncf.io/maintainers/community/vendor-neutrality/[neutral al proveedor] según lo definido por la CNCF.
 
 endif::[]

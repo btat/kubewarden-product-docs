@@ -71,8 +71,9 @@ Puedes servir {short-project-name} políticas utilizando un servidor web estánd
 
 ifeval::["{build-type}" == "community"]
 
+[#_vendor_neutrality]
 == Neutralidad del proveedor
 
-{short-project-name} es un proyecto [neutral al proveedor](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) según lo definido por la CNCF.
+{short-project-name} es un proyecto https://contribute.cncf.io/maintainers/community/vendor-neutrality/[neutral al proveedor] según lo definido por la CNCF.
 
 endif::[]

@@ -16,7 +16,7 @@ include::partial$variables.adoc[]
 
 == OpenTelemetry、メトリクスおよびトレーシングの依存関係
 
-執筆時点で、https://opentelemetry.io[OpenTelemetry]スタックは改善を続けています。しかし、まだ安定しておらず、未発表の後方互換性のない変更が発生することがあります。{short-project-name}の開発者は、OpenTelemetryスタックの変更を追跡し、それに適応するよう努めています。プロジェクトは、既知の動作範囲のOpenTelemetry、メトリクスおよびトレーシングスタックに対してテストを行います。
+執筆時点で、link:https://opentelemetry.io[OpenTelemetry]スタックは改善を続けています。しかし、まだ安定しておらず、未発表の後方互換性のない変更が発生することがあります。{short-project-name}の開発者は、OpenTelemetryスタックの変更を追跡し、それに適応するよう努めています。プロジェクトは、既知の動作範囲のOpenTelemetry、メトリクスおよびトレーシングスタックに対してテストを行います。
 
 == オプションの依存関係
 

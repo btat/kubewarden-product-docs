@@ -23,7 +23,7 @@ TypeScriptはJavaScriptに型を追加して拡張します。
 
 JavaScriptを理解することで、TypeScriptはエラーをキャッチし、コードを実行する前に修正を提供するのにかかる時間を節約します。
 
-{project-name}はhttps://github.com/bytecodealliance/javy[Javy]（バイトコードアライアンスプロジェクト）を使用して、JavaScriptとTypeScriptからWebAssemblyバイナリを構築します。
+{project-name}はlink:https://github.com/bytecodealliance/javy[Javy]（バイトコードアライアンスプロジェクト）を使用して、JavaScriptとTypeScriptからWebAssemblyバイナリを構築します。
 
 [quote]
 JavyはあなたのJavaScriptコードを取り込み、WebAssemblyコンテキストで実行します。
@@ -73,7 +73,7 @@ Node.js 18以上を使用していることを確認してください。古い�
 * https://github.com/kubewarden/policy-sdk-js[{short-project-name} JavaScript SDK]：必要なコードの量を減らす構造と関数を提供します。また、テストヘルパーとすべてのホスト機能へのアクセスも提供します。
 * https://github.com/silverlyra/kubernetes-types[Kubernetes TypeScriptタイプ]：すべてのKubernetesリソースのTypeScript定義を提供し、型安全なポリシー開発を可能にします。
 
-{short-project-name}プロジェクトは、https://github.com/kubewarden/js-policy-template[テンプレートJavaScript/TypeScriptポリシープロジェクト]を提供し、{short-project-name}ポリシーを作成するために使用できます。
+{short-project-name}プロジェクトは、link:https://github.com/kubewarden/js-policy-template[テンプレートJavaScript/TypeScriptポリシープロジェクト]を提供し、{short-project-name}ポリシーを作成するために使用できます。
 
 == ツールチェーンの取得
 

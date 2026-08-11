@@ -37,7 +37,7 @@ Beachten Sie, dass die URL den vollständigen Repository-Pfad, den Workflow-Date
 
 Das {admc-short-name} Team unternimmt ebenfalls Anstrengungen, um die sichere Lieferkette zu verbessern und den gesamten Stack SLSA Level 3-konform zu machen. Daher umfassen die Hauptartefakte auch SBOM- und Provenance-Dateien. In den folgenden Abschnitten zeigen wir, wie man die verschiedenen Artefakte, die vom {admc-short-name} Team produziert werden, verifiziert und wie man die sichere Lieferkette der Artefakte mithilfe von SBOM- und Provenance-Dateien sicherstellt.
 
-[#container-images]
+[#_container_images]
 == Container-Images
 
 Um die schlüssellosen signierten Container-Images, die vom {admc-short-name} Team produziert werden, zu verifizieren, können Sie das `cosign` CLI-Tool verwenden. Beispiel: Um das `kubewarden/policy-server` Bild zu verifizieren, können Sie den folgenden Befehl ausführen:
@@ -95,6 +95,7 @@ slsactl download provenance ghcr.io/kubewarden/policy-server:v1.30.0
 slsactl download sbom ghcr.io/kubewarden/policy-server:v1.30.0
 ----
 
+[#_helm_chart]
 == Helm-Charts
 
 Sie finden {admc-short-name} Helm-Charts in unserem `https://` traditionellen Helm-Repository unter https://charts.kubewarden.io..
@@ -129,7 +130,7 @@ The following checks were performed on each of these signatures:
 
 Sie können dann überprüfen, ob das Zertifikat im zurückgegebenen JSON den richtigen Aussteller, das Subjekt und die `github_workflow_repository` Erweiterungen enthält.
 
-Die Chart-Attestierungen werden als Artefaktschicht in das OCI-Registry hochgeladen. Siehe den Abschnitt xref:#container-images[Container-Images], wie Sie diese überprüfen können.
+Die Chart-Attestierungen werden als Artefaktschicht in das OCI-Registry hochgeladen. Siehe den Abschnitt xref:#_container_images[Container-Images], wie Sie diese überprüfen können.
 
 {admc-short-name} Charts enthalten `imagelist.txt` und (`policylist.txt`, wenn relevant) innerhalb des Charts. Daher, wenn Sie das Chart bereits überprüft haben, können Sie diese Listen verwenden, um die verwendeten Container-Images und Richtlinien zu überprüfen.
 
@@ -153,7 +154,7 @@ ghcr.io/kubewarden/policy-server:v0.3.1
 ghcr.io/kubewarden/kubectl:v1.21.4
 ----
 
-Jetzt können Sie für jedes Image in dieser Liste deren Sigstore-Signaturen gemäß den Anweisungen aus dem xref:#container-images[vorherigen Abschnitt] überprüfen.
+Jetzt können Sie für jedes Image in dieser Liste deren Sigstore-Signaturen gemäß den Anweisungen aus dem xref:#_container_images[vorherigen Abschnitt] überprüfen.
 
 == kwctl
 

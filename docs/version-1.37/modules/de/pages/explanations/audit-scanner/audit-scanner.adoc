@@ -58,6 +58,7 @@ Außerdem unterstützen Richtlinien in {admc-short-name} jetzt zwei optionale An
 
 Siehe die xref:tutorials/writing-policies/index.adoc[Richtlinienautoren-Dokumentation] für weitere Informationen.
 
+[#_permissions_and_serviceaccounts]
 == Berechtigungen und Servicekonten
 
 Der Kubewarden audit scanner in {admc-short-name} erfordert spezifische rollenbasierte Zugriffskontrolle (RBAC)-Konfigurationen, um Kubernetes-Ressourcen scannen und die Ergebnisse speichern zu können. Die Installation erstellt ein korrektes Standard-Servicekonto mit diesen Berechtigungen. Der Benutzer kann sein eigenes Servicekonto erstellen, um den Zugriff auf Ressourcen zu konfigurieren.

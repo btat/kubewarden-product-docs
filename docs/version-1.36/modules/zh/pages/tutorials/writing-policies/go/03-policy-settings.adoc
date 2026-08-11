@@ -50,7 +50,7 @@ type RegularExpression struct {
 ====
 
 
-您正在使用`regexp`软件包来处理正则表达式对象，并使用https://github.com/deckarep/golang-set[`mapset.Set`]类型来存储被拒绝标签的列表。
+您正在使用`regexp`软件包来处理正则表达式对象，并使用link:https://github.com/deckarep/golang-set[`mapset.Set`]类型来存储被拒绝标签的列表。
 
 由于`regexp.Regexp`不处理解组，您需要定义自定义函数来处理正则表达式的编组和解组：
 
@@ -105,7 +105,7 @@ func (s *Settings) UnmarshalJSON(data []byte) error {
 一个{admc-short-name}策略暴露两个不同的函数，这些函数接收策略设置作为输入：
 
 * `validate`：当Kubernetes对象需要通过策略进行验证时，请使用此函数。
-这些设置是https://pkg.go.dev/github.com/kubewarden/policy-sdk-go@v0.2.1/protocol#ValidationRequest[`ValidationRequest`]对象的一部分。
+这些设置是link:https://pkg.go.dev/github.com/kubewarden/policy-sdk-go@v0.2.1/protocol#ValidationRequest[`ValidationRequest`]对象的一部分。
 * `validate_settings`：当策略首次被{admc-short-name}加载时，请调用此函数。
 该函数接收策略设置作为输入并检查有效性。
 
@@ -126,11 +126,11 @@ func NewSettingsFromValidationReq(validationReq *kubewarden_protocol.ValidationR
 
 [NOTE]
 ====
-所有的`mapset.Set`对象都是使用https://pkg.go.dev/github.com/deckarep/golang-set?utm_source=godoc#NewThreadUnsafeSet[线程不安全变体]创建的。
+所有的`mapset.Set`对象都是使用link:https://pkg.go.dev/github.com/deckarep/golang-set?utm_source=godoc#NewThreadUnsafeSet[线程不安全变体]创建的。
 WebAssembly代码在单个线程中执行，因此没有并发问题。
 
 WebAssembly标准尚未涵盖线程。
-有关更多详细信息，请参见https://github.com/WebAssembly/threads[官方提案]。
+有关更多详细信息，请参见link:https://github.com/WebAssembly/threads[官方提案]。
 ====
 
 
@@ -191,7 +191,7 @@ func validateSettings(payload []byte) ([]byte, error) {
 }
 ----
 
-您可以看到，该函数利用了由https://github.com/kubewarden/policy-sdk-go[{admc-short-name}的SDK提供的辅助函数。]
+您可以看到，该函数利用了由link:https://github.com/kubewarden/policy-sdk-go[{admc-short-name}的SDK提供的辅助函数。]
 
 == 测试设置代码
 

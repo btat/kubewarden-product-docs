@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = {admc-name}-Architektur
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Entdecken Sie, wie {admc-name} Kernel-Funktionen von Kubernetes nutzt, um nahtlos in Ihren Cluster integriert zu werden.
 :doc-persona: ["kubewarden-all"]

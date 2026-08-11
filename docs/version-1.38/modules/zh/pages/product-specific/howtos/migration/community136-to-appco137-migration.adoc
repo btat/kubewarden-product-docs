@@ -243,7 +243,7 @@ component images.
 helm install kubewarden \
   oci://dp.apps.rancher.io/charts/suse-security-admission-controller \
   -n "$TARGET_NAMESPACE" \
-  --set global.imagePullSecrets=\{application-collection}
+  --set global.imagePullSecrets={application-collection}
 ----
 
 If you have values to carry over from the community charts, pass the per-chart
@@ -256,7 +256,7 @@ later files take precedence:
 helm install kubewarden \
   oci://dp.apps.rancher.io/charts/suse-security-admission-controller \
   -n "$TARGET_NAMESPACE" \
-  --set global.imagePullSecrets=\{application-collection} \
+  --set global.imagePullSecrets={application-collection} \
   --values kubewarden-crds-values.yaml \
   --values kubewarden-controller-values.yaml \
   --values kubewarden-defaults-values.yaml

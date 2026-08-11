@@ -17,7 +17,7 @@ Ao usar o {project-name} Audit Scanner, você armazena os resultados das varredu
 [CAUTION]
 ====
 
-Com {project-name} 1.33, o recurso Audit Scanner salva os relatórios em OpenReports CRDs de [openreports.io](https://openreports.io) por padrão.
+Com {project-name} 1.33, o recurso Audit Scanner salva os relatórios em OpenReports CRDs de https://openreports.io[openreports.io] por padrão.
 
 Os CRDs link:https://htmlpreview.github.io/?https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/045372e558b896695b2daae92e8c7a04d4d40282/policy-report/docs/index.html[PolicyReport] do grupo de trabalho de políticas do K8s não são instalados por padrão, estão marcados como descontinuados e serão removidos em uma versão futura.
 

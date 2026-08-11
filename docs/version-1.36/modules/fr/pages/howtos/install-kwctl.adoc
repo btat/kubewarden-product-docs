@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Installation de kwctl ({admc-name} CLI)
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :title: Installation de kwctl
 :description: Installez kwctl (le {admc-name} CLI) en suivant ses instructions d'installation pour divers systèmes d'exploitation, puis activez la complétion de shell.

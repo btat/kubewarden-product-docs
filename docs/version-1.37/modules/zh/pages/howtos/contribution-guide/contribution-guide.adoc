@@ -15,5 +15,5 @@ include::partial$variables.adoc[]
 _{admc-name}欢迎所有贡献者，无论是新手还是经验丰富的。_
 
 ifeval::["{build-type}" == "community"]
-请查看贡献指南https://github.com/kubewarden/community/blob/main/CONTRIBUTING.md[此处]。
+请查看贡献指南link:https://github.com/kubewarden/community/blob/main/CONTRIBUTING.md[此处]。
 endif::[]

@@ -1,6 +1,8 @@
 include::partial$variables.adoc[]
 
 = Proxy-Konfiguration
+:revdate: 2026-07-14
+:page-revdate: {revdate}
 :page-languages: [en, de, es, fr, ja, pt, zh]
 :description: Proxies mit {admc-name} verwenden.
 :keywords: ["{admc-name}", "kubewarden", "kubernetes", "proxy", "proxies"]

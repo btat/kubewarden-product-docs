@@ -29,7 +29,7 @@ Kubernetesの外でポリシーを実行するなど、各種操作を行うた�
 
 == テストの記述
 
-テストを記述し、自動化するためにhttps://github.com/bats-core/bats-core[bats]を使用します。
+テストを記述し、自動化するためにlink:https://github.com/bats-core/bats-core[bats]を使用します。
 各テストには次のステップがあります：
 
 . `kwctl`を使用してポリシーを実行します。

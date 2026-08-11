@@ -14,7 +14,7 @@ include::partial$variables.adoc[]
 
 https://github.com/kubernetes/community/tree/master/sig-security[Kubernetesセキュリティ特別興味グループ（SIG）]は、KubernetesのためのAdmission Control Threat Modelを定義しました。{admc-name}チームはこの脅威モデルに対して{admc-short-name}を継続的に評価し、安全なデフォルトを提供するために取り組んでいます。{admc-short-name}管理者が脅威モデルを読み理解し、必要に応じて自分の状況に特化した脅威モデルを考案することを推奨します。
 
-各脅威の詳細は、https://github.com/kubernetes/sig-security/tree/main/sig-security-docs/papers/admission-control[SIGセキュリティによって公開された文書]にあります。
+各脅威の詳細は、link:https://github.com/kubernetes/sig-security/tree/main/sig-security-docs/papers/admission-control[SIGセキュリティによって公開された文書]にあります。
 
 == Kubernetesの脅威
 
@@ -183,7 +183,7 @@ RBAC権限は厳格に管理されています。
 
 ==== 緩和策
 
-すべてのルールをレビューし、テストしてください。廃止されたリソースの使用をテストするポリシーがあります。それはhttps://github.com/kubewarden/deprecated-api-versions-policy[廃止されたAPIバージョンポリシー]から入手可能です。
+すべてのルールをレビューし、テストしてください。廃止されたリソースの使用をテストするポリシーがあります。それはlink:https://github.com/kubewarden/deprecated-api-versions-policy[廃止されたAPIバージョンポリシー]から入手可能です。
 
 NOTE: `deprecated-api-versions-policy`は、それに知られているカスタムリソースのみを扱います。脅威は、廃止されたリソースバージョンと、新しい未知のリソースが誤用されることの両方であり、したがってポリシーは問題の一部しかカバーしていません。
 

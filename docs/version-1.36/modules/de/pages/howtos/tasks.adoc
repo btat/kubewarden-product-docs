@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = Häufige Tasks
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: Verwalten Sie Richtlinien in Ihrem Kubernetes-Cluster mit {admc-name} mit dem kwctl CLI-Tool.
 :doc-persona: ["kubewarden-all"]
@@ -11,7 +11,7 @@ include::partial$variables.adoc[]
 :keywords: ["{admc-name}", "kubewarden", "kubernetes", "kwctl", "Richtlinie", "Richtlinienspeicher", "Clusterzulassungsrichtlinie", "Zulassungsrichtlinie"]
 :current-version: {page-origin-branch}
 
-Dies beschreibt allgemeine Aufgaben, nachdem Sie xref:quick-start.adoc#installation[installieren {admc-name}] in Ihrem Kubernetes-Cluster.
+Dies beschreibt allgemeine Aufgaben, nachdem Sie xref:quick-start.adoc#_installation[installieren {admc-name}] in Ihrem Kubernetes-Cluster.
 
 Die einzelnen Aufgaben sind in einer logischen Reihenfolge angeordnet.
 

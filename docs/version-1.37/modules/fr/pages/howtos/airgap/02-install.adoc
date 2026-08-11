@@ -37,7 +37,7 @@ helm pull kubewarden/sbomscanner
 
 [NOTE]
 ====
-En option, vous pouvez vérifier les signatures des xref:/tutorials/verifying-kubewarden.adoc#_helm_charts[graphiques Helm] et des xref:/tutorials/verifying-kubewarden.adoc#_container_images[images de conteneurs].
+En option, vous pouvez vérifier les signatures des xref:/tutorials/verifying-kubewarden.adoc#_helm_chart[graphiques Helm] et des xref:/tutorials/verifying-kubewarden.adoc#_container_images[images de conteneurs].
 ====
 
 == Enregistrez les images de conteneurs localement

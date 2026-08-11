@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = Vía de actualizar versión
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-06-18
+:revdate: 2026-07-28
 :page-revdate: {revdate}
 :description: Actualiza tu {admc-name} pila utilizando estrategias de versionado y reglas de compatibilidad entre sus componentes.
 :doc-persona: ["kubewarden-operator"]

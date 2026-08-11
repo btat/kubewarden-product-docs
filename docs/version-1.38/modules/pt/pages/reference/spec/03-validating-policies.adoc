@@ -48,6 +48,7 @@ Ele se parece com:
 
 A chave `settings` aponta para um documento JSON em formato livre que contém as configurações específicas da política. O capítulo anterior focou em políticas e configurações.
 
+[#_an_example]
 == Um exemplo
 
 Dado o seguinte Kubernetes `AdmissionReview`:

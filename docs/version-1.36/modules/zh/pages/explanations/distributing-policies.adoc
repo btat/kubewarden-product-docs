@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 分发策略
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: 通过使用kwctl等工具，将策略安全地分发到OCI兼容注册表，并通过{admc-name}策略管理确保集群安全。
 :doc-persona: ["kubewarden-operator", "kubewarden-policy-developer", "kubewarden-distributor", "kubewarden-integrator"]
@@ -31,7 +31,7 @@ https://github.com/opencontainers/image-spec[OCI镜像格式]规范允许在常�
 
 目标OCI兼容注册表*必须支持工件*以成功将{admc-short-name}策略推送到其中。
 
-您可以使用https://github.com/kubewarden/kwctl[`kwctl`] CLI 将{admc-short-name}策略推送到OCI兼容的注册表。
+您可以使用link:https://github.com/kubewarden/kwctl[`kwctl`] CLI 将{admc-short-name}策略推送到OCI兼容的注册表。
 
 == 注释策略
 

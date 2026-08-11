@@ -140,6 +140,7 @@ Kubernetes wird bereits mit zwei Prioritätsklassen ausgeliefert, die gute Kandi
 Wenn Sie eine Prioritätsklasse löschen, bleiben bestehende Pods, die den Namen der gelöschten Prioritätsklasse verwenden, unverändert, aber nachfolgende Pods, die den Namen der gelöschten Prioritätsklasse verwenden, werden von Kubernetes nicht erstellt.
 ====
 
+[#_policyserver_production_configuration]
 == `PolicyServer` Produktionskonfiguration
 
 `PolicyServers` sind entscheidend für den Cluster. Die Zuverlässigkeit dieser ist wichtig, da sie Zulassungsanfragen, die an die Kubernetes-API über die Validierungs- und Mutations-Webhooks gerichtet sind, verarbeiten.

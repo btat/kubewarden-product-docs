@@ -8,7 +8,7 @@ include::partial$variables.adoc[]
 
 = {title}
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 
 == {admc-name} 確認中
@@ -18,7 +18,7 @@ xref:/tutorials/verifying-kubewarden.adoc[verifying
 
 == バイナリ
 
-私たちの`kwctl` CLIツールは、https://github.com/kubewarden/kwctl/releases[GitHubリリース]を通じて公開されています。
+私たちの`kwctl` CLIツールは、link:https://github.com/kubewarden/kwctl/releases[GitHubリリース]を通じて公開されています。
 
 == OCIアーティファクト
 
@@ -31,4 +31,4 @@ Open Container Initiative (OCI) アーティファクトについて、プロジ
 
 == HTTPS経由のHelmチャート
 
-{admc-short-name}は、https://charts.kubewarden.io.のHelmチャートHTTPSリポジトリにHelmチャートを公開します。SLSAや署名はありませんが、このタイプのHelmリポジトリは検索機能を提供します。
+{admc-short-name}は、link:https://charts.kubewarden.io[].のHelmチャートHTTPSリポジトリにHelmチャートを公開します。SLSAや署名はありませんが、このタイプのHelmリポジトリは検索機能を提供します。

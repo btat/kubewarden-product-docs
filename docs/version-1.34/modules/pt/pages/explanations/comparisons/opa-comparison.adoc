@@ -2,7 +2,7 @@ include::partial$variables.adoc[]
 
 = {project-name} vs OPA Gatekeeper
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-03-18
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :page-aliases: explanations/opa-comparison.adoc
 :description: Compare OPA Gatekeeper e {project-name} na gestão de políticas para ambientes Kubernetes para determinar a melhor abordagem para o seu caso de uso.
@@ -69,12 +69,14 @@ Esta tabela fornece uma comparação entre OPA Gatekeeper e {short-project-name}
 | ✅
 |===
 
+[#_types_of_policies]
 == Tipos de políticas
 
 Tanto o OPA Gatekeeper quanto o Kubernetes podem escrever políticas de validação e mutação.
 
 Essas políticas podem direcionar qualquer tipo de recurso do Kubernetes, incluindo Recursos Personalizados.
 
+[#_writing_policies]
 == Escrevendo políticas
 
 Você escreve políticas do OPA Gatekeeper usando https://www.openpolicyagent.org/docs/latest/#rego[Rego]. Rego é uma linguagem de consulta criada pelo projeto Open Policy Agent.
@@ -101,6 +103,7 @@ Apesar de usar a mesma linguagem, as políticas escritas para kube-mgmt não sã
 ====
 
 
+[#_context_aware]
 == Consciente do contexto
 
 Às vezes, uma política precisa de dados sobre o estado atual do cluster para tomar uma decisão de validação ou mutação. Por exemplo, uma política que valida recursos de Ingress pode precisar saber sobre outros recursos de Ingress já definidos no cluster para garantir que não ocorram conflitos. {short-project-name} chama essas políticas de "conscientes do contexto".
@@ -116,6 +119,7 @@ Por exemplo, se uma política do OPA Gatekeeper requer acesso a Segredos do Kube
 Por outro lado, {short-project-name} fornece um acesso granular aos recursos do cluster.
 Cada política tem acesso apenas aos recursos que o administrador do Kubernetes especifica. Tentar ler dados não autorizados é imediatamente bloqueado e reportado aos administradores do cluster.
 
+[#_kubernetes_integration]
 == Integração com Kubernetes
 
 OPA Gatekeeper possui um Recurso Personalizado em todo o cluster, permitindo a definição de políticas e como e onde aplicá-las.
@@ -126,6 +130,7 @@ As políticas implantadas via um recurso `AdmissionPolicy` afetam apenas os recu
 
 Isso permite que administradores do Kubernetes deleguem trabalho relacionado a políticas.
 
+[#_policy_distribution]
 == Distribuição de políticas
 
 OPA Gatekeeper e {short-project-name} políticas têm código-fonte de política (Rego para OPA Gatekeeper, CEL para {short-project-name}) no Recurso Personalizado que define uma política no Kubernetes.
@@ -136,6 +141,7 @@ Você pode assinar e verificar {short-project-name} políticas usando ferramenta
 
 Você pode distribuir políticas {short-project-name} entre registros de contêiner geograficamente distribuídos usando as ferramentas e processos tradicionais adotados para imagens de contêiner.
 
+[#_cicd_integration]
 == Integração CI/CD
 
 Tanto OPA Gatekeeper quanto {short-project-name} são gerenciados usando metodologias GitOps.
@@ -154,6 +160,7 @@ Administradores do Kubernetes normalmente mantêm outros pipelines de automaçã
 
 O pipeline testa a política contra diferentes tipos de solicitações. Você pode realizar os testes usando a ferramenta CLI https://github.com/kubewarden/kwctl[`kwctl`], sem precisar de um cluster Kubernetes em execução. A ferramenta CLI `kwctl` usa o mesmo mecanismo de avaliação utilizado pela pilha {short-project-name} implantada em um cluster Kubernetes.
 
+[#_policy_enforcement_modes]
 == Modos de imposição de políticas
 
 Tanto o OPA Gatekeeper quanto {short-project-name} podem implantar políticas usando dois modos de operação diferentes:
@@ -161,6 +168,7 @@ Tanto o OPA Gatekeeper quanto {short-project-name} podem implantar políticas us
 * `deny`: violação de uma política rejeita a solicitação
 * `warn`: violação de uma política não causa rejeição e é registrada
 
+[#_deployment_mode]
 == Modo de implantação
 
 O mesmo servidor avalia todas as políticas do OPA Gatekeeper. Por outro lado, {short-project-name} permite a definição de múltiplos servidores de avaliação. Você define esses servidores por um Recurso Personalizado chamado `PolicyServer`.
@@ -182,6 +190,7 @@ Isso permite cenários interessantes como os seguintes:
 * Implante políticas críticas em um pool dedicado de Servidores de Políticas.
 * Implante as políticas de um inquilino barulhento em um pool dedicado de Servidores de Políticas.
 
+[#_background_checks]
 == Verificações de antecedentes
 
 À medida que políticas são adicionadas, removidas e reconfiguradas, os recursos já no cluster podem se tornar não conformes.

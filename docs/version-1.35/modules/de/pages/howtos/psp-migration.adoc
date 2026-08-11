@@ -18,7 +18,7 @@ Für Kubernetes ≥ v1.25.
 https://kubernetes.io/docs/concepts/security/pod-security-policy/[PodSecurityPolicy]
 (PSP) wurde entfernt. Jetzt können Sie {project-name} für die Zulassungskontrolle in Ihren Kubernetes-Clustern verwenden.
 
-{short-project-name} hat separate Richtlinien, um dasselbe Ziel wie eine monolithische PSP-Konfiguration zu erreichen. Jede {short-project-name} Richtliniendefinition fungiert als ein anderer Konfigurationsabschnitt in der Spezifikation einer PSP. Die Zuordnung der PSP-Konfigurationsfelder zu ihren jeweiligen {short-project-name} Richtlinien befindet sich in der <<_mapping_kubewarden_policies_to_psp_fields,Mapping-Tabelle>> unten.
+{short-project-name} hat separate Richtlinien, um dasselbe Ziel wie eine monolithische PSP-Konfiguration zu erreichen. Jede {short-project-name} Richtliniendefinition fungiert als ein anderer Konfigurationsabschnitt in der Spezifikation einer PSP. Die Zuordnung der PSP-Konfigurationsfelder zu ihren jeweiligen {short-project-name} Richtlinien befindet sich in der <<_mapping_policies_to_psp_fields,Mapping-Tabelle>> unten.
 
 Mit {short-project-name} haben Betreiber eine granulare Kontrolle über die Richtlinienkonfiguration in ihren Clustern.
 
@@ -466,6 +466,7 @@ Error from server: error when creating "STDIN": admission webhook "clusterwide-p
 
 ======
 
+[#_mapping_policies_to_psp_fields]
 == Zuordnung von {short-project-name} Richtlinien zu PSP-Feldern
 
 Diese Tabelle ordnet die PSP-Konfigurationsfelder den entsprechenden {short-project-name} Richtlinien zu.

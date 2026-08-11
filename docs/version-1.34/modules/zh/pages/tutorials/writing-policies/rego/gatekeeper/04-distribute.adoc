@@ -51,6 +51,7 @@ annotations:
 $ kwctl annotate policy.wasm --metadata-path metadata.yaml --output-path annotated-policy.wasm
 ----
 
+[#_pushing_the_policy]
 == 推送策略
 
 将您的策略推送到OCI注册表：

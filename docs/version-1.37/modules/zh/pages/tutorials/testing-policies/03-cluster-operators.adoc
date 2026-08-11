@@ -21,7 +21,7 @@ include::partial$variables.adoc[]
  ** 更改策略的配置参数时，如何确保一切按预期工作？
  ** 等等？
 
-{admc-short-name}有一个工具，https://github.com/kubewarden/kwctl[`kwctl`]，允许在Kubernetes外部测试策略。
+{admc-short-name}有一个工具，link:https://github.com/kubewarden/kwctl[`kwctl`]，允许在Kubernetes外部测试策略。
 
 要使用`kwctl`，您需要使用以下输入调用它：
 
@@ -229,7 +229,7 @@ $ kwctl run \
 ----
 
 在这两次您运行策略时*没有*提供任何设置。
-正如https://github.com/kubewarden/psp-apparmor#configuration[策略文档]所述，这会导致禁止使用非默认控制文件。
+正如link:https://github.com/kubewarden/psp-apparmor#configuration[策略文档]所述，这会导致禁止使用非默认控制文件。
 
 使用自定义`nginx`控制文件的Pod也会被策略拒绝：
 
@@ -271,7 +271,7 @@ $ kwctl run \
 
 == 自动化
 
-您可以使用https://github.com/bats-core/bats-core[bats]自动化所有这些步骤。
+您可以使用link:https://github.com/bats-core/bats-core[bats]自动化所有这些步骤。
 
 您可以编写一系列测试，并将它们的执行集成到现有的CI和CD管道中。
 

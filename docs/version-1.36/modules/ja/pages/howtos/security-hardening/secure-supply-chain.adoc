@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = 安全なサプライチェーン
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: {admc-name}を設定して、アーティファクトの署名とアドミッションポリシーの整合性を検証します。
 :doc-persona: ["kubewarden-user", "kubewarden-operator", "kubewarden-distributor", "kubewarden-integrator"]
@@ -17,21 +17,21 @@ include::partial$variables.adoc[]
 
 https://sigstore.dev/[Sigstore]プロジェクトは、これに必要なツールとインフラストラクチャーを提供します。これは、アーティファクトのサプライチェーンの整合性を検証するためのものです。
 
-{admc-short-name}は、https://github.com/sigstore/cosign[`cosign`]と共に、Sigstoreプロジェクトが提供するhttps://github.com/SigStore/fulcio[fulcio]およびhttps://github.com/sigstore/rekor[rekor]インフラストラクチャーを使用します。
+{admc-short-name}は、link:https://github.com/sigstore/cosign[`cosign`]と共に、Sigstoreプロジェクトが提供するlink:https://github.com/SigStore/fulcio[fulcio]およびlink:https://github.com/sigstore/rekor[rekor]インフラストラクチャーを使用します。
 
 クラスターオペレーターは、{admc-name}を設定して、信頼できるエンティティによって署名されたポリシーのみを実行できます。ポリシー開発者は、自分のポリシーに署名し、それをレジストリに公開できます。
 
 == 前提条件
 
-次のセクションでは、いくつかのツールをインストールする必要があります。これにより、ユーザーはOCIアーティファクトの署名と検証を行うことができます。例では、ポリシーの署名と検査のためにhttps://docs.sigstore.dev/quickstart/quickstart-cosign/[`cosign`]およびhttps://github.com/kubewarden/kwctl[`kwctl`]ユーティリティの使用を示しています。
+次のセクションでは、いくつかのツールをインストールする必要があります。これにより、ユーザーはOCIアーティファクトの署名と検証を行うことができます。例では、ポリシーの署名と検査のためにlink:https://docs.sigstore.dev/quickstart/quickstart-cosign/[`cosign`]およびlink:https://github.com/kubewarden/kwctl[`kwctl`]ユーティリティの使用を示しています。
 
-ポリシーに署名するためにGitHubを使用するには、https://docs.sigstore.dev/cosign/system_config/installation/#github-actions[GitHub actions]をインストールする必要があります。
+ポリシーに署名するためにGitHubを使用するには、link:https://docs.sigstore.dev/cosign/system_config/installation/#github-actions[GitHub actions]をインストールする必要があります。
 
-キーレス署名は、Sigstoreプロジェクトが提供するデフォルトのhttps://github.com/SigStore/fulcio[fulcio]およびhttps://github.com/sigstore/rekor[rekor]インスタンスを使用します。必要に応じて、これに自分のインフラストラクチャーを使用する方法については、Sigstoreのドキュメントを確認してください。
+キーレス署名は、Sigstoreプロジェクトが提供するデフォルトのlink:https://github.com/SigStore/fulcio[fulcio]およびlink:https://github.com/sigstore/rekor[rekor]インスタンスを使用します。必要に応じて、これに自分のインフラストラクチャーを使用する方法については、Sigstoreのドキュメントを確認してください。
 
 == ポリシーに署名する
 
-{admc-short-name}はSigstoreのhttps://github.com/sigstore/cosign[cosign]ユーティリティを使用してポリシーに署名することを推奨します。このセクションでは、キーに基づくポリシー署名の方法を示します。これには、プライベートキーとパブリックキーのペアを生成する必要があります。生成されたキーは、署名されたアーティファクトが期待されるユーザーから来たものであるかを確認するのに役立ちます。このキー・ペアを生成するには、次の`cosign generate-key-pair`コマンドを使用します：
+{admc-short-name}はSigstoreのlink:https://github.com/sigstore/cosign[cosign]ユーティリティを使用してポリシーに署名することを推奨します。このセクションでは、キーに基づくポリシー署名の方法を示します。これには、プライベートキーとパブリックキーのペアを生成する必要があります。生成されたキーは、署名されたアーティファクトが期待されるユーザーから来たものであるかを確認するのに役立ちます。このキー・ペアを生成するには、次の`cosign generate-key-pair`コマンドを使用します：
 
 [subs="+attributes",bash]
 ----
@@ -72,7 +72,7 @@ Pushing signature to: ghcr.io/kubewarden/policies/user-group-psp
 
 同じポリシーは、同じユーザーまたは異なるユーザーによって複数回署名できます。これらの署名は、元の署名と共に署名オブジェクトに追加されます。
 
-署名プロセスの仕組みについての詳細は、https://docs.sigstore.dev/[Sigstoreプロジェクトのドキュメント]を確認してください。
+署名プロセスの仕組みについての詳細は、link:https://docs.sigstore.dev/[Sigstoreプロジェクトのドキュメント]を確認してください。
 
 === キーなし署名
 

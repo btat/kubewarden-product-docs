@@ -3,7 +3,7 @@
 include::partial$variables.adoc[]
 = kwctl CLI
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-04-30
+:revdate: 2026-06-18
 :page-revdate: {revdate}
 :title: kwctl CLI
 :description: Explore a ferramenta de linha de comando \`kwctl` para gerenciar {project-name} políticas e realizar tarefas como carregar políticas.

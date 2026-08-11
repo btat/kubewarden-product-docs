@@ -23,7 +23,7 @@ include::partial$variables.adoc[]
 
 作成したポリシーを使用し、その`validate`関数をKubernetesオブジェクトを定義するGo型を使用しないように変更できます。
 
-代わりに、https://github.com/tidwall/gjson[`gjson`]ライブラリを使用して、生のJSONオブジェクトからデータを抽出できます。
+代わりに、link:https://github.com/tidwall/gjson[`gjson`]ライブラリを使用して、生のJSONオブジェクトからデータを抽出できます。
 
 まず、要件セクションを変更する必要があります。
 コードは次のようになります：

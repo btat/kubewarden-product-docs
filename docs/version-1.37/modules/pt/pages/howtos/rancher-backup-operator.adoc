@@ -20,6 +20,7 @@ Desde a versão `v9.0.0`, `rancher-backup` tem suporte para {admc-name}. Isso in
 - Os CRDs de {admc-short-name}, que são reconciliados após a restauração pelo controlador {admc-short-name}.
 - O subchart `policy-reporter` do chart `kubewarden-controller`, para seus valores padrão. Isso não inclui a integração do Grafana nem outros plugins.
 
+[#_user_secrets]
 == Segredos do Usuário
 
 O processo de backup não inclui segredos criados pelo usuário, como aqueles usados para xref:/howtos/policy-servers/02-private-registry.adoc#_creating_the_secret[configurar servidores de política para registros privados], a menos que estejam corretamente rotulados. Para isso, rotule os segredos de uma das seguintes maneiras. Ou:
@@ -38,7 +39,7 @@ kubectl label secret secret-ghcr-docker resources.cattle.io/backup=true
 
 == Instalando o Operador de Backup do Rancher
 
-Siga o \link: \https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[documentação do Rancher Manager]. Para uma instalação do Minikube usando os PersistentVolumes do tipo `hostPath` nomeados `standard` que o Minikube suporta por padrão.
+Siga o \link: https://documentation.suse.com/cloudnative/rancher-manager/latest/en/rancher-admin/back-up-restore-and-disaster-recovery/back-up-restore-and-disaster-recovery.html[documentação do Rancher Manager]. Para uma instalação do Minikube usando os PersistentVolumes do tipo `hostPath` nomeados `standard` que o Minikube suporta por padrão.
 
 É necessário instruir o Operador de Backup a também fazer backup de CRs definidos pelo usuário {admc-short-name} definindo o Valor `optionalResources.kubewarden.enabled` como `true`.
 

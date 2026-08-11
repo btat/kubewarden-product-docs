@@ -84,7 +84,7 @@ include::partial$variables.adoc[]
 
 == ClusterAdmissionPolicies
 
-ClusterAdmissionPoliciesには、フィールドhttps://doc.crds.dev/github.com/kubewarden/kubewarden-controller/policies.kubewarden.io/ClusterAdmissionPolicy/v1#spec-contextAwareResources[spec.contextAwareResources]があります。
+ClusterAdmissionPoliciesには、フィールドlink:https://doc.crds.dev/github.com/kubewarden/kubewarden-controller/policies.kubewarden.io/ClusterAdmissionPolicy/v1#spec-contextAwareResources[spec.contextAwareResources]があります。
 このフィールドは、ポリシーがアクセスする必要のある`GroupVersionKind`リソースのリストを提供します。これにより、ポリシー作成者はポリシーと一緒に必要な「権限」を提供できます。さらに、これにより、ポリシーオペレーターはデプロイ時にポリシーに必要な「権限」を確認できます。
 
 === ローカルでのコンテキスト対応ポリシーのテスト
@@ -146,11 +146,11 @@ SDKで使用されるwaPC関数についての詳細情報が必要な場合は�
 
 === Rust
 
-この機能を公開している関数は、https://docs.rs/kubewarden-policy-sdk/0.8.7/kubewarden_policy_sdk[Rust SDKリファレンスドキュメント]にあります。
+この機能を公開している関数は、link:https://docs.rs/kubewarden-policy-sdk/0.8.7/kubewarden_policy_sdk[Rust SDKリファレンスドキュメント]にあります。
 
 === 実行
 
-この機能を公開している関数は、https://pkg.go.dev/github.com/kubewarden/policy-sdk-go[Go SDKリファレンスドキュメント]にあります。
+この機能を公開している関数は、link:https://pkg.go.dev/github.com/kubewarden/policy-sdk-go[Go SDKリファレンスドキュメント]にあります。
 
 == Regoポリシー
 
@@ -162,6 +162,6 @@ SDKで使用されるwaPC関数についての詳細情報が必要な場合は�
 
 === オープンポリシーエージェント
 
-コンテキストに応じた情報の公開は、`data.kubernetes`キーの下にあり、https://github.com/open-policy-agent/kube-mgmt[`kube-mgmt`]がデフォルトでこの動作を行います。
+コンテキストに応じた情報の公開は、`data.kubernetes`キーの下にあり、link:https://github.com/open-policy-agent/kube-mgmt[`kube-mgmt`]がデフォルトでこの動作を行います。
 
 インベントリは、ポリシーが`spec.contextAwareResources`フィールドを介してアクセスできるリソースで構成されます。

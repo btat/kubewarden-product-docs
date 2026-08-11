@@ -65,7 +65,7 @@ fn validate(payload: &[u8]) -> CallResult {
 
 * ➀とマークされた行で。受信した`payload`を`ValidationRequest<Setting>`オブジェクトに解析します。
 これにより、ユーザーが提供したパラメータで`ValidationRequest`内の`Settings`インスタンスが自動的に設定されます。
-* ➁とマークされた行で。リクエストに埋め込まれたKubernetesの生JSONオブジェクトをhttps://arnavion.github.io/k8s-openapi/v0.25.x/k8s_openapi/api/core/v1/struct.Pod.html[Pod構造体]のインスタンスに変換します。
+* ➁とマークされた行で。リクエストに埋め込まれたKubernetesの生JSONオブジェクトをlink:https://arnavion.github.io/k8s-openapi/v0.25.x/k8s_openapi/api/core/v1/struct.Pod.html[Pod構造体]のインスタンスに変換します。
 * ➂とマークされた行で。リクエストにはPodオブジェクトがあり、コードは`metadata.name`がハードコーディングされた値`invalid-pod-name`と等しくないリクエストのみを承認します。
 * ➃とマークされた行で。リクエストにはPodオブジェクトが含まれていないため、ポリシーはリクエストを受け入れます。
 
@@ -118,7 +118,7 @@ fn validate(payload: &[u8]) -> CallResult {
 
 `lib.rs`ファイルの下部にはすでにテストが定義されており、{short-project-name}のRust SDKもテストヘルパーを提供していることがわかります。
 
-さらに、スキャフォールドプロジェクトには、`test_data`ディレクトリにデフォルトのhttps://en.wikipedia.org/wiki/Test_fixture#Software[テストフィクスチャ]が付属しています。これらの記録されたAdmissionリクエストを使用してユニットテストを作成します。
+さらに、スキャフォールドプロジェクトには、`test_data`ディレクトリにデフォルトのlink:https://en.wikipedia.org/wiki/Test_fixture#Software[テストフィクスチャ]が付属しています。これらの記録されたAdmissionリクエストを使用してユニットテストを作成します。
 
 `src/lib.rs`の最後にあるテストセクションの内容を次のように変更してください：
 

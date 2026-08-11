@@ -51,6 +51,7 @@ Allez-y et annotez la stratégie :
 $ kwctl annotate policy.wasm --metadata-path metadata.yaml --output-path annotated-policy.wasm
 ----
 
+[#_pushing_the_policy]
 == Pousser la stratégie
 
 Poussez votre stratégie vers un registre OCI :

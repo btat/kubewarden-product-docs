@@ -23,7 +23,7 @@ include::partial$variables.adoc[]
 
 您可以使用刚刚创建的策略，并将其`validate`函数更改为不使用定义 Kubernetes 对象的 Go 类型。
 
-您可以改为使用https://github.com/tidwall/gjson[`gjson`]库从原始 JSON 对象中提取数据。
+您可以改为使用link:https://github.com/tidwall/gjson[`gjson`]库从原始 JSON 对象中提取数据。
 
 首先，您需要更改需求部分。
 代码应如下所示：

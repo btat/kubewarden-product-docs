@@ -14,4 +14,4 @@ include::partial$variables.adoc[]
 
 {project-name}ポリシーは、WASIインターフェースを対象とするWebAssemblyモジュールを生成できる任意のプログラミング言語で作成できます。
 
-もし、https://github.com/kubewarden/docs[こちら]ポリシーを作成できるプログラミング言語をご存知の場合は、プルリクエストまたはGitHub Issueを、から開いてください。{short-project-name}
+もし、link:https://github.com/kubewarden/docs[こちら]ポリシーを作成できるプログラミング言語をご存知の場合は、プルリクエストまたはGitHub Issueを、から開いてください。{short-project-name}

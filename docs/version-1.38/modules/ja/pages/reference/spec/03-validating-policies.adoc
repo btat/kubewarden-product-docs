@@ -46,6 +46,7 @@ https://godoc.org/k8s.io/api/admission/v1#AdmissionRequest[`AdmissionRequest`]�
 
 `settings` キーは、ポリシー固有の設定を保持する自由形式の JSON ドキュメントを指します。前の章では、ポリシーと設定に焦点を当てました。
 
+[#_an_example]
 == 例
 
 次の Kubernetes `AdmissionReview` を考慮してください：

@@ -14,7 +14,7 @@ include::partial$variables.adoc[]
 ポリシーでログを記録できます。
 `policy-server`または`kwctl`は、適切な情報を付加したログエントリを転送します。
 
-Rust SDKに選ばれたログライブラリは、https://github.com/slog-rs/slog[`slog`]です。
+Rust SDKに選ばれたログライブラリは、link:https://github.com/slog-rs/slog[`slog`]です。
 これは人気があり、よく知られたクレートで、{project-name}とクリーンに統合されます。
 
 == ロガーを初期化します。
@@ -59,4 +59,4 @@ fn validate(payload: &[u8]) -> CallResult {
 これは`kwctl`または`policy-server`です。
 その後、ポリシー評価者はこの情報をログに記録し、Kubernetesリクエスト`uid`などのさらなる既知のコンテキスト情報を追加します。
 
-slogが提供するhttps://docs.rs/slog/2.7.0/slog/macro.log.html[ログ記録マクロ]に関する詳細情報は、そのhttps://docs.rs/slog/2.7.0/slog/index.html[ドキュメント]にあります。
+slogが提供するlink:https://docs.rs/slog/2.7.0/slog/macro.log.html[ログ記録マクロ]に関する詳細情報は、そのlink:https://docs.rs/slog/2.7.0/slog/index.html[ドキュメント]にあります。

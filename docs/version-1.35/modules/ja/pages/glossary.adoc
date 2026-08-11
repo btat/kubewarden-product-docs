@@ -14,28 +14,33 @@ include::partial$variables.adoc[]
 
 == A
 
+[#_admissionpolicy]
 === AdmissionPolicy
 
 ネームスペース全体のリソースです。ポリシーは、AdmissionPolicyが定義されているネームスペースをターゲットにしたリクエストのみを処理します。
 
 == C
 
+[#_clusteradmissionpolicy]
 === ClusterAdmissionPolicy
 
 クラスター全体のリソースをターゲットにした<<_admissionpolicy,AdmissionPolicy>>です。
 
+[#_clusterreport]
 === ClusterReport
 
 <<_report,Report>>とClusterReportは、ポリシースキャンの結果を保存します。どちらが使用されるかは、リソースのスコープによります。
 
 == K
 
+[#_kwctl]
 === kwctl
 
 ポリシーデプロイメントのためのKubernetes YAMLファイルを生成およびテストするCLIツールです。
 
 == M
 
+[#_mutatingwebhookconfiguration]
 === MutatingWebhookConfiguration
 
 https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#what-are-admission-webhooks[Kubernetesリソース]は、{short-project-name}コントローラーによって作成され、Kubernetesにどこに`AdmissionReview`を送信するかを知らせます。
@@ -43,17 +48,19 @@ https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-con
 
 == P
 
+[#_report]
 === レポート
 
 Reportと<<_clusterreport,ClusterReport>>は、ポリシースキャンの結果を保存します。どちらが使用されるかは、リソースのスコープによります。
 
-[#_policy_server]
+[#_policyserver]
 === PolicyServer
 
 ポリシーサーバーは、リクエストに対して{short-project-name}ポリシーを実行することによって、受信リクエストを検証します。
 
 == V
 
+[#_validatingwebhookconfiguration]
 === ValidatingWebhookConfiguration
 
 https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#what-are-admission-webhooks[Kubernetesリソース]は、{short-project-name}コントローラーによって作成され、Kubernetesにどこに`AdmissionReview`を送信するかを知らせるためのものです。
@@ -61,18 +68,22 @@ https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-con
 
 == W
 
+[#_wapc]
 === waPC
 
-WebAssembly手続き呼び出し。https://wapc.io.
+WebAssembly手続き呼び出し。link:https://wapc.io[].
 
+[#_wasi]
 === WASI
 
-WebAssemblyシステムインターフェース。https://wasi.dev.
+WebAssemblyシステムインターフェース。link:https://wasi.dev[].
 
+[#_wasm]
 === Wasm
 
-スタックベースの仮想マシン用のバイナリ命令形式です。ウェブデプロイメントのために設計されています。https://webassembly.org.
+スタックベースの仮想マシン用のバイナリ命令形式です。ウェブデプロイメントのために設計されています。link:https://webassembly.org[].
 
+[#_wasmtime]
 === Wasmtime
 
-WebAssembly用のランタイムです。https://wasmtime.dev.
+WebAssembly用のランタイムです。link:https://wasmtime.dev[].

@@ -19,7 +19,7 @@ include::partial$variables.adoc[]
 コンテキスト認識ポリシーは、{project-name}のバージョンがv1.6.0以上でのみ利用可能です。
 ====
 
-ポリシーがクラスター内のどのリソースにアクセスできるかは、ポリシーサーバーのhttps://kubernetes.io/docs/concepts/security/service-accounts/[サービスアカウント]によって制御されます。クラスター管理者は、KubernetesのRBACルールを介してポリシーがアクセスできる内容を制御します。コンテキスト認識ポリシーは、要求されたリソースに対して*read*アクセスのみを持っています。
+ポリシーがクラスター内のどのリソースにアクセスできるかは、ポリシーサーバーのlink:https://kubernetes.io/docs/concepts/security/service-accounts/[サービスアカウント]によって制御されます。クラスター管理者は、KubernetesのRBACルールを介してポリシーがアクセスできる内容を制御します。コンテキスト認識ポリシーは、要求されたリソースに対して*read*アクセスのみを持っています。
 
 セキュリティ上の理由から、`ClusterAdmissionPolicy`ポリシーのみがKubernetesクラスターから情報を取得できます。これは、特権のないユーザーが`AdmissionPolicy`リソースをデプロイできるためです。
 

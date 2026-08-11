@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 = {admc-name} アーキテクチャ
 :page-languages: [en, de, es, fr, ja, pt, zh]
-:revdate: 2026-05-04
+:revdate: 2026-05-14
 :page-revdate: {revdate}
 :description: {admc-name}が、Kubernetesのコア機能を活用してクラスターにシームレスに統合する方法をご紹介します。
 :doc-persona: ["kubewarden-all"]
@@ -18,7 +18,7 @@ include::partial$variables.adoc[]
 
 == ポリシー_とは_何ですか？
 
-ポリシーはhttps://opencontainers.org/[Open Container Initiative]（OCI）アーティファクトです。それはWebAssemblyモジュール、ポリシーコード、およびPolicyServerが入場リクエストの検証と変更を行うために必要なメタデータを含んでいます。
+ポリシーはlink:https://opencontainers.org/[Open Container Initiative]（OCI）アーティファクトです。それはWebAssemblyモジュール、ポリシーコード、およびPolicyServerが入場リクエストの検証と変更を行うために必要なメタデータを含んでいます。
 
 [NOTE]
 ====
@@ -67,9 +67,9 @@ WebAssemblyはポータブルで効率的であり、ポリシーが異なる環
 
 {admc-name}はこれらのコンポーネントで構成されています：
 
-* {admc-name}カスタムリソースは、ポリシー管理のプロセスを簡素化するhttps://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/[Kubernetesカスタムリソース]です。
+* {admc-name}カスタムリソースは、ポリシー管理のプロセスを簡素化するlink:https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/[Kubernetesカスタムリソース]です。
 +
-{admc-name}は、https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/[アドミッションコントロール]を使用してKubernetesと統合されます。特に、{admc-name}はKubernetesのアドミッションWebhookとして機能します。`policy-server`は、Kubernetes APIサーバーによってリクエストを検証するために呼び出されるWebhookエンドポイントです。
+{admc-name}は、link:https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/[アドミッションコントロール]を使用してKubernetesと統合されます。特に、{admc-name}はKubernetesのアドミッションWebhookとして機能します。`policy-server`は、Kubernetes APIサーバーによってリクエストを検証するために呼び出されるWebhookエンドポイントです。
 
 * https://github.com/kubewarden/kubewarden-controller[{admc-name}コントローラー]は、{admc-name}のカスタムリソースを調整するKubernetesコントローラーです。このコントローラーは、{admc-name}スタックの一部を作成します。
 また、{admc-name}の設定をKubernetesの指示に変換します。
@@ -99,7 +99,7 @@ include::latest@shared:en:partial$architecture.adoc[]
 
 `kubewarden-controller`がデフォルトのPolicyServerリソースに気付くと、PolicyServerコンポーネントの`policy-server`デプロイメントを作成します。
 
-{admc-name}はKubernetesのAdmission Webhookとして機能します。Kubernetesは、すべてのWebhookエンドポイントを保護するためにhttps://en.wikipedia.org/wiki/Transport_Layer_Security[トランスポート層セキュリティ]（TLS）を使用することを指定します。`kubewarden-controller`は次のようにしてこの安全な通信を設定します：
+{admc-name}はKubernetesのAdmission Webhookとして機能します。Kubernetesは、すべてのWebhookエンドポイントを保護するためにlink:https://en.wikipedia.org/wiki/Transport_Layer_Security[トランスポート層セキュリティ]（TLS）を使用することを指定します。`kubewarden-controller`は次のようにしてこの安全な通信を設定します：
 
 . 自己署名のCAを生成する
 . このCAを使用して、`policy-server`サービスのTLS証明書キーを生成します。
@@ -139,7 +139,7 @@ Webサーバーは、命名規則に従い、各ポリシーを専用のパス�
 
 === Kubernetesにポリシーを認識させる
 
-すべての`policy-server`インスタンスには、https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/[`レディネスプローブ`]があり、`kubewarden-controller`が`policy-server`デプロイメントがhttps://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#webhook-request-and-response[`AdmissionReview`]を評価する準備ができているかを確認します。
+すべての`policy-server`インスタンスには、link:https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/[`レディネスプローブ`]があり、`kubewarden-controller`が`policy-server`デプロイメントがlink:https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#webhook-request-and-response[`AdmissionReview`]を評価する準備ができているかを確認します。
 
 {admc-name}が`policy-server`デプロイメントを「一意に到達可能」または`Ready`としてマークすると、`kubewarden-controller`はKubernetes APIサーバーに新しいポリシーを認識させます。これは、`MutatingWebhookConfiguration`または`ValidatingWebhookConfiguration`オブジェクトを作成することによって行われます。この文脈において、「一意に到達可能」とは、クラスター内のすべてのPolicyServerインスタンスが最新のポリシー設定をインストールしていることを意味します。その区別は微妙な点ですが、PolicyServersの展開方法により必要です。
 異なる構成を持つ複数のPolicyServer上で、同じポリシーを運用することが可能です。
